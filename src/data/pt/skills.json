@@ -1,0 +1,7 @@
+[
+  { "name": "Programação", "icon": "code", "skills": ["Python", "SQL", "JavaScript", "Bash"] },
+  { "name": "Machine Learning", "icon": "brain", "skills": ["LLMs", "VLMs", "Llama", "LangChain", "OpenAI", "Fine-tuning"] },
+  { "name": "Visão Computacional", "icon": "eye", "skills": ["PyTorch", "YOLO", "Metric Learning", "OCR", "PyTesseract"] },
+  { "name": "MLOps / Cloud", "icon": "cloud", "skills": ["Azure ML", "MLOps", "LLMOps", "Docker", "Git", "Linux"] },
+  { "name": "Pesquisa", "icon": "flask-conical", "skills": ["Document Understanding", "Adaptação de Domínio", "Few-shot Learning", "Modelos Multimodais", "RAG", "Séries Temporais"] }
+]

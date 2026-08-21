@@ -1,0 +1,4 @@
+# LaTeX CV Parser requirements
+# Install with: pip install -r requirements.txt
+# (No external dependencies — uses only Python stdlib for parsing.
+#  Listed here for future extensibility, e.g. full LaTeX AST parsing.)

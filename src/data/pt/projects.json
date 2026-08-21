@@ -1,0 +1,47 @@
+[
+  {
+    "id": "proj-1",
+    "title": "Análise de Documentos Fiscais com IA",
+    "description": "Pipeline completo de ML para análise de documentos fiscais, integrando OCR, modelos de classificação NLP, fine-tuning de Llama e modelos locais. Projeto em conjunto com FINEP e SUFRAMA.",
+    "category": "Machine Learning",
+    "technologies": ["Python", "Llama", "PyTesseract", "OCR", "SQL"],
+    "github": "",
+    "featured": true
+  },
+  {
+    "id": "proj-2",
+    "title": "Segmentação e Classificação de SKUs",
+    "description": "Sistema de visão computacional para segmentação e classificação de SKUs a partir de fotos enviadas via celular, automatizando identificação de produtos e precificação com aumento de 40% na eficiência operacional.",
+    "category": "Visão Computacional",
+    "technologies": ["Python", "PyTorch", "YOLO", "Metric Learning", "Azure ML"],
+    "github": "",
+    "featured": true
+  },
+  {
+    "id": "proj-3",
+    "title": "Sistema de RAG para Atendimento",
+    "description": "Sistema de RAG end-to-end com LangChain, integrando banco vetorial, bancos relacionais e APIs corporativas (SAP, ServiceNow, jurisprudência) para automação do atendimento de chamados.",
+    "category": "Machine Learning",
+    "technologies": ["Python", "LangChain", "OpenAI", "SAP", "ServiceNow"],
+    "github": "",
+    "featured": false
+  },
+  {
+    "id": "proj-4",
+    "title": "Adaptação de Domínio em Visão Computacional",
+    "description": "Pesquisa em técnicas de adaptação de domínio aplicadas a tarefas de visão computacional, buscando melhorar a generalização de modelos em diferentes distribuições de dados.",
+    "category": "Pesquisa",
+    "technologies": ["Python", "PyTorch", "Transfer Learning"],
+    "github": "",
+    "featured": false
+  },
+  {
+    "id": "proj-5",
+    "title": "Visão Computacional com Poucos Dados",
+    "description": "Exploração de estratégias para treinar modelos de visão computacional em cenários com poucos dados anotados, incluindo data augmentation e transfer learning.",
+    "category": "Pesquisa",
+    "technologies": ["Python", "PyTorch", "Few-shot Learning"],
+    "github": "",
+    "featured": false
+  }
+]

@@ -1,0 +1,15 @@
+{
+  "name": "Lucas de Oliveira Cunha",
+  "headline": "Computer Science · Machine Learning · Research",
+  "tagline": "Computer Scientist & Machine Learning Researcher",
+  "description": "Computer Science student (8th semester) and visiting master's student in Informatics, focused on LLMs, VLMs, and Computer Vision applied to documents. I work professionally on AI solutions for tax documents (OCR, VLMs, LLMs) and research multimodal models, computer vision, and domain adaptation.",
+  "location": "Curitiba, Brazil",
+  "email": "lucas.ocunha@hotmail.com",
+  "cvUrl": "/cv/resume.pdf",
+  "socials": [
+    { "label": "LinkedIn", "url": "https://www.linkedin.com/in/lucasdoc/", "icon": "linkedin" },
+    { "label": "GitHub", "url": "https://github.com/lucasdocunha", "icon": "github" },
+    { "label": "Google Scholar", "url": "[SCHOLAR URL]", "icon": "scholar" },
+    { "label": "Email", "url": "mailto:lucas.ocunha@hotmail.com", "icon": "mail" }
+  ]
+}

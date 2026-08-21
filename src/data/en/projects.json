@@ -1,0 +1,47 @@
+[
+  {
+    "id": "proj-1",
+    "title": "Tax Document Analysis with AI",
+    "description": "Full ML pipeline for tax document analysis, integrating OCR, NLP classification models, Llama fine-tuning, and local models. Joint project with FINEP and SUFRAMA.",
+    "category": "Machine Learning",
+    "technologies": ["Python", "Llama", "PyTesseract", "OCR", "SQL"],
+    "github": "",
+    "featured": true
+  },
+  {
+    "id": "proj-2",
+    "title": "SKU Segmentation and Classification",
+    "description": "Computer vision system for SKU segmentation and classification from mobile photos, automating product identification and pricing with a 40% increase in operational efficiency.",
+    "category": "Computer Vision",
+    "technologies": ["Python", "PyTorch", "YOLO", "Metric Learning", "Azure ML"],
+    "github": "",
+    "featured": true
+  },
+  {
+    "id": "proj-3",
+    "title": "RAG System for Help Desk",
+    "description": "End-to-end RAG system with LangChain, integrating vector databases, relational databases, and corporate APIs (SAP, ServiceNow, jurisprudence) for help desk ticket automation.",
+    "category": "Machine Learning",
+    "technologies": ["Python", "LangChain", "OpenAI", "SAP", "ServiceNow"],
+    "github": "",
+    "featured": false
+  },
+  {
+    "id": "proj-4",
+    "title": "Domain Adaptation in Computer Vision",
+    "description": "Research on domain adaptation techniques applied to computer vision tasks, aiming to improve model generalization across different data distributions.",
+    "category": "Research",
+    "technologies": ["Python", "PyTorch", "Transfer Learning"],
+    "github": "",
+    "featured": false
+  },
+  {
+    "id": "proj-5",
+    "title": "Computer Vision with Limited Data",
+    "description": "Exploration of strategies to train computer vision models in low-data scenarios, including data augmentation and transfer learning.",
+    "category": "Research",
+    "technologies": ["Python", "PyTorch", "Few-shot Learning"],
+    "github": "",
+    "featured": false
+  }
+]

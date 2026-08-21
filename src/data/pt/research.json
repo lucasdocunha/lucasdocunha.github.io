@@ -1,0 +1,34 @@
+{
+  "lines": [
+    { "area": "Document Understanding", "description": "Pesquisa em modelos multimodais aplicados a documentos, com foco em extração de informações e compreensão de layout." },
+    { "area": "Visão Computacional", "description": "Trabalhos em visão computacional com poucos dados, segmentação e classificação de objetos em imagens." },
+    { "area": "Adaptação de Domínio", "description": "Iniciação científica focada em técnicas de adaptação de domínio para melhorar generalização de modelos." },
+    { "area": "LLMs e VLMs", "description": "Aplicação e pesquisa de grandes modelos de linguagem e modelos visuais em pipelines de IA para documentos." }
+  ],
+  "projects": [
+    {
+      "id": "res-1",
+      "title": "Adaptação de Domínio para Visão Computacional",
+      "lab": "Lasin — PUCPR",
+      "period": "2024 — 2025",
+      "description": "Iniciação científica investigando técnicas de adaptação de domínio aplicadas a tarefas de visão computacional, buscando melhorar a generalização de modelos em cenários com distribuições de dados distintas.",
+      "areas": ["Adaptação de Domínio", "Visão Computacional"]
+    },
+    {
+      "id": "res-2",
+      "title": "Visão Computacional com Poucos Dados",
+      "lab": "Lasin — PUCPR",
+      "period": "2025 — 2026",
+      "description": "Iniciação científica explorando estratégias para treinar modelos de visão computacional em cenários com poucos dados anotados, incluindo técnicas de data augmentation e transfer learning.",
+      "areas": ["Visão Computacional", "Few-shot Learning"]
+    }
+  ],
+  "publications": [],
+  "futureInterests": [
+    "Document Understanding",
+    "Modelos Multimodais",
+    "Adaptação de Domínio",
+    "OCR com LLMs",
+    "RAG Aplicado a Documentos"
+  ]
+}

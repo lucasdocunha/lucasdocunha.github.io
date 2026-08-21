@@ -1,0 +1,20 @@
+{
+  "summary": "Estudante de Ciência da Computação (8º período) e aluno ouvinte de mestrado em Informática, com foco em LLMs, VLMs e Visão Computacional aplicados a documentos. Atuo profissionalmente em soluções de IA para documentos fiscais (OCR, VLMs, LLMs) e pesquiso modelos multimodais, visão computacional e adaptação de domínio.",
+  "highlights": [
+    { "label": "Formação", "value": "Ciência da Computação", "icon": "graduation-cap" },
+    { "label": "Pesquisa", "value": "LLMs, VLMs / Visão Computacional", "icon": "flask-conical" },
+    { "label": "Foco Atual", "value": "Document Understanding", "icon": "brain-circuit" },
+    { "label": "Experiência", "value": "Pesquisa & Indústria", "icon": "briefcase" }
+  ],
+  "interests": [
+    "Visão Computacional",
+    "Document Understanding",
+    "LLMs",
+    "VLMs",
+    "Adaptação de Domínio",
+    "OCR",
+    "Modelos Multimodais",
+    "MLOps"
+  ],
+  "goals": "Me profissionalizar para a área da pesquisa e fazer aplicações das mais diversas possíveis durante a minha trajetória acadêmica e profissional."
+}

@@ -1,0 +1,31 @@
+[
+  {
+    "id": "exp-1",
+    "role": "Machine Learning Engineer",
+    "company": "DATAKIE",
+    "period": "06/2026 — Present",
+    "location": "Curitiba, Brazil",
+    "description": "Lead developer on a joint research project with FINEP and SUFRAMA for tax document analysis.",
+    "responsibilities": [
+      "Developing the full ML pipeline, from NLP classification models, OCR, fine-tuning, Llama, and local models",
+      "Managing the entire MLOps and LLMOps infrastructure",
+      "Applied research and technical project decisions"
+    ],
+    "technologies": ["Python", "SQL", "Llama", "PyTesseract", "OCR", "LLMs"],
+    "projects": ["Tax Document Analysis (FINEP/SUFRAMA)"]
+  },
+  {
+    "id": "exp-2",
+    "role": "Data Scientist (Intern)",
+    "company": "MBRF",
+    "period": "10/2025 — 06/2026",
+    "location": "Curitiba, Brazil",
+    "description": "Worked across multiple business areas, focusing on computer vision and RAG systems.",
+    "responsibilities": [
+      "Computer vision project for SKU segmentation and classification from mobile photos, automating product identification and pricing, increasing operational efficiency by approximately 40%",
+      "End-to-end RAG system with LangChain, integrating vector databases, relational databases, and corporate APIs (SAP, ServiceNow, jurisprudence databases), supporting multi-format file reading for help desk ticket automation"
+    ],
+    "technologies": ["Python", "PyTorch", "YOLO", "Azure ML", "LangChain", "OpenAI", "Metric Learning", "Time Series"],
+    "projects": ["SKU Segmentation and Classification", "RAG System for Help Desk Automation"]
+  }
+]

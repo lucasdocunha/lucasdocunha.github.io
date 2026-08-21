@@ -1,0 +1,20 @@
+{
+  "summary": "Computer Science student (8th semester) and visiting master's student in Informatics, focused on LLMs, VLMs, and Computer Vision applied to documents. I work professionally on AI solutions for tax documents (OCR, VLMs, LLMs) and research multimodal models, computer vision, and domain adaptation.",
+  "highlights": [
+    { "label": "Education", "value": "Computer Science", "icon": "graduation-cap" },
+    { "label": "Research", "value": "LLMs, VLMs / Computer Vision", "icon": "flask-conical" },
+    { "label": "Current Focus", "value": "Document Understanding", "icon": "brain-circuit" },
+    { "label": "Experience", "value": "Research & Industry", "icon": "briefcase" }
+  ],
+  "interests": [
+    "Computer Vision",
+    "Document Understanding",
+    "LLMs",
+    "VLMs",
+    "Domain Adaptation",
+    "OCR",
+    "Multimodal Models",
+    "MLOps"
+  ],
+  "goals": "To professionalize myself for research and apply my knowledge across diverse areas throughout my academic and professional career."
+}

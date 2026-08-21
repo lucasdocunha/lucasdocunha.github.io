@@ -1,0 +1,31 @@
+[
+  {
+    "id": "exp-1",
+    "role": "Engenheiro de Machine Learning",
+    "company": "DATAKIE",
+    "period": "06/2026 — Presente",
+    "location": "Curitiba",
+    "description": "Atuando como principal desenvolvedor em um projeto de pesquisa em conjunto com a FINEP e a SUFRAMA para análise de documentos fiscais.",
+    "responsibilities": [
+      "Desenvolvimento de todo o pipeline de ML, desde modelos de classificação NLP, OCR, fine-tuning, Llama e modelos locais",
+      "Gestão de todo o sistema de MLOps e LLMOps",
+      "Pesquisa aplicada à área e decisões técnicas do projeto"
+    ],
+    "technologies": ["Python", "SQL", "Llama", "PyTesseract", "OCR", "LLMs"],
+    "projects": ["Análise de Documentos Fiscais (FINEP/SUFRAMA)"]
+  },
+  {
+    "id": "exp-2",
+    "role": "Cientista de Dados (Estágio)",
+    "company": "MBRF",
+    "period": "10/2025 — 06/2026",
+    "location": "Curitiba",
+    "description": "Atuação em diversos projetos de diferentes áreas de negócio, com foco em visão computacional e sistemas de RAG.",
+    "responsibilities": [
+      "Projeto de visão computacional com segmentação e classificação de SKUs a partir de fotos via celular, automatizando identificação de produtos e precificação, aumentando a eficiência operacional em cerca de 40%",
+      "Desenvolvimento de sistema de RAG end-to-end com LangChain, integrando tools, banco vetorial, bancos relacionais e APIs corporativas (SAP, ServiceNow e bases de jurisprudência), com suporte à leitura e interpretação de múltiplos formatos de arquivos para automação do atendimento de chamados"
+    ],
+    "technologies": ["Python", "PyTorch", "YOLO", "Azure ML", "LangChain", "OpenAI", "Metric Learning", "Séries Temporais"],
+    "projects": ["Segmentação e Classificação de SKUs", "Sistema de RAG para Atendimento de Chamados"]
+  }
+]

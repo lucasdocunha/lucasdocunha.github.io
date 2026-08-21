@@ -1,0 +1,34 @@
+{
+  "lines": [
+    { "area": "Document Understanding", "description": "Research on multimodal models applied to documents, focusing on information extraction and layout understanding." },
+    { "area": "Computer Vision", "description": "Work on computer vision with limited data, object segmentation and classification in images." },
+    { "area": "Domain Adaptation", "description": "Scientific initiation focused on domain adaptation techniques to improve model generalization." },
+    { "area": "LLMs and VLMs", "description": "Application and research of large language models and vision-language models in AI pipelines for documents." }
+  ],
+  "projects": [
+    {
+      "id": "res-1",
+      "title": "Domain Adaptation for Computer Vision",
+      "lab": "Lasin — PUCPR",
+      "period": "2024 — 2025",
+      "description": "Scientific initiation investigating domain adaptation techniques applied to computer vision tasks, aiming to improve model generalization across different data distributions.",
+      "areas": ["Domain Adaptation", "Computer Vision"]
+    },
+    {
+      "id": "res-2",
+      "title": "Computer Vision with Limited Data",
+      "lab": "Lasin — PUCPR",
+      "period": "2025 — 2026",
+      "description": "Scientific initiation exploring strategies to train computer vision models in low-data scenarios, including data augmentation and transfer learning techniques.",
+      "areas": ["Computer Vision", "Few-shot Learning"]
+    }
+  ],
+  "publications": [],
+  "futureInterests": [
+    "Document Understanding",
+    "Multimodal Models",
+    "Domain Adaptation",
+    "OCR with LLMs",
+    "RAG Applied to Documents"
+  ]
+}
