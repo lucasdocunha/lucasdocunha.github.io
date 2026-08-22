@@ -1,15 +1,14 @@
 {
-  "name": "Lucas de Oliveira Cunha",
-  "headline": "Ciência da Computação · Machine Learning · Pesquisa",
-  "tagline": "Cientista da Computação & Pesquisador de Machine Learning",
-  "description": "Estudante de Ciência da Computação e aluno ouvinte de mestrado em Informática, com foco em LLMs, VLMs e Visão Computacional aplicados a documentos. Atuo profissionalmente em soluções de IA para documentos fiscais e pesquiso modelos multimodais, visão computacional e adaptação de domínio.",
-  "location": "Curitiba, Brasil",
+  "name": "Lucas Cunha",
+  "headline": "Desenvolvedor de Machine Learning & Pesquisador em Visão Computacional",
+  "tagline": "Visão Computacional · Deep Learning · LLMs & Agentes Inteligentes",
+  "description": "Desenvolvedor de Machine Learning e Pesquisador com especialidade em Visão Computacional e Inteligência Artificial. Atuação no desenvolvimento de soluções com LLMs, agentes inteligentes, Visão Computacional e automações corporativas no Centro de Excelência em IA (COEIA), além de projetos de ML para documentos fiscais (FINEP/SUFRAMA) e pesquisa acadêmica em adaptação de domínio e modelos profundos.",
+  "location": "Curitiba, PR — Brasil",
   "email": "lucas.ocunha@hotmail.com",
   "cvUrl": "/cv/resume.pdf",
   "socials": [
     { "label": "LinkedIn", "url": "https://www.linkedin.com/in/lucasdoc/", "icon": "linkedin" },
     { "label": "GitHub", "url": "https://github.com/lucasdocunha", "icon": "github" },
-    { "label": "Google Scholar", "url": "[SCHOLAR URL]", "icon": "scholar" },
     { "label": "Email", "url": "mailto:lucas.ocunha@hotmail.com", "icon": "mail" }
   ]
 }

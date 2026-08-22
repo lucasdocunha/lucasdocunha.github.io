@@ -1,20 +1,20 @@
 {
-  "summary": "Estudante de Ciência da Computação (8º período) e aluno ouvinte de mestrado em Informática, com foco em LLMs, VLMs e Visão Computacional aplicados a documentos. Atuo profissionalmente em soluções de IA para documentos fiscais (OCR, VLMs, LLMs) e pesquiso modelos multimodais, visão computacional e adaptação de domínio.",
+  "summary": "Desenvolvedor de Machine Learning e Pesquisador com especialidade em Visão Computacional, graduando em Ciência da Computação e aluno ouvinte de mestrado no PPGIA (PUCPR). Possuo sólida experiência no desenvolvimento de soluções de Inteligência Artificial aplicada, englobando modelos de Visão Computacional, LLMs, agentes inteligentes e automações corporativas. Atuo como Desenvolvedor de ML na DATAKIE, conduzindo as decisões técnicas e arquiteturais do pipeline de Machine Learning, além de desenvolver pesquisas científicas (PIBIC / CNPq / PUCPR) sobre adaptação de domínio, autoencoders e modelos profundos.",
   "highlights": [
-    { "label": "Formação", "value": "Ciência da Computação", "icon": "graduation-cap" },
-    { "label": "Pesquisa", "value": "LLMs, VLMs / Visão Computacional", "icon": "flask-conical" },
-    { "label": "Foco Atual", "value": "Document Understanding", "icon": "brain-circuit" },
-    { "label": "Experiência", "value": "Pesquisa & Indústria", "icon": "briefcase" }
+    { "label": "Especialidade", "value": "Visão Computacional", "icon": "eye" },
+    { "label": "Atuação", "value": "Machine Learning & LLMs", "icon": "brain-circuit" },
+    { "label": "Pesquisa", "value": "Adaptação de Domínio & Autoencoders", "icon": "flask-conical" },
+    { "label": "Formação", "value": "Ciência da Computação & PPGIA", "icon": "graduation-cap" }
   ],
   "interests": [
     "Visão Computacional",
-    "Document Understanding",
-    "LLMs",
-    "VLMs",
     "Adaptação de Domínio",
-    "OCR",
-    "Modelos Multimodais",
-    "MLOps"
+    "Autoencoders (VAE, Denoising)",
+    "Grandes Modelos de Linguagem (LLMs)",
+    "Agentes Inteligentes & Chatbots",
+    "Few-Shot Learning",
+    "Document Understanding & OCR",
+    "LLMOps & MLOps"
   ],
-  "goals": "Me profissionalizar para a área da pesquisa e fazer aplicações das mais diversas possíveis durante a minha trajetória acadêmica e profissional."
+  "goals": "Desenvolver e pesquisar soluções de ponta em Visão Computacional e Inteligência Artificial, unindo experimentação científica rigorosa a pipelines escaláveis e de alto impacto prático."
 }

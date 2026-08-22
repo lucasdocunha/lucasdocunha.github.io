@@ -1,4 +1,4 @@
-import { GraduationCap, FlaskConical, BrainCircuit, Briefcase, Target, Lightbulb } from 'lucide-react';
+import { GraduationCap, FlaskConical, BrainCircuit, Briefcase, Target, Lightbulb, Eye } from 'lucide-react';
 import Section from './Section';
 import Reveal from './Reveal';
 import { useLanguage } from '@/i18n/LanguageContext';
@@ -9,6 +9,7 @@ const ICON_MAP: Record<string, typeof GraduationCap> = {
   'flask-conical': FlaskConical,
   'brain-circuit': BrainCircuit,
   'briefcase': Briefcase,
+  'eye': Eye,
 };
 
 export default function About() {

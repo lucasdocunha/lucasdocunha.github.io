@@ -1,31 +1,32 @@
 [
   {
     "id": "exp-1",
-    "role": "Engenheiro de Machine Learning",
+    "role": "Desenvolvedor de Machine Learning",
     "company": "DATAKIE",
     "period": "06/2026 — Presente",
-    "location": "Curitiba",
-    "description": "Atuando como principal desenvolvedor em um projeto de pesquisa em conjunto com a FINEP e a SUFRAMA para análise de documentos fiscais.",
+    "location": "Curitiba, PR",
+    "description": "Atuação no desenvolvimento e decisões técnicas de arquitetura em projeto de Machine Learning voltado ao processamento e análise inteligente de documentos fiscais (parceria FINEP / SUFRAMA).",
     "responsibilities": [
-      "Desenvolvimento de todo o pipeline de ML, desde modelos de classificação NLP, OCR, fine-tuning, Llama e modelos locais",
-      "Gestão de todo o sistema de MLOps e LLMOps",
-      "Pesquisa aplicada à área e decisões técnicas do projeto"
+      "Desenvolvimento de todo o pipeline de Machine Learning, desde modelos de classificação com NLP, OCR inteligente, fine-tuning de modelos abertos (família LLaMA) e inferência local",
+      "Tomada de decisões técnicas, definição de arquiteturas de modelos e estruturação das rotinas de MLOps e LLMOps",
+      "Condução de experimentação prática, testes de robustez e pesquisa aplicada voltada a documentos fiscais"
     ],
-    "technologies": ["Python", "SQL", "Llama", "PyTesseract", "OCR", "LLMs"],
-    "projects": ["Análise de Documentos Fiscais (FINEP/SUFRAMA)"]
+    "technologies": ["Python", "PyTorch", "LLaMA", "Transformers", "OCR", "PyTesseract", "MLOps", "LLMOps", "SQL"],
+    "projects": ["Análise de Documentos Fiscais (FINEP / SUFRAMA)"]
   },
   {
     "id": "exp-2",
-    "role": "Cientista de Dados (Estágio)",
+    "role": "Cientista de Dados (Estagiário)",
     "company": "MBRF",
     "period": "10/2025 — 06/2026",
-    "location": "Curitiba",
-    "description": "Atuação em diversos projetos de diferentes áreas de negócio, com foco em visão computacional e sistemas de RAG.",
+    "location": "Curitiba, PR",
+    "description": "Atuação no Centro Operacional de Excelência em IA (COEIA) desenvolvendo soluções baseadas em LLMs, agentes inteligentes, Visão Computacional e automações corporativas que otimizam fluxos internos e ampliam a eficiência operacional.",
     "responsibilities": [
-      "Projeto de visão computacional com segmentação e classificação de SKUs a partir de fotos via celular, automatizando identificação de produtos e precificação, aumentando a eficiência operacional em cerca de 40%",
-      "Desenvolvimento de sistema de RAG end-to-end com LangChain, integrando tools, banco vetorial, bancos relacionais e APIs corporativas (SAP, ServiceNow e bases de jurisprudência), com suporte à leitura e interpretação de múltiplos formatos de arquivos para automação do atendimento de chamados"
+      "Desenvolvimento de chatbot corporativo integrado ao Microsoft Teams, capaz de interpretar consultas textuais complexas e recuperar informações diretamente de bancos de dados utilizando Python, SQL e a API do Genie no Databricks, reduzindo em cerca de 80% o tempo gasto pelas equipes na busca manual de dados",
+      "Implementação de sistema automatizado de avaliação e resumo de currículos para o RH, utilizando embeddings, prompting avançado e fluxos de LLMOps para aumentar a precisão da triagem e diminuir gargalos em processos seletivos",
+      "Desenvolvimento de pipeline de Visão Computacional com segmentação e classificação de SKUs a partir de fotos capturadas via celular, automatizando identificação de produtos com ganho de cerca de 40% na eficiência operacional"
     ],
-    "technologies": ["Python", "PyTorch", "YOLO", "Azure ML", "LangChain", "OpenAI", "Metric Learning", "Séries Temporais"],
-    "projects": ["Segmentação e Classificação de SKUs", "Sistema de RAG para Atendimento de Chamados"]
+    "technologies": ["Python", "SQL", "Docker", "Databricks", "Azure", "Git", "LLMs", "Embeddings", "Chatbots", "LLMOps", "PyTorch", "YOLO"],
+    "projects": ["Chatbot Corporativo com Genie API", "Triagem Automatizada de CVs com LLMOps", "Segmentação e Classificação de SKUs"]
   }
 ]

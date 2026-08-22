@@ -1,1 +1,20 @@
-[]
+[
+  {
+    "id": "pub-1",
+    "title": "Benchmarking Spatial, Spectral, and Self-Supervised Cues for Face Forgery Detection under Realistic Degradation",
+    "authors": ["Lucas de Oliveira Cunha", "et al."],
+    "year": "2026",
+    "venue": "39th Conference on Graphics, Patterns and Images (SIBGRAPI 2026)",
+    "abstract": "A systematic benchmark assessing the generalization ability and forensic robustness of spatial convolutional representations, frequency-domain spectral maps (FFT), and self-supervised foundation models (DINOv3) for deepfake detection under real-world degradation and compression artifacts.",
+    "tags": ["Deepfake Detection", "Self-Supervised Learning", "DINOv3", "Computer Vision", "Fourier Analysis"]
+  },
+  {
+    "id": "pub-2",
+    "title": "An Ensemble-Based Self-Taught Learning Approach for Parking Space Classification Under Limited Data",
+    "authors": ["Lucas de Oliveira Cunha", "Andre G. Hochuli"],
+    "year": "2026",
+    "venue": "IEEE International Conference on Systems, Man, and Cybernetics (SMC 2026)",
+    "abstract": "An ensemble self-taught learning framework leveraging unsupervised multi-layer autoencoders for robust visual feature extraction in intelligent parking management systems, overcoming label scarcity constraints to reach state-of-the-art accuracy on PKLot and CNR-EXT benchmarks.",
+    "tags": ["Self-Taught Learning", "Autoencoders", "Smart Parking", "Computer Vision", "Few-Shot Learning"]
+  }
+]

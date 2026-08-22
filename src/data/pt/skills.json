@@ -1,7 +1,7 @@
 [
-  { "name": "Programação", "icon": "code", "skills": ["Python", "SQL", "JavaScript", "Bash"] },
-  { "name": "Machine Learning", "icon": "brain", "skills": ["LLMs", "VLMs", "Llama", "LangChain", "OpenAI", "Fine-tuning"] },
-  { "name": "Visão Computacional", "icon": "eye", "skills": ["PyTorch", "YOLO", "Metric Learning", "OCR", "PyTesseract"] },
-  { "name": "MLOps / Cloud", "icon": "cloud", "skills": ["Azure ML", "MLOps", "LLMOps", "Docker", "Git", "Linux"] },
-  { "name": "Pesquisa", "icon": "flask-conical", "skills": ["Document Understanding", "Adaptação de Domínio", "Few-shot Learning", "Modelos Multimodais", "RAG", "Séries Temporais"] }
+  { "name": "Visão Computacional (Especialidade)", "icon": "eye", "skills": ["PyTorch", "YOLO", "Autoencoders (VAE / Denoising)", "CNNs", "DINOv3 / ViT", "OpenCV", "Albumentations", "Metric Learning", "Análise Espectral (FFT)"] },
+  { "name": "LLMs, Agentes & IA Generativa", "icon": "brain", "skills": ["LLMs", "Embeddings", "Prompting Avançado", "Chatbots", "Databricks (Genie API)", "LLaMA", "Fine-Tuning", "LangChain", "Transformers"] },
+  { "name": "Linguagens & Bibliotecas Científicas", "icon": "code", "skills": ["Python", "SQL", "TensorFlow", "Keras", "Scikit-Learn", "NumPy", "Pandas", "Matplotlib", "TypeScript"] },
+  { "name": "MLOps, Cloud & Infraestrutura", "icon": "cloud", "skills": ["Databricks", "Azure", "Docker", "Podman", "LLMOps", "MLOps", "Git / GitHub", "Linux", "Bash"] },
+  { "name": "Pesquisa & Métodos Avançados", "icon": "flask-conical", "skills": ["Adaptação de Domínio", "Fusão de Representações", "Few-Shot Learning", "Self-Taught Learning", "Modelos Federados", "Data Augmentation", "LaTeX"] }
 ]

@@ -1,34 +1,49 @@
 {
   "lines": [
-    { "area": "Document Understanding", "description": "Research on multimodal models applied to documents, focusing on information extraction and layout understanding." },
-    { "area": "Computer Vision", "description": "Work on computer vision with limited data, object segmentation and classification in images." },
-    { "area": "Domain Adaptation", "description": "Scientific initiation focused on domain adaptation techniques to improve model generalization." },
-    { "area": "LLMs and VLMs", "description": "Application and research of large language models and vision-language models in AI pipelines for documents." }
+    { "area": "Document Understanding & Multimodality", "description": "Research and engineering of vision-language architectures (VLMs/LLMs) applied to structured information extraction, complex layout reasoning, and neural OCR." },
+    { "area": "Forensic Robustness & Deepfake Detection", "description": "Investigation into the generalization capacity of spatial features, frequency-domain spectral cues (FFT), and self-supervised foundation backbones (DINOv3) under real-world corruptions." },
+    { "area": "Self-Supervised & Data-Constrained Learning", "description": "Exploration of deep autoencoder ensembles, Self-Taught Learning, and Few-Shot Learning frameworks to train high-performing models in low-annotation regimes." },
+    { "area": "Domain Adaptation & Representation Fusion", "description": "Techniques for cross-domain transfer learning, domain shift mitigation, and multimodal feature fusion across distributed environments." }
   ],
   "projects": [
     {
       "id": "res-1",
-      "title": "Domain Adaptation for Computer Vision",
-      "lab": "Lasin — PUCPR",
-      "period": "2024 — 2025",
-      "description": "Scientific initiation investigating domain adaptation techniques applied to computer vision tasks, aiming to improve model generalization across different data distributions.",
-      "areas": ["Domain Adaptation", "Computer Vision"]
+      "title": "Representation Fusion for Domain Adaptation of Deep Models in Intelligent Parking Space Monitoring",
+      "lab": "PUCPR — Lasin",
+      "period": "07/2025 — Present",
+      "description": "Applied research on representation fusion and domain adaptation for smart parking monitoring systems. Implementing and benchmarking Autoencoders (VAE, Denoising, and deep variants), CNNs, and federated models, establishing end-to-end data augmentation pipelines to mitigate domain discrepancies. Work spans empirical experimentation, metric evaluation, result visualization, and pipeline containerization using Podman for reproducibility.",
+      "areas": ["Representation Fusion", "Domain Adaptation", "Autoencoders", "Computer Vision", "Podman"]
     },
     {
       "id": "res-2",
-      "title": "Computer Vision with Limited Data",
-      "lab": "Lasin — PUCPR",
-      "period": "2025 — 2026",
-      "description": "Scientific initiation exploring strategies to train computer vision models in low-data scenarios, including data augmentation and transfer learning techniques.",
-      "areas": ["Computer Vision", "Few-shot Learning"]
+      "title": "Domain Adaptation in Deep Classification Models Applied to Parking Space Detection",
+      "lab": "CNPq / PUCPR — Lasin",
+      "period": "03/2024 — 07/2025",
+      "description": "Development of domain adaptation and few-shot learning methods for deep computer vision models applied to parking spot detection. Modeled CNNs, Autoencoders, and classical classifiers while exploring preprocessing and data augmentation techniques to boost stability and accuracy under low-data regimes, achieving results comparable to literature benchmarks.",
+      "areas": ["Domain Adaptation", "Few-Shot Learning", "CNNs", "Computer Vision", "Autoencoders"]
     }
   ],
-  "publications": [],
+  "publications": [
+    {
+      "title": "Benchmarking Spatial, Spectral, and Self-Supervised Cues for Face Forgery Detection under Realistic Degradation",
+      "venue": "39th Conference on Graphics, Patterns and Images (SIBGRAPI 2026)",
+      "year": "2026",
+      "authors": ["Lucas de Oliveira Cunha", "et al."],
+      "abstract": "A comprehensive benchmark assessing the generalization ability and forensic robustness of spatial convolutions, spectral cues (FFT), and self-supervised representations (DINOv3) under realistic degradations."
+    },
+    {
+      "title": "An Ensemble-Based Self-Taught Learning Approach for Parking Space Classification Under Limited Data",
+      "venue": "IEEE International Conference on Systems, Man, and Cybernetics (SMC 2026)",
+      "year": "2026",
+      "authors": ["Lucas de Oliveira Cunha", "Andre G. Hochuli"],
+      "abstract": "An ensemble self-taught learning framework leveraging unsupervised autoencoder representations for robust parking space occupancy classification in data-constrained environments."
+    }
+  ],
   "futureInterests": [
-    "Document Understanding",
-    "Multimodal Models",
-    "Domain Adaptation",
-    "OCR with LLMs",
-    "RAG Applied to Documents"
+    "Multimodal Document Understanding",
+    "Spatial-Spectral Cross-Attention",
+    "Foundation Vision Models (DINOv3 / ViT)",
+    "Test-Time Domain Adaptation (TTA)",
+    "LLMs and VLMs for Unstructured Enterprise Data"
   ]
 }

@@ -1,20 +1,20 @@
 {
-  "summary": "Computer Science student (8th semester) and visiting master's student in Informatics, focused on LLMs, VLMs, and Computer Vision applied to documents. I work professionally on AI solutions for tax documents (OCR, VLMs, LLMs) and research multimodal models, computer vision, and domain adaptation.",
+  "summary": "Machine Learning Developer and Researcher specializing in Computer Vision, graduating in Computer Science and participating in the Graduate Program in Informatics (PPGIA / PUCPR) as a visiting master's student. Experienced in building applied Artificial Intelligence solutions including Computer Vision systems, LLMs, intelligent agents, and enterprise automations. Currently working as an ML Developer at DATAKIE leading technical and architectural decisions for the ML pipeline, while conducting academic research (PIBIC / CNPq / PUCPR) on domain adaptation, autoencoders, and deep architectures.",
   "highlights": [
-    { "label": "Education", "value": "Computer Science", "icon": "graduation-cap" },
-    { "label": "Research", "value": "LLMs, VLMs / Computer Vision", "icon": "flask-conical" },
-    { "label": "Current Focus", "value": "Document Understanding", "icon": "brain-circuit" },
-    { "label": "Experience", "value": "Research & Industry", "icon": "briefcase" }
+    { "label": "Specialty", "value": "Computer Vision", "icon": "eye" },
+    { "label": "Focus", "value": "Machine Learning & LLMs", "icon": "brain-circuit" },
+    { "label": "Research", "value": "Domain Adaptation & Autoencoders", "icon": "flask-conical" },
+    { "label": "Education", "value": "Computer Science & PPGIA", "icon": "graduation-cap" }
   ],
   "interests": [
     "Computer Vision",
-    "Document Understanding",
-    "LLMs",
-    "VLMs",
     "Domain Adaptation",
-    "OCR",
-    "Multimodal Models",
-    "MLOps"
+    "Autoencoders (VAE, Denoising)",
+    "Large Language Models (LLMs)",
+    "Intelligent Agents & Chatbots",
+    "Few-Shot Learning",
+    "Document Understanding & OCR",
+    "LLMOps & MLOps"
   ],
-  "goals": "To professionalize myself for research and apply my knowledge across diverse areas throughout my academic and professional career."
+  "goals": "To research and build state-of-the-art solutions in Computer Vision and Artificial Intelligence, uniting rigorous scientific experimentation with scalable, high-impact production pipelines."
 }

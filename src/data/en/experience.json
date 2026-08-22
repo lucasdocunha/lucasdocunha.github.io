@@ -1,31 +1,32 @@
 [
   {
     "id": "exp-1",
-    "role": "Machine Learning Engineer",
+    "role": "Machine Learning Developer",
     "company": "DATAKIE",
     "period": "06/2026 — Present",
-    "location": "Curitiba, Brazil",
-    "description": "Lead developer on a joint research project with FINEP and SUFRAMA for tax document analysis.",
+    "location": "Curitiba, PR — Brazil",
+    "description": "Developing ML solutions and driving technical and architectural decisions for intelligent tax document processing (FINEP / SUFRAMA partnership).",
     "responsibilities": [
-      "Developing the full ML pipeline, from NLP classification models, OCR, fine-tuning, Llama, and local models",
-      "Managing the entire MLOps and LLMOps infrastructure",
-      "Applied research and technical project decisions"
+      "End-to-end Machine Learning pipeline development, spanning NLP classification models, intelligent OCR, fine-tuning open-source models (LLaMA family), and local inference",
+      "Making technical decisions on model architectures and establishing MLOps and LLMOps practices",
+      "Conducting hands-on model experimentation, robustness evaluation, and applied research for tax document analysis"
     ],
-    "technologies": ["Python", "SQL", "Llama", "PyTesseract", "OCR", "LLMs"],
-    "projects": ["Tax Document Analysis (FINEP/SUFRAMA)"]
+    "technologies": ["Python", "PyTorch", "LLaMA", "Transformers", "OCR", "PyTesseract", "MLOps", "LLMOps", "SQL"],
+    "projects": ["Tax Document Intelligence (FINEP / SUFRAMA)"]
   },
   {
     "id": "exp-2",
     "role": "Data Scientist (Intern)",
     "company": "MBRF",
     "period": "10/2025 — 06/2026",
-    "location": "Curitiba, Brazil",
-    "description": "Worked across multiple business areas, focusing on computer vision and RAG systems.",
+    "location": "Curitiba, PR — Brazil",
+    "description": "Worked at the AI Center of Operational Excellence (COEIA), building LLM-based solutions, intelligent agents, Computer Vision systems, and enterprise automations to streamline internal workflows and increase operational efficiency.",
     "responsibilities": [
-      "Computer vision project for SKU segmentation and classification from mobile photos, automating product identification and pricing, increasing operational efficiency by approximately 40%",
-      "End-to-end RAG system with LangChain, integrating vector databases, relational databases, and corporate APIs (SAP, ServiceNow, jurisprudence databases), supporting multi-format file reading for help desk ticket automation"
+      "Engineered an enterprise chatbot integrated with Microsoft Teams, capable of interpreting complex textual queries and retrieving data directly from databases via Python, SQL, and the Databricks Genie API, reducing manual lookup time by ~80%",
+      "Developed an automated resume screening and summarization system for HR using embeddings, advanced prompting, and LLMOps workflows to enhance triage accuracy and eliminate recruitment bottlenecks",
+      "Built a Computer Vision pipeline for SKU segmentation and classification from mobile camera captures, automating product identification and increasing operational efficiency by ~40%"
     ],
-    "technologies": ["Python", "PyTorch", "YOLO", "Azure ML", "LangChain", "OpenAI", "Metric Learning", "Time Series"],
-    "projects": ["SKU Segmentation and Classification", "RAG System for Help Desk Automation"]
+    "technologies": ["Python", "SQL", "Docker", "Databricks", "Azure", "Git", "LLMs", "Embeddings", "Chatbots", "LLMOps", "PyTorch", "YOLO"],
+    "projects": ["Enterprise Teams Chatbot with Genie API", "Automated HR Resume Screening with LLMOps", "Visual SKU Segmentation & Classification"]
   }
 ]

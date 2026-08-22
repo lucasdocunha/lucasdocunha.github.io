@@ -1,46 +1,55 @@
 [
   {
     "id": "proj-1",
-    "title": "Análise de Documentos Fiscais com IA",
-    "description": "Pipeline completo de ML para análise de documentos fiscais, integrando OCR, modelos de classificação NLP, fine-tuning de Llama e modelos locais. Projeto em conjunto com FINEP e SUFRAMA.",
-    "category": "Machine Learning",
-    "technologies": ["Python", "Llama", "PyTesseract", "OCR", "SQL"],
+    "title": "Reconhecimento e Segmentação Visual de SKUs",
+    "description": "Solução de Visão Computacional para detecção, recorte e classificação instantânea de produtos (SKUs) a partir de imagens capturadas por celulares no varejo. Incorporação de técnicas de Metric Learning e arquiteturas YOLO, automatizando a auditoria e aumentando em cerca de 40% a eficiência operacional.",
+    "category": "Visão Computacional",
+    "technologies": ["Python", "PyTorch", "YOLO", "Metric Learning", "OpenCV", "Azure ML"],
     "github": "",
     "featured": true
   },
   {
     "id": "proj-2",
-    "title": "Segmentação e Classificação de SKUs",
-    "description": "Sistema de visão computacional para segmentação e classificação de SKUs a partir de fotos enviadas via celular, automatizando identificação de produtos e precificação com aumento de 40% na eficiência operacional.",
-    "category": "Visão Computacional",
-    "technologies": ["Python", "PyTorch", "YOLO", "Metric Learning", "Azure ML"],
+    "title": "Chatbot Corporativo com Databricks Genie",
+    "description": "Assistente inteligente corporativo integrado ao Microsoft Teams, capaz de interpretar consultas textuais complexas em linguagem natural e recuperar dados analíticos diretamente via Python, SQL e API do Genie no Databricks, reduzindo em cerca de 80% o tempo gasto na busca manual de dados.",
+    "category": "Machine Learning",
+    "technologies": ["Python", "SQL", "Databricks", "Genie API", "Microsoft Teams", "LLMs"],
     "github": "",
     "featured": true
   },
   {
     "id": "proj-3",
-    "title": "Sistema de RAG para Atendimento",
-    "description": "Sistema de RAG end-to-end com LangChain, integrando banco vetorial, bancos relacionais e APIs corporativas (SAP, ServiceNow, jurisprudência) para automação do atendimento de chamados.",
+    "title": "Triagem e Avaliação de CVs com LLMOps",
+    "description": "Sistema automatizado de análise, pontuação e resumo de currículos para o RH. Utiliza modelos de embeddings, prompting avançado e fluxos estruturados de LLMOps para elevar a assertividade da triagem e mitigar gargalos em processos seletivos de grande volume.",
     "category": "Machine Learning",
-    "technologies": ["Python", "LangChain", "OpenAI", "SAP", "ServiceNow"],
+    "technologies": ["Python", "LLMs", "Embeddings", "LLMOps", "Azure", "Docker"],
     "github": "",
     "featured": false
   },
   {
     "id": "proj-4",
-    "title": "Adaptação de Domínio em Visão Computacional",
-    "description": "Pesquisa em técnicas de adaptação de domínio aplicadas a tarefas de visão computacional, buscando melhorar a generalização de modelos em diferentes distribuições de dados.",
-    "category": "Pesquisa",
-    "technologies": ["Python", "PyTorch", "Transfer Learning"],
+    "title": "Processamento Inteligente de Documentos Fiscais",
+    "description": "Pipeline de Machine Learning para processamento e interpretação semântica de documentos fiscais. Integração de módulos de OCR, classificação com NLP, fine-tuning de modelos abertos (família LLaMA) e inferência local. Projeto em parceria com FINEP e SUFRAMA.",
+    "category": "Machine Learning",
+    "technologies": ["Python", "PyTorch", "LLaMA", "OCR", "PyTesseract", "MLOps", "SQL"],
     "github": "",
     "featured": false
   },
   {
     "id": "proj-5",
-    "title": "Visão Computacional com Poucos Dados",
-    "description": "Exploração de estratégias para treinar modelos de visão computacional em cenários com poucos dados anotados, incluindo data augmentation e transfer learning.",
+    "title": "Robustez Forense em Detecção de Deepfakes (SIBGRAPI 2026)",
+    "description": "Pesquisa e benchmark avaliando a robustez de extratores espaciais convolucionais, mapas espectrais no domínio da frequência (FFT) e modelos auto-supervisionados (DINOv3) na detecção de manipulações faciais sob degradações do mundo real.",
     "category": "Pesquisa",
-    "technologies": ["Python", "PyTorch", "Few-shot Learning"],
+    "technologies": ["Python", "PyTorch", "DINOv3", "FFT", "Deepfake Forensics"],
+    "github": "",
+    "featured": true
+  },
+  {
+    "id": "proj-6",
+    "title": "Ensemble Self-Taught para Estacionamentos (IEEE SMC 2026)",
+    "description": "Framework baseado em Self-Taught Learning com comitês de autoencoders não-supervisionados para classificação de ocupação de vagas em cenários de alta restrição de dados rotulados, com validação nos benchmarks PKLot e CNR-EXT.",
+    "category": "Pesquisa",
+    "technologies": ["Python", "TensorFlow", "Autoencoders", "Ensemble", "PKLot", "CNR-EXT"],
     "github": "",
     "featured": false
   }

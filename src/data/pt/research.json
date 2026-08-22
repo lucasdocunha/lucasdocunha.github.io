@@ -1,34 +1,49 @@
 {
   "lines": [
-    { "area": "Document Understanding", "description": "Pesquisa em modelos multimodais aplicados a documentos, com foco em extração de informações e compreensão de layout." },
-    { "area": "Visão Computacional", "description": "Trabalhos em visão computacional com poucos dados, segmentação e classificação de objetos em imagens." },
-    { "area": "Adaptação de Domínio", "description": "Iniciação científica focada em técnicas de adaptação de domínio para melhorar generalização de modelos." },
-    { "area": "LLMs e VLMs", "description": "Aplicação e pesquisa de grandes modelos de linguagem e modelos visuais em pipelines de IA para documentos." }
+    { "area": "Document Understanding & Multimodalidade", "description": "Pesquisa e desenvolvimento de modelos visuais e de linguagem (VLMs/LLMs) aplicados à extração estruturada de entidades, análise de layouts complexos e OCR neural." },
+    { "area": "Robustez Forense & Detecção de Deepfakes", "description": "Investigação da generalização de extratores espaciais, espectrais (FFT) e modelos fundacionais (DINOv3) contra perturbações e compressões adversas." },
+    { "area": "Aprendizado Auto-Supervisionado & Restrição de Dados", "description": "Exploração de arquiteturas de autoencoders, Self-Taught Learning e Few-Shot Learning para treinamento de modelos eficientes em cenários com escassez de anotações." },
+    { "area": "Adaptação de Domínio & Aprendizado Federado", "description": "Métodos para transferência de conhecimento, mitigação de domain shift e fusão de representações em cenários distribuídos." }
   ],
   "projects": [
     {
       "id": "res-1",
-      "title": "Adaptação de Domínio para Visão Computacional",
-      "lab": "Lasin — PUCPR",
-      "period": "2024 — 2025",
-      "description": "Iniciação científica investigando técnicas de adaptação de domínio aplicadas a tarefas de visão computacional, buscando melhorar a generalização de modelos em cenários com distribuições de dados distintas.",
-      "areas": ["Adaptação de Domínio", "Visão Computacional"]
+      "title": "Fusão de representações para adaptação de domínio de modelos profundos no monitoramento inteligente de vagas de estacionamento",
+      "lab": "PUCPR — Lasin",
+      "period": "07/2025 — Atual",
+      "description": "Pesquisa aplicada sobre fusão de representações e adaptação de domínio para monitoramento inteligente de vagas de estacionamento. Implementação e avaliação de Autoencoders (VAE, Denoising e variantes profundas), CNNs e modelos federados, criando pipelines completos de data augmentation para corrigir discrepâncias entre domínios. Atuação em experimentação empírica, análise de métricas, visualização e containerização de pipelines com Podman para padronização e reprodutibilidade.",
+      "areas": ["Fusão de Representações", "Adaptação de Domínio", "Autoencoders", "Visão Computacional", "Podman"]
     },
     {
       "id": "res-2",
-      "title": "Visão Computacional com Poucos Dados",
-      "lab": "Lasin — PUCPR",
-      "period": "2025 — 2026",
-      "description": "Iniciação científica explorando estratégias para treinar modelos de visão computacional em cenários com poucos dados anotados, incluindo técnicas de data augmentation e transfer learning.",
-      "areas": ["Visão Computacional", "Few-shot Learning"]
+      "title": "Adaptação de domínio em modelos profundos de classificação aplicados a vagas de estacionamento",
+      "lab": "CNPq / PUCPR — Lasin",
+      "period": "03/2024 — 07/2025",
+      "description": "Desenvolvimento de técnicas de adaptação de domínio e few-shot learning para modelos profundos de visão computacional aplicados à detecção de vagas. Modelagem de CNNs, Autoencoders e classificadores tradicionais, explorando estratégias de pré-processamento e aumento de dados para melhorar estabilidade e precisão em cenários com conjuntos limitados de imagens, atingindo resultados comparáveis aos da literatura mesmo com datasets pequenos.",
+      "areas": ["Adaptação de Domínio", "Few-Shot Learning", "CNNs", "Visão Computacional", "Autoencoders"]
     }
   ],
-  "publications": [],
+  "publications": [
+    {
+      "title": "Benchmarking Spatial, Spectral, and Self-Supervised Cues for Face Forgery Detection under Realistic Degradation",
+      "venue": "39th Conference on Graphics, Patterns and Images (SIBGRAPI 2026)",
+      "year": "2026",
+      "authors": ["Lucas de Oliveira Cunha", "et al."],
+      "abstract": "Benchmark detalhado avaliando a robustez de representações convolucionais, análise espectral (FFT) e modelos auto-supervisionados (DINOv3) na detecção forense sob degradações reais."
+    },
+    {
+      "title": "An Ensemble-Based Self-Taught Learning Approach for Parking Space Classification Under Limited Data",
+      "venue": "IEEE International Conference on Systems, Man, and Cybernetics (SMC 2026)",
+      "year": "2026",
+      "authors": ["Lucas de Oliveira Cunha", "Andre G. Hochuli"],
+      "abstract": "Framework de Self-Taught Learning com comitês de autoencoders para classificação de ocupação de vagas com dados limitados, atingindo resultados estado da arte."
+    }
+  ],
   "futureInterests": [
-    "Document Understanding",
-    "Modelos Multimodais",
-    "Adaptação de Domínio",
-    "OCR com LLMs",
-    "RAG Aplicado a Documentos"
+    "Multimodal Document Understanding",
+    "Cross-Attention Espaço-Espectral",
+    "Foundation Models (DINOv3 / ViT)",
+    "Adaptação de Domínio em Tempo de Teste (TTA)",
+    "LLMs e VLMs para Dados Não-Estruturados"
   ]
 }

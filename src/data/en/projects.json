@@ -1,46 +1,55 @@
 [
   {
     "id": "proj-1",
-    "title": "Tax Document Analysis with AI",
-    "description": "Full ML pipeline for tax document analysis, integrating OCR, NLP classification models, Llama fine-tuning, and local models. Joint project with FINEP and SUFRAMA.",
-    "category": "Machine Learning",
-    "technologies": ["Python", "Llama", "PyTesseract", "OCR", "SQL"],
+    "title": "Visual SKU Recognition & Segmentation System",
+    "description": "Computer Vision platform for automated product (SKU) detection, bounding-box segmentation, and fine-grained classification from mobile camera captures in retail environments. Leveraged Metric Learning and state-of-the-art YOLO backbones to streamline auditing and pricing workflows, boosting operational efficiency by 40%.",
+    "category": "Computer Vision",
+    "technologies": ["Python", "PyTorch", "YOLO", "Metric Learning", "Azure ML", "OpenCV"],
     "github": "",
     "featured": true
   },
   {
     "id": "proj-2",
-    "title": "SKU Segmentation and Classification",
-    "description": "Computer vision system for SKU segmentation and classification from mobile photos, automating product identification and pricing with a 40% increase in operational efficiency.",
-    "category": "Computer Vision",
-    "technologies": ["Python", "PyTorch", "YOLO", "Metric Learning", "Azure ML"],
+    "title": "Enterprise Teams Chatbot with Databricks Genie",
+    "description": "Intelligent enterprise assistant integrated into Microsoft Teams, interpreting complex natural language queries and fetching analytical data directly from databases via Python, SQL, and the Databricks Genie API, reducing manual data lookup time by ~80%.",
+    "category": "Machine Learning",
+    "technologies": ["Python", "SQL", "Databricks", "Genie API", "Microsoft Teams", "LLMs"],
     "github": "",
     "featured": true
   },
   {
     "id": "proj-3",
-    "title": "RAG System for Help Desk",
-    "description": "End-to-end RAG system with LangChain, integrating vector databases, relational databases, and corporate APIs (SAP, ServiceNow, jurisprudence) for help desk ticket automation.",
+    "title": "Automated HR Resume Screening with LLMOps",
+    "description": "Automated resume evaluation and summarization system for recruitment teams. Leveraged dense embeddings, advanced prompting, and structured LLMOps workflows to enhance triage accuracy and eliminate candidate evaluation bottlenecks.",
     "category": "Machine Learning",
-    "technologies": ["Python", "LangChain", "OpenAI", "SAP", "ServiceNow"],
+    "technologies": ["Python", "LLMs", "Embeddings", "LLMOps", "Azure", "Docker"],
     "github": "",
     "featured": false
   },
   {
     "id": "proj-4",
-    "title": "Domain Adaptation in Computer Vision",
-    "description": "Research on domain adaptation techniques applied to computer vision tasks, aiming to improve model generalization across different data distributions.",
-    "category": "Research",
-    "technologies": ["Python", "PyTorch", "Transfer Learning"],
+    "title": "Intelligent Tax Document Processing",
+    "description": "Machine Learning pipeline for extraction and semantic analysis of tax documents. Integrates OCR modules, NLP classification, fine-tuned open-source LLMs (LLaMA family), and secure local edge inference. Partnered with FINEP and SUFRAMA.",
+    "category": "Machine Learning",
+    "technologies": ["Python", "PyTorch", "LLaMA", "OCR", "PyTesseract", "MLOps", "SQL"],
     "github": "",
     "featured": false
   },
   {
     "id": "proj-5",
-    "title": "Computer Vision with Limited Data",
-    "description": "Exploration of strategies to train computer vision models in low-data scenarios, including data augmentation and transfer learning.",
+    "title": "Forensic Robustness in Face Forgery Detection (SIBGRAPI 2026)",
+    "description": "In-depth empirical investigation benchmarking spatial convolutional networks, frequency-domain spectral analysis (FFT), and self-supervised Vision Transformers (DINOv3) under real-world image degradation, compression artifacts, and cross-dataset distribution shifts.",
     "category": "Research",
-    "technologies": ["Python", "PyTorch", "Few-shot Learning"],
+    "technologies": ["Python", "PyTorch", "DINOv3", "FFT Analysis", "Xception", "Deepfake Forensics"],
+    "github": "",
+    "featured": true
+  },
+  {
+    "id": "proj-6",
+    "title": "Self-Taught Ensemble for Smart Parking (IEEE SMC 2026)",
+    "description": "Unsupervised Self-Taught Learning framework leveraging multi-layer autoencoder ensembles for parking space occupancy classification in low-label data regimes, reaching state-of-the-art performance on the PKLot and CNR-EXT benchmarks.",
+    "category": "Research",
+    "technologies": ["Python", "TensorFlow", "Autoencoders", "Ensemble", "PKLot", "CNR-EXT"],
     "github": "",
     "featured": false
   }
