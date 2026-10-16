@@ -5,8 +5,8 @@
       "description": "Pesquisa e experimentação com modelos multimodais (VLMs) e Small Language Models (SLMs) aplicados à compreensão de documentos complexos, OCR neural e extração estruturada."
     },
     {
-      "area": "Visão Computacional, 3D & Segmentação Robusta",
-      "description": "Investigação de arquiteturas para segmentação semântica e por instância, visão 3D, representações espaço-espectrais (FFT) e modelos fundacionais (DINOv3)."
+      "area": "Visão Computacional & Segmentação Robusta",
+      "description": "Investigação de arquiteturas para segmentação semântica e por instância, representações espaço-espectrais (FFT) e modelos fundacionais (DINOv3)."
     },
     {
       "area": "High Performance Computing (HPC) & Slurm",
@@ -148,7 +148,7 @@
   ],
   "futureInterests": [
     "Modelos Multimodais Eficientes (VLMs & SLMs)",
-    "Visão Computacional 3D & Segmentação com SAM",
+    "Segmentação Robusta & Foundation Models (SAM)",
     "Orquestração em Supercomputadores (HPC & Slurm)",
     "Modelos Leves e Otimização para Borda (Edge AI)",
     "Adaptação de Domínio em Tempo de Teste (TTA)",

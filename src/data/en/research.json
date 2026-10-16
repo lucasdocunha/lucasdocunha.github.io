@@ -5,8 +5,8 @@
       "description": "Research and development of multimodal models (VLMs) and Small Language Models (SLMs) applied to structured document parsing, complex layout reasoning, and neural OCR."
     },
     {
-      "area": "Computer Vision, 3D & Robust Segmentation",
-      "description": "Investigation into semantic and instance segmentation, 3D vision, spatial-spectral representations (FFT), and foundational backbones (DINOv3)."
+      "area": "Computer Vision & Robust Segmentation",
+      "description": "Investigation into semantic and instance segmentation, spatial-spectral representations (FFT), and foundational backbones (DINOv3)."
     },
     {
       "area": "High Performance Computing (HPC) & Slurm",
@@ -148,7 +148,7 @@
   ],
   "futureInterests": [
     "Efficient Multimodal Models (VLMs & SLMs)",
-    "3D Computer Vision & SAM-based Segmentation",
+    "Robust Segmentation & Foundation Models (SAM)",
     "Supercomputing Orchestration (HPC & Slurm)",
     "Lightweight Models & Edge AI Optimization",
     "Test-Time Domain Adaptation (TTA)",
