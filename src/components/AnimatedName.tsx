@@ -12,6 +12,8 @@ interface AnimatedNameProps {
 
 export default function AnimatedName({ name }: AnimatedNameProps) {
   const root = useRef<HTMLSpanElement>(null);
+  const waveTlRef = useRef<gsap.core.Timeline | null>(null);
+  const resumeTimerRef = useRef<gsap.core.Tween | null>(null);
   const total = Array.from(name).length;
 
   const { contextSafe } = useGSAP(
@@ -20,6 +22,7 @@ export default function AnimatedName({ name }: AnimatedNameProps) {
       const mm = gsap.matchMedia();
 
       mm.add('(prefers-reduced-motion: no-preference)', () => {
+        // Initial entrance on first load
         if (!introPlayed) {
           gsap.from(visuals, {
             opacity: 0,
@@ -34,12 +37,61 @@ export default function AnimatedName({ name }: AnimatedNameProps) {
           });
           introPlayed = true;
         }
+
+        // Autonomous wave animation running periodically on its own
+        const wave = gsap.timeline({
+          repeat: -1,
+          repeatDelay: 2.8,
+          delay: 1.2,
+        });
+
+        wave.to(visuals, {
+          y: -8,
+          scale: 1.08,
+          duration: 0.28,
+          ease: 'sine.inOut',
+          stagger: {
+            each: 0.045,
+            yoyo: true,
+            repeat: 1,
+          },
+        });
+
+        waveTlRef.current = wave;
       });
 
-      return () => mm.revert();
+      return () => {
+        mm.revert();
+        waveTlRef.current?.kill();
+        resumeTimerRef.current?.kill();
+      };
     },
     { scope: root }
   );
+
+  // Pause autonomous wave when user begins interacting with the name
+  const handleContainerEnter = contextSafe(() => {
+    resumeTimerRef.current?.kill();
+    waveTlRef.current?.pause();
+  });
+
+  // Resume autonomous wave after cursor leaves
+  const handleContainerLeave = contextSafe(() => {
+    resumeTimerRef.current?.kill();
+    resumeTimerRef.current = gsap.delayedCall(1.8, () => {
+      if (!waveTlRef.current) return;
+      const visuals = gsap.utils.toArray<HTMLElement>('.name-char-visual');
+      gsap.to(visuals, {
+        y: 0,
+        scale: 1,
+        duration: 0.3,
+        overwrite: 'auto',
+        onComplete: () => {
+          waveTlRef.current?.resume();
+        },
+      });
+    });
+  });
 
   // Smooth letter hover interaction with neighbor dispersion (wave) effect
   const handleCharHover = contextSafe((charIndex: number) => {
@@ -110,7 +162,13 @@ export default function AnimatedName({ name }: AnimatedNameProps) {
   }, []);
 
   return (
-    <span ref={root} className="inline-block [perspective:800px]" aria-label={name}>
+    <span
+      ref={root}
+      onMouseEnter={handleContainerEnter}
+      onMouseLeave={handleContainerLeave}
+      className="inline-block [perspective:800px]"
+      aria-label={name}
+    >
       {words.map((word, w) => (
         <span key={w} className="inline-block whitespace-nowrap" aria-hidden="true">
           {Array.from(word.text).map((ch, c) => {

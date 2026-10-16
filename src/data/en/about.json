@@ -2,8 +2,8 @@
   "summary": "Researcher and Machine Learning Engineer with solid experience in applied Artificial Intelligence, Computer Vision, Multimodal Models, and High Performance Computing (HPC). Currently working as a Machine Learning Engineer at Datakie, leading technical and architectural decisions for machine learning and generative AI pipelines, alongside conducting scientific research in R&I projects and master's research (PPGIA/PUCPR). Specialized in Computer Vision (semantic and instance segmentation, 3D vision, OpenCV, and lightweight edge models), Multimodal Vision-Language Models (VLMs), Small Language Models (SLMs), and scientific experimentation on supercomputing (HPC) clusters orchestrated with Slurm and remote SSH environments.",
   "highlights": [
     { "label": "Specialty", "value": "Computer Vision & 3D", "icon": "eye" },
-    { "label": "Models", "value": "VLMs, SLMs & LLMs", "icon": "brain" },
-    { "label": "Research & HPC", "value": "Slurm, SSH & Multi-GPU", "icon": "server" },
+    { "label": "Focus", "value": "Machine Learning Engineer & HPC", "icon": "server" },
+    { "label": "Research", "value": "Document Understanding & VLMs", "icon": "flask-conical" },
     { "label": "Education", "value": "Computer Science & PPGIA", "icon": "graduation-cap" }
   ],
   "interests": [

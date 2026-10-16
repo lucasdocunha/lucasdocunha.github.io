@@ -1,4 +1,4 @@
-import { useState, useRef, type FormEvent } from 'react';
+import { useState, useRef, useEffect, type FormEvent } from 'react';
 import { Mail, Linkedin, Github, GraduationCap, Send, CheckCircle2, AlertCircle, Loader2 } from 'lucide-react';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
@@ -19,6 +19,34 @@ type Status = 'idle' | 'loading' | 'success' | 'error';
 function AnimatedQuestionMark() {
   const qRef = useRef<HTMLSpanElement>(null);
 
+  // Spin when the section comes into view
+  useEffect(() => {
+    if (!qRef.current) return;
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const [entry] = entries;
+        if (entry.isIntersecting && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+          gsap.fromTo(
+            qRef.current,
+            { rotate: 0, scale: 0.7 },
+            {
+              rotate: 360,
+              scale: 1,
+              duration: 0.85,
+              ease: 'back.out(2)',
+              overwrite: 'auto',
+            }
+          );
+        }
+      },
+      { threshold: 0.25 }
+    );
+
+    observer.observe(qRef.current);
+    return () => observer.disconnect();
+  }, []);
+
+  // Autonomous gentle floating animation
   useGSAP(
     () => {
       if (!qRef.current) return;
@@ -26,8 +54,7 @@ function AnimatedQuestionMark() {
       mm.add('(prefers-reduced-motion: no-preference)', () => {
         gsap.to(qRef.current, {
           y: -5,
-          rotate: 8,
-          duration: 1.8,
+          duration: 1.5,
           ease: 'sine.inOut',
           yoyo: true,
           repeat: -1,
@@ -38,28 +65,29 @@ function AnimatedQuestionMark() {
     { scope: qRef }
   );
 
-  const handleMouseEnter = () => {
+  // Interactive spin on hover / click
+  const handleInteract = () => {
     if (!qRef.current || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-    gsap.fromTo(
-      qRef.current,
-      { rotate: 0, scale: 1 },
-      {
-        rotate: 360,
-        scale: 1.25,
-        duration: 0.65,
-        ease: 'back.out(2)',
-        overwrite: 'auto',
-      }
-    );
+    gsap.to(qRef.current, {
+      rotate: '+=360',
+      scale: 1.25,
+      duration: 0.65,
+      ease: 'back.out(2)',
+      overwrite: 'auto',
+      onComplete: () => {
+        gsap.to(qRef.current, { scale: 1, duration: 0.25, ease: 'power2.out' });
+      },
+    });
   };
 
   return (
     <span
       ref={qRef}
-      onMouseEnter={handleMouseEnter}
+      onMouseEnter={handleInteract}
+      onClick={handleInteract}
       aria-hidden="true"
       title="Bora conversar?"
-      className="inline-flex items-center justify-center w-8 h-8 md:w-9 md:h-9 rounded-full bg-accent-500/15 border border-accent-500/35 text-accent-400 font-serif font-bold text-lg md:text-xl cursor-pointer align-middle ml-2.5 shadow-sm shadow-accent-500/20 select-none will-change-transform hover:bg-accent-500/30 transition-colors"
+      className="inline-block text-accent-400 cursor-pointer ml-1 select-none will-change-transform origin-center hover:text-accent-300 transition-colors"
     >
       ?
     </span>
@@ -112,7 +140,7 @@ export default function Contact() {
       id="contact"
       title={t.contact.title}
       heading={
-        <span className="inline-flex items-center flex-wrap">
+        <span className="inline-flex items-baseline">
           <span>{t.contact.heading}</span>
           <AnimatedQuestionMark />
         </span>

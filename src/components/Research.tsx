@@ -29,8 +29,8 @@ export default function Research() {
                   </span>
                 )}
                 {proj.status && (
-                  <span className="badge-accent gap-1.5">
-                    <span className="w-1.5 h-1.5 rounded-full bg-accent-400 animate-pulse-soft" />
+                  <span className={`gap-1.5 ${proj.status === 'Finalizado' || proj.status === 'Completed' ? 'badge text-gray-300 border-base-600' : 'badge-accent'}`}>
+                    <span className={`w-1.5 h-1.5 rounded-full ${proj.status === 'Finalizado' || proj.status === 'Completed' ? 'bg-secondary-400' : 'bg-accent-400 animate-pulse-soft'}`} />
                     {proj.status}
                   </span>
                 )}

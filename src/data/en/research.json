@@ -73,9 +73,10 @@
     {
       "id": "res-pibic-2",
       "type": "PIBIC",
+      "status": "Completed",
       "title": "Representation Fusion for Domain Adaptation of Deep Models in Intelligent Parking Space Monitoring",
       "lab": "PUCPR — Lasin",
-      "period": "07/2025 — Present",
+      "period": "07/2025 — 2026",
       "description": "Second undergraduate research grant. Applied research on representation fusion and domain adaptation for smart parking monitoring. Implementing and benchmarking Autoencoders (VAE, Denoising and deep variants), CNNs and federated models, with data augmentation pipelines to mitigate domain discrepancies and Podman containerization for reproducibility.",
       "areas": [
         "Representation Fusion",

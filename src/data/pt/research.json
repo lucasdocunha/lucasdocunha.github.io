@@ -73,9 +73,10 @@
     {
       "id": "res-pibic-2",
       "type": "PIBIC",
+      "status": "Finalizado",
       "title": "Fusão de representações para adaptação de domínio de modelos profundos no monitoramento inteligente de vagas de estacionamento",
       "lab": "PUCPR — Lasin",
-      "period": "07/2025 — Atual",
+      "period": "07/2025 — 2026",
       "description": "Segunda Iniciação Científica. Pesquisa aplicada sobre fusão de representações e adaptação de domínio para monitoramento inteligente de vagas. Implementação e avaliação de Autoencoders (VAE, Denoising e variantes profundas), CNNs e modelos federados, com pipelines de data augmentation para corrigir discrepâncias entre domínios e containerização com Podman para reprodutibilidade.",
       "areas": [
         "Fusão de Representações",
