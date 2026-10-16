@@ -7,36 +7,80 @@
   ],
   "projects": [
     {
-      "id": "res-1",
+      "id": "res-tcc",
+      "type": "Thesis",
+      "status": "Ongoing",
+      "title": "Face Forgery Detection under Realistic Degradation",
+      "lab": "Computer Science — PUCPR",
+      "period": "2025 — Present",
+      "description": "Undergraduate thesis that gave rise to the paper accepted at SIBGRAPI 2026. A unified framework to evaluate robustness, cross-dataset generalization and explainability of deepfake detectors, comparing CNNs, Vision Transformers and the self-supervised DINOv3 model across spatial and spectral (2D-FFT) representations. We are continuing the research to publish a more robust version of the work.",
+      "areas": ["Deepfake Detection", "DINOv3", "FFT", "Robustness", "Explainability"],
+      "links": [
+        { "label": "Paper (arXiv)", "url": "https://arxiv.org/abs/2609.01511" },
+        { "label": "GitHub", "url": "https://github.com/lucasdocunha/FaceForgery-Benchmark" }
+      ]
+    },
+    {
+      "id": "res-liga",
+      "type": "AI League",
+      "status": "Ongoing",
+      "title": "Document Understanding — ICDAR 2026 Challenges",
+      "lab": "Academic League of Artificial Intelligence — PUCPR",
+      "period": "Present",
+      "description": "We are currently researching Document Understanding at the AI League, continuing the ICDAR 2026 challenges: document comprehension with multimodal models (VLMs), layout analysis, OCR and structured information extraction. The League also takes part in other scientific competitions, such as the ICPR 2026 low-resolution license plate recognition challenge.",
+      "areas": ["Document Understanding", "VLMs", "OCR", "ICDAR 2026", "ICPR 2026"],
+      "links": [
+        { "label": "League GitHub", "url": "https://github.com/Liga-de-IA-PUCPR" }
+      ]
+    },
+    {
+      "id": "res-pibic-2",
+      "type": "PIBIC",
       "title": "Representation Fusion for Domain Adaptation of Deep Models in Intelligent Parking Space Monitoring",
       "lab": "PUCPR — Lasin",
       "period": "07/2025 — Present",
-      "description": "Applied research on representation fusion and domain adaptation for smart parking monitoring systems. Implementing and benchmarking Autoencoders (VAE, Denoising, and deep variants), CNNs, and federated models, establishing end-to-end data augmentation pipelines to mitigate domain discrepancies. Work spans empirical experimentation, metric evaluation, result visualization, and pipeline containerization using Podman for reproducibility.",
-      "areas": ["Representation Fusion", "Domain Adaptation", "Autoencoders", "Computer Vision", "Podman"]
+      "description": "Second undergraduate research grant. Applied research on representation fusion and domain adaptation for smart parking monitoring. Implementing and benchmarking Autoencoders (VAE, Denoising and deep variants), CNNs and federated models, with data augmentation pipelines to mitigate domain discrepancies and Podman containerization for reproducibility.",
+      "areas": ["Representation Fusion", "Domain Adaptation", "Autoencoders", "Federated Learning", "Podman"]
     },
     {
-      "id": "res-2",
+      "id": "res-pibic-1",
+      "type": "PIBIC",
       "title": "Domain Adaptation in Deep Classification Models Applied to Parking Space Detection",
       "lab": "CNPq / PUCPR — Lasin",
       "period": "03/2024 — 07/2025",
-      "description": "Development of domain adaptation and few-shot learning methods for deep computer vision models applied to parking spot detection. Modeled CNNs, Autoencoders, and classical classifiers while exploring preprocessing and data augmentation techniques to boost stability and accuracy under low-data regimes, achieving results comparable to literature benchmarks.",
-      "areas": ["Domain Adaptation", "Few-Shot Learning", "CNNs", "Computer Vision", "Autoencoders"]
+      "description": "First undergraduate research grant (CNPq). Development of domain adaptation and few-shot learning methods for computer vision models applied to parking spot detection. Modeled CNNs, Autoencoders and classical classifiers, achieving results comparable to the literature even with small datasets. This parking research line led to the paper published at IEEE SMC 2026.",
+      "areas": ["Domain Adaptation", "Few-Shot Learning", "CNNs", "Autoencoders"],
+      "links": [
+        { "label": "SMC Paper (arXiv)", "url": "https://arxiv.org/abs/2609.03258" }
+      ]
+    },
+    {
+      "id": "res-mestrado",
+      "type": "M.Sc.",
+      "title": "Vision-Language Models for Document Understanding",
+      "lab": "PPGIA — PUCPR (special student)",
+      "period": "2026 — Present",
+      "description": "Graduate courses and research at the Graduate Program in Informatics focused on Vision-Language Models (VLMs), OCR and document understanding, evaluating multimodal models on structured extraction and visual reasoning tasks.",
+      "areas": ["VLMs", "Document Understanding", "OCR", "Multimodality"]
     }
   ],
   "publications": [
     {
       "title": "Benchmarking Spatial, Spectral, and Self-Supervised Cues for Face Forgery Detection under Realistic Degradation",
-      "venue": "39th Conference on Graphics, Patterns and Images (SIBGRAPI 2026)",
+      "venue": "SIBGRAPI 2026",
       "year": "2026",
+      "status": "Accepted",
       "authors": ["Lucas de Oliveira Cunha", "et al."],
-      "abstract": "A comprehensive benchmark assessing the generalization ability and forensic robustness of spatial convolutions, spectral cues (FFT), and self-supervised representations (DINOv3) under realistic degradations."
+      "link": "https://arxiv.org/abs/2609.01511",
+      "abstract": "Originated from my thesis: a robustness benchmark of convolutional, spectral (FFT) and self-supervised (DINOv3) representations for face forgery detection under realistic degradations."
     },
     {
       "title": "An Ensemble-Based Self-Taught Learning Approach for Parking Space Classification Under Limited Data",
-      "venue": "IEEE International Conference on Systems, Man, and Cybernetics (SMC 2026)",
+      "venue": "IEEE SMC 2026",
       "year": "2026",
       "authors": ["Lucas de Oliveira Cunha", "Andre G. Hochuli"],
-      "abstract": "An ensemble self-taught learning framework leveraging unsupervised autoencoder representations for robust parking space occupancy classification in data-constrained environments."
+      "link": "https://arxiv.org/abs/2609.03258",
+      "abstract": "Self-taught learning with an autoencoder ensemble for parking space classification under limited labels, reaching 93%–96% accuracy in cross-dataset evaluation."
     }
   ],
   "futureInterests": [

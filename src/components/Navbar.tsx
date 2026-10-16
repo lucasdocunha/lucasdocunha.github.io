@@ -1,10 +1,11 @@
 import { useEffect, useState } from 'react';
+import { AnimatePresence, motion } from 'framer-motion';
 import { Menu, X, FileDown, Languages } from 'lucide-react';
 import { useLanguage } from '@/i18n/LanguageContext';
 import { getData } from '@/data';
 
 export default function Navbar() {
-  const { t, lang, toggleLang } = useLanguage();
+  const { t, lang, toggleLang, isSwitching } = useLanguage();
   const { profile } = getData(lang);
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
@@ -66,7 +67,9 @@ export default function Navbar() {
               href={item.href}
               className={`nav-link ${active === item.href ? 'text-accent-400' : ''}`}
             >
-              {item.label}
+              <motion.span animate={{ opacity: isSwitching ? 0 : 1 }} transition={{ duration: 0.2 }}>
+                {item.label}
+              </motion.span>
             </a>
           ))}
           <button
@@ -74,8 +77,10 @@ export default function Navbar() {
             className="flex items-center gap-1.5 text-sm text-gray-400 hover:text-accent-400 transition-colors px-2 py-1"
             aria-label="Toggle language"
           >
-            <Languages size={15} />
-            {t.langToggle.label}
+            <motion.span animate={{ rotate: isSwitching ? 180 : 0 }} transition={{ duration: 0.3 }} className="inline-flex">
+              <Languages size={15} />
+            </motion.span>
+            <LangLabel label={t.langToggle.label} />
           </button>
           <a href={profile.cvUrl} download className="btn-primary text-xs ml-2">
             <FileDown size={14} />
@@ -90,8 +95,10 @@ export default function Navbar() {
             className="flex items-center gap-1.5 text-sm text-gray-400 hover:text-accent-400 transition-colors"
             aria-label="Toggle language"
           >
-            <Languages size={15} />
-            {t.langToggle.label}
+            <motion.span animate={{ rotate: isSwitching ? 180 : 0 }} transition={{ duration: 0.3 }} className="inline-flex">
+              <Languages size={15} />
+            </motion.span>
+            <LangLabel label={t.langToggle.label} />
           </button>
           <button
             onClick={() => setOpen(!open)}
@@ -134,5 +141,24 @@ export default function Navbar() {
         </div>
       </div>
     </header>
+  );
+}
+
+/** Language code that slides in/out when it changes. */
+function LangLabel({ label }: { label: string }) {
+  return (
+    <span className="relative inline-flex overflow-hidden w-5 h-5 items-center">
+      <AnimatePresence mode="popLayout" initial={false}>
+        <motion.span
+          key={label}
+          initial={{ y: 14, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          exit={{ y: -14, opacity: 0 }}
+          transition={{ duration: 0.25, ease: 'easeOut' }}
+        >
+          {label}
+        </motion.span>
+      </AnimatePresence>
+    </span>
   );
 }

@@ -47,13 +47,23 @@ export interface ExperienceItem {
   projects?: string[];
 }
 
+export interface LinkItem {
+  label: string;
+  url: string;
+}
+
 export interface ResearchItem {
   id: string;
+  /** Short badge such as "TCC", "PIBIC", "Mestrado", "Liga de IA" */
+  type?: string;
+  /** Optional status badge, e.g. "Em andamento" */
+  status?: string;
   title: string;
   lab: string;
   period: string;
   description: string;
   areas: string[];
+  links?: LinkItem[];
 }
 
 export interface ResearchPublication {
@@ -62,6 +72,7 @@ export interface ResearchPublication {
   year: string;
   authors: string[];
   link?: string;
+  status?: string;
   abstract?: string;
 }
 
@@ -86,6 +97,7 @@ export interface ProjectItem {
   image?: string;
   github?: string;
   demo?: string;
+  paper?: string;
   featured?: boolean;
 }
 
@@ -97,6 +109,8 @@ export interface PublicationItem {
   venue: string;
   doi?: string;
   link?: string;
+  status?: string;
+  note?: string;
   abstract: string;
   tags: string[];
 }

@@ -38,7 +38,8 @@
   }
 
   .card {
-    @apply bg-base-850/60 border border-base-700 rounded-xl backdrop-blur-sm transition-all duration-300;
+    @apply bg-base-850/60 border border-base-700 rounded-xl backdrop-blur-sm
+           transition-[border-color,background-color,box-shadow] duration-300;
   }
 
   .card-hover {

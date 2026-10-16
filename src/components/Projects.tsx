@@ -1,5 +1,6 @@
 import { useState, useMemo } from 'react';
-import { Github, ExternalLink, FolderGit2 } from 'lucide-react';
+import { Github, ExternalLink, FolderGit2, FileText } from 'lucide-react';
+import { motion } from 'framer-motion';
 import Section from './Section';
 import Reveal from './Reveal';
 import { useLanguage } from '@/i18n/LanguageContext';
@@ -42,12 +43,28 @@ export default function Projects() {
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
         {filtered.map((project, i) => (
           <Reveal key={project.id} delay={i * 80}>
-            <article className="card card-hover p-5 h-full flex flex-col group">
+            <motion.article
+              whileHover={{ y: -6 }}
+              transition={{ type: 'spring', stiffness: 300, damping: 20 }}
+              className="card card-hover p-5 h-full flex flex-col group"
+            >
               <div className="flex items-start justify-between mb-3">
                 <div className="w-10 h-10 rounded-lg bg-accent-500/10 border border-accent-500/20 flex items-center justify-center">
                   <FolderGit2 size={18} className="text-accent-400" />
                 </div>
                 <div className="flex gap-2">
+                  {project.paper && (
+                    <a
+                      href={project.paper}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={t.projects.paper}
+                      title={t.projects.paper}
+                      className="text-gray-500 hover:text-accent-400 transition-colors"
+                    >
+                      <FileText size={18} />
+                    </a>
+                  )}
                   {project.github && (
                     <a
                       href={project.github}
@@ -87,7 +104,7 @@ export default function Projects() {
                   <span key={j} className="badge">{tech}</span>
                 ))}
               </div>
-            </article>
+            </motion.article>
           </Reveal>
         ))}
       </div>

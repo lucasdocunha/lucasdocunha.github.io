@@ -1,4 +1,5 @@
-import { FileText, ArrowUpRight } from 'lucide-react';
+import { FileText, ArrowUpRight, Info } from 'lucide-react';
+import { motion } from 'framer-motion';
 import Section from './Section';
 import Reveal from './Reveal';
 import { useLanguage } from '@/i18n/LanguageContext';
@@ -13,7 +14,11 @@ export default function Publications() {
       <div className="space-y-4">
         {publications.map((pub, i) => (
           <Reveal key={pub.id} delay={i * 100}>
-            <article className="card card-hover p-6 group">
+            <motion.article
+              whileHover={{ y: -4 }}
+              transition={{ type: 'spring', stiffness: 300, damping: 20 }}
+              className="card card-hover p-6 group"
+            >
               <div className="flex flex-col md:flex-row md:items-start gap-4">
                 <div className="w-10 h-10 rounded-lg bg-accent-500/10 border border-accent-500/20 flex items-center justify-center shrink-0">
                   <FileText size={18} className="text-accent-400" />
@@ -22,6 +27,11 @@ export default function Publications() {
                 <div className="flex-1 min-w-0">
                   <div className="flex items-center gap-3 mb-2">
                     <span className="badge-accent">{pub.year}</span>
+                    {pub.status && (
+                      <span className="inline-flex items-center px-2.5 py-1 rounded-md bg-secondary-500/10 border border-secondary-500/30 text-xs font-semibold text-secondary-400">
+                        {pub.status}
+                      </span>
+                    )}
                     <span className="text-gray-500 text-xs">{pub.venue}</span>
                   </div>
 
@@ -36,6 +46,13 @@ export default function Publications() {
                   <p className="text-gray-400 text-sm leading-relaxed mb-4">
                     {pub.abstract}
                   </p>
+
+                  {pub.note && (
+                    <p className="flex items-start gap-2 text-sm text-accent-300 bg-accent-500/5 border border-accent-500/20 rounded-lg px-3 py-2 mb-4">
+                      <Info size={15} className="mt-0.5 shrink-0" />
+                      {pub.note}
+                    </p>
+                  )}
 
                   <div className="flex flex-wrap items-center justify-between gap-3">
                     <div className="flex flex-wrap gap-1.5">
@@ -57,7 +74,7 @@ export default function Publications() {
                   </div>
                 </div>
               </div>
-            </article>
+            </motion.article>
           </Reveal>
         ))}
       </div>

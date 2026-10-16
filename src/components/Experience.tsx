@@ -1,4 +1,5 @@
-import { Briefcase, ChevronRight } from 'lucide-react';
+import { Briefcase, ChevronRight, FlaskConical } from 'lucide-react';
+import { motion } from 'framer-motion';
 import Section from './Section';
 import Reveal from './Reveal';
 import { useLanguage } from '@/i18n/LanguageContext';
@@ -10,6 +11,32 @@ export default function Experience() {
 
   return (
     <Section id="experience" title={t.experience.title} heading={t.experience.heading}>
+      <div className="grid sm:grid-cols-2 gap-4 mb-14">
+        {[
+          { icon: FlaskConical, value: 4, label: t.experience.researchYears, detail: t.experience.researchDetail },
+          { icon: Briefcase, value: 2, label: t.experience.workYears, detail: t.experience.workDetail },
+        ].map((stat, i) => (
+          <Reveal key={i} delay={i * 120}>
+            <motion.div
+              whileHover={{ y: -4 }}
+              transition={{ type: 'spring', stiffness: 300, damping: 20 }}
+              className="card card-hover p-6 flex items-center gap-5 h-full"
+            >
+              <div className="w-14 h-14 rounded-xl bg-accent-500/10 border border-accent-500/20 flex items-center justify-center shrink-0">
+                <stat.icon size={24} className="text-accent-400" />
+              </div>
+              <div>
+                <p className="text-white">
+                  <span className="text-4xl font-bold font-serif text-accent-400 mr-2 align-middle">{stat.value}</span>
+                  <span className="text-base font-medium align-middle">{stat.label}</span>
+                </p>
+                <p className="text-gray-500 text-sm mt-1">{stat.detail}</p>
+              </div>
+            </motion.div>
+          </Reveal>
+        ))}
+      </div>
+
       <div className="relative">
         <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-accent-500/40 via-base-600 to-transparent md:-translate-x-1/2" />
 

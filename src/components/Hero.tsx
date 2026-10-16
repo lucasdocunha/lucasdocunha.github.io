@@ -1,6 +1,7 @@
 import { ArrowRight, FileDown, Mail, Linkedin, Github, GraduationCap } from 'lucide-react';
 import { useLanguage } from '@/i18n/LanguageContext';
 import { getData } from '@/data';
+import AnimatedName from './AnimatedName';
 
 const ICON_MAP: Record<string, typeof Linkedin> = {
   linkedin: Linkedin,
@@ -33,9 +34,7 @@ export default function Hero() {
 
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white tracking-tight mb-4 animate-fade-in-up font-serif">
             {t.hero.greeting}{' '}
-            <span className="bg-gradient-to-r from-accent-400 via-accent-300 to-secondary-400 bg-clip-text text-transparent bg-[length:200%_auto] animate-gradient">
-              {profile.name}
-            </span>
+            <AnimatedName name={profile.name} />
           </h1>
 
           <p className="text-lg md:text-xl text-gray-400 mb-6 animate-fade-in-up" style={{ animationDelay: '0.1s', opacity: 0 }}>

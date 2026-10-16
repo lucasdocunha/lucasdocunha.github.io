@@ -30,6 +30,10 @@ export interface TranslationStrings {
     heading: string;
     notableProjects: string;
     empty: string;
+    researchYears: string;
+    researchDetail: string;
+    workYears: string;
+    workDetail: string;
   };
   research: {
     title: string;
@@ -45,6 +49,7 @@ export interface TranslationStrings {
     heading: string;
     all: string;
     empty: string;
+    paper: string;
   };
   publications: {
     title: string;
@@ -132,12 +137,16 @@ export const translations: Record<Language, TranslationStrings> = {
       heading: 'Trajetória e Atuação Profissional',
       notableProjects: 'Projetos Relevantes',
       empty: 'Nenhuma experiência cadastrada no momento.',
+      researchYears: 'anos de pesquisa acadêmica',
+      researchDetail: 'Lasin · 2× PIBIC · TCC · Liga de IA · PPGIA',
+      workYears: 'anos de experiência profissional',
+      workDetail: 'DATAKIE · MBRF (COEIA)',
     },
     research: {
       title: 'Pesquisa',
       heading: 'Investigação Científica e Publicações',
       lines: 'Linhas de Pesquisa',
-      projects: 'Projetos de Iniciação Científica e Pesquisa',
+      projects: 'Trajetória Acadêmica: TCC, Liga de IA, PIBIC e Mestrado',
       publications: 'Artigos e Publicações em Destaque',
       futureInterests: 'Direções Futuras de Investigação',
       readPaper: 'Acessar Artigo',
@@ -147,6 +156,7 @@ export const translations: Record<Language, TranslationStrings> = {
       heading: 'Engenharia e Pesquisa Aplicada',
       all: 'Todos',
       empty: 'Nenhum projeto cadastrado nesta categoria.',
+      paper: 'Artigo',
     },
     publications: {
       title: 'Publicações',
@@ -232,12 +242,16 @@ export const translations: Record<Language, TranslationStrings> = {
       heading: 'Professional Track Record',
       notableProjects: 'Featured Projects',
       empty: 'No experience entries available at the moment.',
+      researchYears: 'years of academic research',
+      researchDetail: 'Lasin · 2× PIBIC · Thesis · AI League · PPGIA',
+      workYears: 'years of professional experience',
+      workDetail: 'DATAKIE · MBRF (COEIA)',
     },
     research: {
       title: 'Research',
       heading: 'Scientific Investigation & Publications',
       lines: 'Research Tracks',
-      projects: 'Research Initiatives & Grant Projects',
+      projects: 'Academic Path: Thesis, AI League, PIBIC & M.Sc.',
       publications: 'Featured Publications',
       futureInterests: 'Future Research Directions',
       readPaper: 'View Paper',
@@ -247,6 +261,7 @@ export const translations: Record<Language, TranslationStrings> = {
       heading: 'Applied Engineering & Research Systems',
       all: 'All',
       empty: 'No projects available in this category.',
+      paper: 'Paper',
     },
     publications: {
       title: 'Publications',
