@@ -44,7 +44,7 @@
       "Mestrado (PPGIA / PUCPR — 2026): Investigação em Vision-Language Models (VLMs) e Small Language Models (SLMs) para Document Understanding e raciocínio multimodal",
       "Liga Acadêmica de IA (2025 — Presente): Desafios internacionais do ICDAR 2026 (compreensão de documentos) e ICPR 2026; autor da ferramenta Sci-Image (conversão de figuras científicas para Markdown)",
       "TCC & Artigo SIBGRAPI 2026 (2025 — Atual): Framework unificado de detecção de deepfakes faciais comparando CNNs, ViTs e DINOv3 com representações espaço-espectrais (2D-FFT)",
-      "Iniciações Científicas PIBIC (2024 — 2026): 1ª PIBIC (bolsa CNPq, artigo no IEEE SMC 2026) e 2ª PIBIC (Lasin) em adaptação de domínio e autoencoders para visão computacional"
+      "Iniciações Científicas PIBIC (2024 — 2026): Duas pesquisas consecutivas (bolsa CNPq e Lasin/PUCPR) sobre adaptação de domínio, comitê de autoencoders e fusão de representações que, juntas, deram origem ao artigo publicado no IEEE SMC 2026"
     ],
     "technologies": ["PyTorch", "VLMs", "SLMs", "DINOv3", "Vision Transformers", "2D-FFT", "Autoencoders", "Few-Shot Learning", "OpenCV"],
     "links": [

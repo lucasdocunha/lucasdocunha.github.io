@@ -73,13 +73,19 @@
       "title": "Representation Fusion for Domain Adaptation of Deep Models in Intelligent Parking Space Monitoring",
       "lab": "PUCPR — Lasin",
       "period": "07/2025 — 2026",
-      "description": "Second undergraduate research grant. Applied research on representation fusion and domain adaptation for smart parking monitoring. Implementing and benchmarking Autoencoders (VAE, Denoising and deep variants), CNNs and federated models, with data augmentation pipelines to mitigate domain discrepancies and Podman containerization for reproducibility.",
+      "description": "Second undergraduate research grant (Lasin). Applied research on representation fusion and domain adaptation for smart parking monitoring. Combined with the first research grant (CNPq), both integrated projects resulted in the paper published at IEEE SMC 2026.",
       "areas": [
         "Representation Fusion",
         "Domain Adaptation",
         "Autoencoders",
         "Federated Learning",
         "Podman"
+      ],
+      "links": [
+        {
+          "label": "SMC Paper (arXiv)",
+          "url": "https://arxiv.org/abs/2609.03258"
+        }
       ]
     },
     {
@@ -88,7 +94,7 @@
       "title": "Domain Adaptation in Deep Classification Models Applied to Parking Space Detection",
       "lab": "CNPq / PUCPR — Lasin",
       "period": "03/2024 — 07/2025",
-      "description": "First undergraduate research grant (CNPq). Development of domain adaptation and few-shot learning methods for computer vision models applied to parking spot detection. Modeled CNNs, Autoencoders and classical classifiers, achieving results comparable to the literature even with small datasets. This parking research line led to the paper published at IEEE SMC 2026.",
+      "description": "First undergraduate research grant (CNPq). Development of domain adaptation and few-shot learning methods for computer vision models applied to parking spot detection. Combined with the second research grant, both integrated projects resulted in the paper published at IEEE SMC 2026.",
       "areas": [
         "Domain Adaptation",
         "Few-Shot Learning",
