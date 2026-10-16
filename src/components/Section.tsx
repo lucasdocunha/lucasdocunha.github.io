@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 interface SectionProps {
   id: string;
   title?: string;
-  heading?: string;
+  heading?: ReactNode;
   children: ReactNode;
   className?: string;
 }

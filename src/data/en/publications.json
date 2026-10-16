@@ -2,23 +2,40 @@
   {
     "id": "pub-1",
     "title": "Benchmarking Spatial, Spectral, and Self-Supervised Cues for Face Forgery Detection under Realistic Degradation",
-    "authors": ["Lucas de Oliveira Cunha", "et al."],
+    "authors": [
+      "Lucas de Oliveira Cunha",
+      "et al."
+    ],
     "year": "2026",
     "venue": "39th Conference on Graphics, Patterns and Images (SIBGRAPI 2026)",
-    "status": "Accepted",
     "link": "https://arxiv.org/abs/2609.01511",
-    "note": "Originated from my undergraduate thesis. The research continues towards a more robust version of the work.",
+    "note": "Originated from my undergraduate thesis and presented at SIBGRAPI 2026. The research continues towards a more robust version of the work.",
     "abstract": "A standardized face forgery detection benchmark on the MFFI dataset comparing six model families (CNNs, Transformers and a frozen DINOv3) across spatial, spectral (FFT) and hybrid inputs. It shows that clean-set performance is not a reliable indicator of robustness under compression, resizing and blurring: Xception with RGB leads on clean data (0.884 ROC-AUC), while frozen DINOv3 achieves the best degraded-set result (0.726 ROC-AUC) training only a linear head.",
-    "tags": ["Deepfake Detection", "Self-Supervised Learning", "DINOv3", "Computer Vision", "Fourier Analysis"]
+    "tags": [
+      "Deepfake Detection",
+      "Self-Supervised Learning",
+      "DINOv3",
+      "Computer Vision",
+      "Fourier Analysis"
+    ]
   },
   {
     "id": "pub-2",
     "title": "An Ensemble-Based Self-Taught Learning Approach for Parking Space Classification Under Limited Data",
-    "authors": ["Lucas de Oliveira Cunha", "Andre G. Hochuli"],
+    "authors": [
+      "Lucas de Oliveira Cunha",
+      "Andre G. Hochuli"
+    ],
     "year": "2026",
     "venue": "IEEE International Conference on Systems, Man, and Cybernetics (SMC 2026)",
     "link": "https://arxiv.org/abs/2609.03258",
     "abstract": "A self-taught learning framework based on unsupervised representation learning with convolutional autoencoders. Encoders learned from unlabeled data are reused as fixed feature extractors, and an ensemble of heterogeneous autoencoders with prediction fusion improves robustness. Under cross-dataset evaluation on PKLot and CNRPark, it substantially reduces annotation requirements, reaching 93%–96% accuracy in data-constrained scenarios.",
-    "tags": ["Self-Taught Learning", "Autoencoders", "Smart Parking", "Computer Vision", "Few-Shot Learning"]
+    "tags": [
+      "Self-Taught Learning",
+      "Autoencoders",
+      "Smart Parking",
+      "Computer Vision",
+      "Few-Shot Learning"
+    ]
   }
 ]

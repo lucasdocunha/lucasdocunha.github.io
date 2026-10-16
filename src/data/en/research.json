@@ -1,9 +1,21 @@
 {
   "lines": [
-    { "area": "Document Understanding & Multimodality", "description": "Research and engineering of vision-language architectures (VLMs/LLMs) applied to structured information extraction, complex layout reasoning, and neural OCR." },
-    { "area": "Forensic Robustness & Deepfake Detection", "description": "Investigation into the generalization capacity of spatial features, frequency-domain spectral cues (FFT), and self-supervised foundation backbones (DINOv3) under real-world corruptions." },
-    { "area": "Self-Supervised & Data-Constrained Learning", "description": "Exploration of deep autoencoder ensembles, Self-Taught Learning, and Few-Shot Learning frameworks to train high-performing models in low-annotation regimes." },
-    { "area": "Domain Adaptation & Representation Fusion", "description": "Techniques for cross-domain transfer learning, domain shift mitigation, and multimodal feature fusion across distributed environments." }
+    {
+      "area": "Document Understanding & Multimodality",
+      "description": "Research and engineering of vision-language architectures (VLMs/LLMs) applied to structured information extraction, complex layout reasoning, and neural OCR."
+    },
+    {
+      "area": "Forensic Robustness & Deepfake Detection",
+      "description": "Investigation into the generalization capacity of spatial features, frequency-domain spectral cues (FFT), and self-supervised foundation backbones (DINOv3) under real-world corruptions."
+    },
+    {
+      "area": "Self-Supervised & Data-Constrained Learning",
+      "description": "Exploration of deep autoencoder ensembles, Self-Taught Learning, and Few-Shot Learning frameworks to train high-performing models in low-annotation regimes."
+    },
+    {
+      "area": "Domain Adaptation & Representation Fusion",
+      "description": "Techniques for cross-domain transfer learning, domain shift mitigation, and multimodal feature fusion across distributed environments."
+    }
   ],
   "projects": [
     {
@@ -13,11 +25,23 @@
       "title": "Face Forgery Detection under Realistic Degradation",
       "lab": "Computer Science — PUCPR",
       "period": "2025 — Present",
-      "description": "Undergraduate thesis that gave rise to the paper accepted at SIBGRAPI 2026. A unified framework to evaluate robustness, cross-dataset generalization and explainability of deepfake detectors, comparing CNNs, Vision Transformers and the self-supervised DINOv3 model across spatial and spectral (2D-FFT) representations. We are continuing the research to publish a more robust version of the work.",
-      "areas": ["Deepfake Detection", "DINOv3", "FFT", "Robustness", "Explainability"],
+      "description": "Undergraduate thesis that gave rise to the paper presented at SIBGRAPI 2026. A unified framework to evaluate robustness, cross-dataset generalization and explainability of deepfake detectors, comparing CNNs, Vision Transformers and the self-supervised DINOv3 model across spatial and spectral (2D-FFT) representations. We are continuing the research to publish a more robust version of the work.",
+      "areas": [
+        "Deepfake Detection",
+        "DINOv3",
+        "FFT",
+        "Robustness",
+        "Explainability"
+      ],
       "links": [
-        { "label": "Paper (arXiv)", "url": "https://arxiv.org/abs/2609.01511" },
-        { "label": "GitHub", "url": "https://github.com/lucasdocunha/FaceForgery-Benchmark" }
+        {
+          "label": "Paper (arXiv)",
+          "url": "https://arxiv.org/abs/2609.01511"
+        },
+        {
+          "label": "GitHub",
+          "url": "https://github.com/lucasdocunha/FaceForgery-Benchmark"
+        }
       ]
     },
     {
@@ -28,9 +52,22 @@
       "lab": "Academic League of Artificial Intelligence — PUCPR",
       "period": "Present",
       "description": "We are currently researching Document Understanding at the AI League, continuing the ICDAR 2026 challenges: document comprehension with multimodal models (VLMs), layout analysis, OCR and structured information extraction. The League also takes part in other scientific competitions, such as the ICPR 2026 low-resolution license plate recognition challenge.",
-      "areas": ["Document Understanding", "VLMs", "OCR", "ICDAR 2026", "ICPR 2026"],
+      "areas": [
+        "Document Understanding",
+        "VLMs",
+        "OCR",
+        "ICDAR 2026",
+        "ICPR 2026"
+      ],
       "links": [
-        { "label": "League GitHub", "url": "https://github.com/Liga-de-IA-PUCPR" }
+        {
+          "label": "Sci-Image (GitHub)",
+          "url": "https://github.com/lucasdocunha/sci-image-markdown"
+        },
+        {
+          "label": "League GitHub",
+          "url": "https://github.com/Liga-de-IA-PUCPR"
+        }
       ]
     },
     {
@@ -40,7 +77,13 @@
       "lab": "PUCPR — Lasin",
       "period": "07/2025 — Present",
       "description": "Second undergraduate research grant. Applied research on representation fusion and domain adaptation for smart parking monitoring. Implementing and benchmarking Autoencoders (VAE, Denoising and deep variants), CNNs and federated models, with data augmentation pipelines to mitigate domain discrepancies and Podman containerization for reproducibility.",
-      "areas": ["Representation Fusion", "Domain Adaptation", "Autoencoders", "Federated Learning", "Podman"]
+      "areas": [
+        "Representation Fusion",
+        "Domain Adaptation",
+        "Autoencoders",
+        "Federated Learning",
+        "Podman"
+      ]
     },
     {
       "id": "res-pibic-1",
@@ -49,9 +92,17 @@
       "lab": "CNPq / PUCPR — Lasin",
       "period": "03/2024 — 07/2025",
       "description": "First undergraduate research grant (CNPq). Development of domain adaptation and few-shot learning methods for computer vision models applied to parking spot detection. Modeled CNNs, Autoencoders and classical classifiers, achieving results comparable to the literature even with small datasets. This parking research line led to the paper published at IEEE SMC 2026.",
-      "areas": ["Domain Adaptation", "Few-Shot Learning", "CNNs", "Autoencoders"],
+      "areas": [
+        "Domain Adaptation",
+        "Few-Shot Learning",
+        "CNNs",
+        "Autoencoders"
+      ],
       "links": [
-        { "label": "SMC Paper (arXiv)", "url": "https://arxiv.org/abs/2609.03258" }
+        {
+          "label": "SMC Paper (arXiv)",
+          "url": "https://arxiv.org/abs/2609.03258"
+        }
       ]
     },
     {
@@ -61,7 +112,12 @@
       "lab": "PPGIA — PUCPR (special student)",
       "period": "2026 — Present",
       "description": "Graduate courses and research at the Graduate Program in Informatics focused on Vision-Language Models (VLMs), OCR and document understanding, evaluating multimodal models on structured extraction and visual reasoning tasks.",
-      "areas": ["VLMs", "Document Understanding", "OCR", "Multimodality"]
+      "areas": [
+        "VLMs",
+        "Document Understanding",
+        "OCR",
+        "Multimodality"
+      ]
     }
   ],
   "publications": [
@@ -69,8 +125,10 @@
       "title": "Benchmarking Spatial, Spectral, and Self-Supervised Cues for Face Forgery Detection under Realistic Degradation",
       "venue": "SIBGRAPI 2026",
       "year": "2026",
-      "status": "Accepted",
-      "authors": ["Lucas de Oliveira Cunha", "et al."],
+      "authors": [
+        "Lucas de Oliveira Cunha",
+        "et al."
+      ],
       "link": "https://arxiv.org/abs/2609.01511",
       "abstract": "Originated from my thesis: a robustness benchmark of convolutional, spectral (FFT) and self-supervised (DINOv3) representations for face forgery detection under realistic degradations."
     },
@@ -78,7 +136,10 @@
       "title": "An Ensemble-Based Self-Taught Learning Approach for Parking Space Classification Under Limited Data",
       "venue": "IEEE SMC 2026",
       "year": "2026",
-      "authors": ["Lucas de Oliveira Cunha", "Andre G. Hochuli"],
+      "authors": [
+        "Lucas de Oliveira Cunha",
+        "Andre G. Hochuli"
+      ],
       "link": "https://arxiv.org/abs/2609.03258",
       "abstract": "Self-taught learning with an autoencoder ensemble for parking space classification under limited labels, reaching 93%–96% accuracy in cross-dataset evaluation."
     }

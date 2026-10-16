@@ -2,23 +2,40 @@
   {
     "id": "pub-1",
     "title": "Benchmarking Spatial, Spectral, and Self-Supervised Cues for Face Forgery Detection under Realistic Degradation",
-    "authors": ["Lucas de Oliveira Cunha", "et al."],
+    "authors": [
+      "Lucas de Oliveira Cunha",
+      "et al."
+    ],
     "year": "2026",
     "venue": "39th Conference on Graphics, Patterns and Images (SIBGRAPI 2026)",
-    "status": "Aceito",
     "link": "https://arxiv.org/abs/2609.01511",
-    "note": "Originado do meu TCC. A pesquisa continua para a publicação de uma versão mais robusta do trabalho.",
+    "note": "Originado do meu TCC e apresentado no SIBGRAPI 2026. A pesquisa continua para a publicação de uma versão mais robusta do trabalho.",
     "abstract": "Benchmark padronizado de detecção de manipulação facial no dataset MFFI, comparando seis famílias de modelos (CNNs, Transformers e DINOv3 congelado) com entradas espaciais, espectrais (FFT) e híbridas. Mostra que o desempenho no conjunto limpo não indica robustez sob compressão, redimensionamento e desfoque: o Xception com RGB lidera no cenário limpo (0,884 ROC-AUC), enquanto o DINOv3 congelado obtém o melhor resultado no conjunto degradado (0,726 ROC-AUC) treinando apenas uma cabeça linear.",
-    "tags": ["Deepfake Detection", "Self-Supervised Learning", "DINOv3", "Computer Vision", "Fourier Analysis"]
+    "tags": [
+      "Deepfake Detection",
+      "Self-Supervised Learning",
+      "DINOv3",
+      "Computer Vision",
+      "Fourier Analysis"
+    ]
   },
   {
     "id": "pub-2",
     "title": "An Ensemble-Based Self-Taught Learning Approach for Parking Space Classification Under Limited Data",
-    "authors": ["Lucas de Oliveira Cunha", "Andre G. Hochuli"],
+    "authors": [
+      "Lucas de Oliveira Cunha",
+      "Andre G. Hochuli"
+    ],
     "year": "2026",
     "venue": "IEEE International Conference on Systems, Man, and Cybernetics (SMC 2026)",
     "link": "https://arxiv.org/abs/2609.03258",
     "abstract": "Framework de Self-Taught Learning baseado em aprendizado de representações não-supervisionado com autoencoders convolucionais. Os encoders aprendidos em dados não rotulados são reutilizados como extratores fixos, e um comitê de autoencoders heterogêneos com fusão de predições aumenta a robustez. Em avaliação cross-dataset no PKLot e CNRPark, reduz drasticamente a necessidade de anotações, atingindo acurácias entre 93% e 96% em cenários com poucos dados.",
-    "tags": ["Self-Taught Learning", "Autoencoders", "Smart Parking", "Computer Vision", "Few-Shot Learning"]
+    "tags": [
+      "Self-Taught Learning",
+      "Autoencoders",
+      "Smart Parking",
+      "Computer Vision",
+      "Few-Shot Learning"
+    ]
   }
 ]

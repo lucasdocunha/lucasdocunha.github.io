@@ -1,9 +1,21 @@
 {
   "lines": [
-    { "area": "Document Understanding & Multimodalidade", "description": "Pesquisa e desenvolvimento de modelos visuais e de linguagem (VLMs/LLMs) aplicados à extração estruturada de entidades, análise de layouts complexos e OCR neural." },
-    { "area": "Robustez Forense & Detecção de Deepfakes", "description": "Investigação da generalização de extratores espaciais, espectrais (FFT) e modelos fundacionais (DINOv3) contra perturbações e compressões adversas." },
-    { "area": "Aprendizado Auto-Supervisionado & Restrição de Dados", "description": "Exploração de arquiteturas de autoencoders, Self-Taught Learning e Few-Shot Learning para treinamento de modelos eficientes em cenários com escassez de anotações." },
-    { "area": "Adaptação de Domínio & Aprendizado Federado", "description": "Métodos para transferência de conhecimento, mitigação de domain shift e fusão de representações em cenários distribuídos." }
+    {
+      "area": "Document Understanding & Multimodalidade",
+      "description": "Pesquisa e desenvolvimento de modelos visuais e de linguagem (VLMs/LLMs) aplicados à extração estruturada de entidades, análise de layouts complexos e OCR neural."
+    },
+    {
+      "area": "Robustez Forense & Detecção de Deepfakes",
+      "description": "Investigação da generalização de extratores espaciais, espectrais (FFT) e modelos fundacionais (DINOv3) contra perturbações e compressões adversas."
+    },
+    {
+      "area": "Aprendizado Auto-Supervisionado & Restrição de Dados",
+      "description": "Exploração de arquiteturas de autoencoders, Self-Taught Learning e Few-Shot Learning para treinamento de modelos eficientes em cenários com escassez de anotações."
+    },
+    {
+      "area": "Adaptação de Domínio & Aprendizado Federado",
+      "description": "Métodos para transferência de conhecimento, mitigação de domain shift e fusão de representações em cenários distribuídos."
+    }
   ],
   "projects": [
     {
@@ -13,11 +25,23 @@
       "title": "Detecção de Manipulação Facial sob Degradações Realistas",
       "lab": "Ciência da Computação — PUCPR",
       "period": "2025 — Atual",
-      "description": "Trabalho de Conclusão de Curso que deu origem ao artigo aceito no SIBGRAPI 2026. Framework unificado para avaliar robustez, generalização cross-dataset e explicabilidade de detectores de deepfakes, comparando CNNs, Vision Transformers e o modelo auto-supervisionado DINOv3 com representações espaciais e espectrais (2D-FFT). Continuamos a pesquisa para publicar uma versão mais robusta do trabalho.",
-      "areas": ["Deepfake Detection", "DINOv3", "FFT", "Robustez", "Explicabilidade"],
+      "description": "Trabalho de Conclusão de Curso que deu origem ao artigo apresentado no SIBGRAPI 2026. Framework unificado para avaliar robustez, generalização cross-dataset e explicabilidade de detectores de deepfakes, comparando CNNs, Vision Transformers e o modelo auto-supervisionado DINOv3 com representações espaciais e espectrais (2D-FFT). Continuamos a pesquisa para publicar uma versão mais robusta do trabalho.",
+      "areas": [
+        "Deepfake Detection",
+        "DINOv3",
+        "FFT",
+        "Robustez",
+        "Explicabilidade"
+      ],
       "links": [
-        { "label": "Artigo (arXiv)", "url": "https://arxiv.org/abs/2609.01511" },
-        { "label": "GitHub", "url": "https://github.com/lucasdocunha/FaceForgery-Benchmark" }
+        {
+          "label": "Artigo (arXiv)",
+          "url": "https://arxiv.org/abs/2609.01511"
+        },
+        {
+          "label": "GitHub",
+          "url": "https://github.com/lucasdocunha/FaceForgery-Benchmark"
+        }
       ]
     },
     {
@@ -28,9 +52,22 @@
       "lab": "Liga Acadêmica de Inteligência Artificial — PUCPR",
       "period": "Atual",
       "description": "Atualmente pesquisamos Document Understanding na Liga de IA, dando continuidade aos desafios do ICDAR 2026: compreensão de documentos com modelos multimodais (VLMs), análise de layout, OCR e extração estruturada de informações. A Liga também participa de outras competições científicas, como o desafio de reconhecimento de placas em baixa resolução do ICPR 2026.",
-      "areas": ["Document Understanding", "VLMs", "OCR", "ICDAR 2026", "ICPR 2026"],
+      "areas": [
+        "Document Understanding",
+        "VLMs",
+        "OCR",
+        "ICDAR 2026",
+        "ICPR 2026"
+      ],
       "links": [
-        { "label": "GitHub da Liga", "url": "https://github.com/Liga-de-IA-PUCPR" }
+        {
+          "label": "Sci-Image (GitHub)",
+          "url": "https://github.com/lucasdocunha/sci-image-markdown"
+        },
+        {
+          "label": "GitHub da Liga",
+          "url": "https://github.com/Liga-de-IA-PUCPR"
+        }
       ]
     },
     {
@@ -40,7 +77,13 @@
       "lab": "PUCPR — Lasin",
       "period": "07/2025 — Atual",
       "description": "Segunda Iniciação Científica. Pesquisa aplicada sobre fusão de representações e adaptação de domínio para monitoramento inteligente de vagas. Implementação e avaliação de Autoencoders (VAE, Denoising e variantes profundas), CNNs e modelos federados, com pipelines de data augmentation para corrigir discrepâncias entre domínios e containerização com Podman para reprodutibilidade.",
-      "areas": ["Fusão de Representações", "Adaptação de Domínio", "Autoencoders", "Aprendizado Federado", "Podman"]
+      "areas": [
+        "Fusão de Representações",
+        "Adaptação de Domínio",
+        "Autoencoders",
+        "Aprendizado Federado",
+        "Podman"
+      ]
     },
     {
       "id": "res-pibic-1",
@@ -49,9 +92,17 @@
       "lab": "CNPq / PUCPR — Lasin",
       "period": "03/2024 — 07/2025",
       "description": "Primeira Iniciação Científica (bolsa CNPq). Desenvolvimento de técnicas de adaptação de domínio e few-shot learning para modelos de visão computacional aplicados à detecção de vagas. Modelagem de CNNs, Autoencoders e classificadores tradicionais, atingindo resultados comparáveis aos da literatura mesmo com conjuntos pequenos. A linha de pesquisa sobre vagas resultou no artigo publicado no IEEE SMC 2026.",
-      "areas": ["Adaptação de Domínio", "Few-Shot Learning", "CNNs", "Autoencoders"],
+      "areas": [
+        "Adaptação de Domínio",
+        "Few-Shot Learning",
+        "CNNs",
+        "Autoencoders"
+      ],
       "links": [
-        { "label": "Artigo SMC (arXiv)", "url": "https://arxiv.org/abs/2609.03258" }
+        {
+          "label": "Artigo SMC (arXiv)",
+          "url": "https://arxiv.org/abs/2609.03258"
+        }
       ]
     },
     {
@@ -61,7 +112,12 @@
       "lab": "PPGIA — PUCPR (aluno especial)",
       "period": "2026 — Atual",
       "description": "Disciplinas e investigação no Programa de Pós-Graduação em Informática com foco em Vision-Language Models (VLMs), OCR e compreensão de documentos, avaliando modelos multimodais em tarefas de extração estruturada e raciocínio visual.",
-      "areas": ["VLMs", "Document Understanding", "OCR", "Multimodalidade"]
+      "areas": [
+        "VLMs",
+        "Document Understanding",
+        "OCR",
+        "Multimodalidade"
+      ]
     }
   ],
   "publications": [
@@ -69,8 +125,10 @@
       "title": "Benchmarking Spatial, Spectral, and Self-Supervised Cues for Face Forgery Detection under Realistic Degradation",
       "venue": "SIBGRAPI 2026",
       "year": "2026",
-      "status": "Aceito",
-      "authors": ["Lucas de Oliveira Cunha", "et al."],
+      "authors": [
+        "Lucas de Oliveira Cunha",
+        "et al."
+      ],
       "link": "https://arxiv.org/abs/2609.01511",
       "abstract": "Originado do TCC: benchmark de robustez de representações convolucionais, espectrais (FFT) e auto-supervisionadas (DINOv3) na detecção de manipulação facial sob degradações reais."
     },
@@ -78,7 +136,10 @@
       "title": "An Ensemble-Based Self-Taught Learning Approach for Parking Space Classification Under Limited Data",
       "venue": "IEEE SMC 2026",
       "year": "2026",
-      "authors": ["Lucas de Oliveira Cunha", "Andre G. Hochuli"],
+      "authors": [
+        "Lucas de Oliveira Cunha",
+        "Andre G. Hochuli"
+      ],
       "link": "https://arxiv.org/abs/2609.03258",
       "abstract": "Self-Taught Learning com comitê de autoencoders para classificação de vagas com poucos dados rotulados, atingindo 93%–96% de acurácia em avaliação cross-dataset."
     }

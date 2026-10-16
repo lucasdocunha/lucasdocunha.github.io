@@ -97,5 +97,21 @@
     "github": "",
     "featured": false,
     "paper": "https://arxiv.org/abs/2609.03258"
+  },
+  {
+    "id": "proj-7",
+    "title": "Document Understanding — Sci-Image Markdown (ICDAR 2026)",
+    "description": "Research and engineering framework for numerical data table extraction from scientific figures into structured Markdown, developed for the ICDAR 2026 challenges (Task 2: Scientific Figure to Data Table Extraction) at the AI League. Fine-tuning using QLoRA with Qwen2.5-VL.",
+    "category": "Research",
+    "technologies": [
+      "Python",
+      "PyTorch",
+      "Qwen2.5-VL",
+      "QLoRA",
+      "Document Understanding",
+      "ICDAR 2026"
+    ],
+    "github": "https://github.com/lucasdocunha/sci-image-markdown",
+    "featured": true
   }
 ]

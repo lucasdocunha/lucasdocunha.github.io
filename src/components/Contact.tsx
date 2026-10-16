@@ -1,5 +1,7 @@
-import { useState, type FormEvent } from 'react';
+import { useState, useRef, type FormEvent } from 'react';
 import { Mail, Linkedin, Github, GraduationCap, Send, CheckCircle2, AlertCircle, Loader2 } from 'lucide-react';
+import gsap from 'gsap';
+import { useGSAP } from '@gsap/react';
 import Section from './Section';
 import Reveal from './Reveal';
 import { useLanguage } from '@/i18n/LanguageContext';
@@ -13,6 +15,56 @@ const ICON_MAP: Record<string, typeof Mail> = {
 };
 
 type Status = 'idle' | 'loading' | 'success' | 'error';
+
+function AnimatedQuestionMark() {
+  const qRef = useRef<HTMLSpanElement>(null);
+
+  useGSAP(
+    () => {
+      if (!qRef.current) return;
+      const mm = gsap.matchMedia();
+      mm.add('(prefers-reduced-motion: no-preference)', () => {
+        gsap.to(qRef.current, {
+          y: -5,
+          rotate: 8,
+          duration: 1.8,
+          ease: 'sine.inOut',
+          yoyo: true,
+          repeat: -1,
+        });
+      });
+      return () => mm.revert();
+    },
+    { scope: qRef }
+  );
+
+  const handleMouseEnter = () => {
+    if (!qRef.current || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    gsap.fromTo(
+      qRef.current,
+      { rotate: 0, scale: 1 },
+      {
+        rotate: 360,
+        scale: 1.25,
+        duration: 0.65,
+        ease: 'back.out(2)',
+        overwrite: 'auto',
+      }
+    );
+  };
+
+  return (
+    <span
+      ref={qRef}
+      onMouseEnter={handleMouseEnter}
+      aria-hidden="true"
+      title="Bora conversar?"
+      className="inline-flex items-center justify-center w-8 h-8 md:w-9 md:h-9 rounded-full bg-accent-500/15 border border-accent-500/35 text-accent-400 font-serif font-bold text-lg md:text-xl cursor-pointer align-middle ml-2.5 shadow-sm shadow-accent-500/20 select-none will-change-transform hover:bg-accent-500/30 transition-colors"
+    >
+      ?
+    </span>
+  );
+}
 
 export default function Contact() {
   const { t, lang } = useLanguage();
@@ -56,7 +108,16 @@ export default function Contact() {
      ${errors[field] ? 'border-error-500' : 'border-base-600 focus:border-accent-500/50 focus:ring-1 focus:ring-accent-500/30'}`;
 
   return (
-    <Section id="contact" title={t.contact.title} heading={t.contact.heading}>
+    <Section
+      id="contact"
+      title={t.contact.title}
+      heading={
+        <span className="inline-flex items-center flex-wrap">
+          <span>{t.contact.heading}</span>
+          <AnimatedQuestionMark />
+        </span>
+      }
+    >
       <div className="grid lg:grid-cols-2 gap-8">
         <Reveal>
           <div className="space-y-6">
