@@ -1,8 +1,8 @@
 {
-  "summary": "Machine Learning Developer and Researcher specializing in Computer Vision, graduating in Computer Science and participating in the Graduate Program in Informatics (PPGIA / PUCPR) as a visiting master's student. Experienced in building applied Artificial Intelligence solutions including Computer Vision systems, LLMs, intelligent agents, and enterprise automations. Currently working as an ML Developer at DATAKIE leading technical and architectural decisions for the ML pipeline, while conducting academic research (PIBIC / CNPq / PUCPR) on domain adaptation, autoencoders, and deep architectures.",
+  "summary": "Researcher and Machine Learning Engineer with solid experience in applied Artificial Intelligence, Computer Vision, LLMs, and intelligent agents. Currently working as a Machine Learning Engineer at Datakie, leading technical and architectural decisions for machine learning pipelines, alongside conducting scientific research in R&I projects and master's academic research on computer vision, multimodal models, and document understanding.",
   "highlights": [
     { "label": "Specialty", "value": "Computer Vision", "icon": "eye" },
-    { "label": "Focus", "value": "Machine Learning & LLMs", "icon": "brain-circuit" },
+    { "label": "Focus", "value": "Machine Learning Engineer & LLMs", "icon": "brain-circuit" },
     { "label": "Research", "value": "Domain Adaptation & Autoencoders", "icon": "flask-conical" },
     { "label": "Education", "value": "Computer Science & PPGIA", "icon": "graduation-cap" }
   ],

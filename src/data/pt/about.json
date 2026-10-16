@@ -1,8 +1,8 @@
 {
-  "summary": "Desenvolvedor de Machine Learning e Pesquisador com especialidade em Visão Computacional, graduando em Ciência da Computação e aluno ouvinte de mestrado no PPGIA (PUCPR). Possuo sólida experiência no desenvolvimento de soluções de Inteligência Artificial aplicada, englobando modelos de Visão Computacional, LLMs, agentes inteligentes e automações corporativas. Atuo como Desenvolvedor de ML na DATAKIE, conduzindo as decisões técnicas e arquiteturais do pipeline de Machine Learning, além de desenvolver pesquisas científicas (PIBIC / CNPq / PUCPR) sobre adaptação de domínio, autoencoders e modelos profundos.",
+  "summary": "Pesquisador e Machine Learning Engineer com sólida experiência em Inteligência Artificial aplicada, Visão Computacional, LLMs e agentes inteligentes. Atuo como Machine Learning Engineer na Datakie, liderando as decisões técnicas e arquiteturais dos pipelines de machine learning, além de desenvolver pesquisas científicas em Projetos de P&I e pesquisas acadêmicas do mestrado, sobre os temas de visão computacional, modelos multimodais e document understanding.",
   "highlights": [
     { "label": "Especialidade", "value": "Visão Computacional", "icon": "eye" },
-    { "label": "Atuação", "value": "Machine Learning & LLMs", "icon": "brain-circuit" },
+    { "label": "Atuação", "value": "Machine Learning Engineer & LLMs", "icon": "brain-circuit" },
     { "label": "Pesquisa", "value": "Adaptação de Domínio & Autoencoders", "icon": "flask-conical" },
     { "label": "Formação", "value": "Ciência da Computação & PPGIA", "icon": "graduation-cap" }
   ],
