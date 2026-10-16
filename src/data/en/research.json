@@ -9,10 +9,6 @@
       "description": "Investigation into semantic and instance segmentation, spatial-spectral representations (FFT), and foundational backbones (DINOv3)."
     },
     {
-      "area": "High Performance Computing (HPC) & Slurm",
-      "description": "Orchestration of distributed training and fine-tuning pipelines on multi-GPU clusters using Slurm and remote SSH, emphasizing scalability and reproducibility."
-    },
-    {
       "area": "Lightweight Models, Domain Adaptation & Edge AI",
       "description": "Optimization for edge inference (quantization, autoencoders, Few-Shot Learning) and domain shift mitigation under data constraints."
     }
@@ -149,7 +145,6 @@
   "futureInterests": [
     "Efficient Multimodal Models (VLMs & SLMs)",
     "Robust Segmentation & Foundation Models (SAM)",
-    "Supercomputing Orchestration (HPC & Slurm)",
     "Lightweight Models & Edge AI Optimization",
     "Test-Time Domain Adaptation (TTA)",
     "Foundation Vision Backbones & Spatial-Spectral Analysis"

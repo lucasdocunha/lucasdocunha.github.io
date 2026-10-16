@@ -9,10 +9,6 @@
       "description": "Investigação de arquiteturas para segmentação semântica e por instância, representações espaço-espectrais (FFT) e modelos fundacionais (DINOv3)."
     },
     {
-      "area": "High Performance Computing (HPC) & Slurm",
-      "description": "Orquestração de pipelines de treinamento e fine-tuning distribuído em clusters multi-GPU via Slurm e SSH, focando em escalabilidade e reprodutibilidade."
-    },
-    {
       "area": "Modelos Leves, Adaptação de Domínio & Edge AI",
       "description": "Otimização de modelos para inferência eficiente (quantização, autoencoders, Few-Shot Learning) e mitigação de domain shift em dados restritos."
     }
@@ -149,7 +145,6 @@
   "futureInterests": [
     "Modelos Multimodais Eficientes (VLMs & SLMs)",
     "Segmentação Robusta & Foundation Models (SAM)",
-    "Orquestração em Supercomputadores (HPC & Slurm)",
     "Modelos Leves e Otimização para Borda (Edge AI)",
     "Adaptação de Domínio em Tempo de Teste (TTA)",
     "Foundation Models e Análise Espaço-Espectral"
