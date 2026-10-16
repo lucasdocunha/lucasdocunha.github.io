@@ -11,7 +11,7 @@ interface SectionProps {
 
 export default function Section({ id, title, heading, children, className = '' }: SectionProps) {
   return (
-    <section id={id} className={`py-20 md:py-28 ${className}`}>
+    <section id={id} className={`py-10 md:py-14 scroll-mt-16 md:scroll-mt-20 ${className}`}>
       <div className="section-container">
         {title && (
           <motion.p
