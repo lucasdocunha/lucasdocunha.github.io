@@ -1,9 +1,8 @@
-import { useState, useRef, useEffect, type FormEvent } from 'react';
+import { useState, type FormEvent } from 'react';
 import { Mail, Linkedin, Github, GraduationCap, Send, CheckCircle2, AlertCircle, Loader2 } from 'lucide-react';
-import gsap from 'gsap';
-import { useGSAP } from '@gsap/react';
 import Section from './Section';
 import Reveal from './Reveal';
+import AnimatedContactHeading from './AnimatedContactHeading';
 import { useLanguage } from '@/i18n/LanguageContext';
 import { getData } from '@/data';
 
@@ -15,84 +14,6 @@ const ICON_MAP: Record<string, typeof Mail> = {
 };
 
 type Status = 'idle' | 'loading' | 'success' | 'error';
-
-function AnimatedQuestionMark() {
-  const qRef = useRef<HTMLSpanElement>(null);
-
-  // Spin when the section comes into view
-  useEffect(() => {
-    if (!qRef.current) return;
-    const observer = new IntersectionObserver(
-      (entries) => {
-        const [entry] = entries;
-        if (entry.isIntersecting && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-          gsap.fromTo(
-            qRef.current,
-            { rotate: 0, scale: 0.7 },
-            {
-              rotate: 360,
-              scale: 1,
-              duration: 0.85,
-              ease: 'back.out(2)',
-              overwrite: 'auto',
-            }
-          );
-        }
-      },
-      { threshold: 0.25 }
-    );
-
-    observer.observe(qRef.current);
-    return () => observer.disconnect();
-  }, []);
-
-  // Autonomous gentle floating animation
-  useGSAP(
-    () => {
-      if (!qRef.current) return;
-      const mm = gsap.matchMedia();
-      mm.add('(prefers-reduced-motion: no-preference)', () => {
-        gsap.to(qRef.current, {
-          y: -5,
-          duration: 1.5,
-          ease: 'sine.inOut',
-          yoyo: true,
-          repeat: -1,
-        });
-      });
-      return () => mm.revert();
-    },
-    { scope: qRef }
-  );
-
-  // Interactive spin on hover / click
-  const handleInteract = () => {
-    if (!qRef.current || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-    gsap.to(qRef.current, {
-      rotate: '+=360',
-      scale: 1.25,
-      duration: 0.65,
-      ease: 'back.out(2)',
-      overwrite: 'auto',
-      onComplete: () => {
-        gsap.to(qRef.current, { scale: 1, duration: 0.25, ease: 'power2.out' });
-      },
-    });
-  };
-
-  return (
-    <span
-      ref={qRef}
-      onMouseEnter={handleInteract}
-      onClick={handleInteract}
-      aria-hidden="true"
-      title="Bora conversar?"
-      className="inline-block text-accent-400 cursor-pointer ml-1 select-none will-change-transform origin-center hover:text-accent-300 transition-colors"
-    >
-      ?
-    </span>
-  );
-}
 
 export default function Contact() {
   const { t, lang } = useLanguage();
@@ -139,12 +60,7 @@ export default function Contact() {
     <Section
       id="contact"
       title={t.contact.title}
-      heading={
-        <span className="inline-flex items-baseline">
-          <span>{t.contact.heading}</span>
-          <AnimatedQuestionMark />
-        </span>
-      }
+      heading={<AnimatedContactHeading text={t.contact.heading} />}
     >
       <div className="grid lg:grid-cols-2 gap-8">
         <Reveal>
