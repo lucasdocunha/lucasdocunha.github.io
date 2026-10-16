@@ -1,20 +1,20 @@
 {
   "lines": [
     {
-      "area": "Document Understanding & Multimodalidade",
-      "description": "Pesquisa e desenvolvimento de modelos visuais e de linguagem (VLMs/LLMs) aplicados à extração estruturada de entidades, análise de layouts complexos e OCR neural."
+      "area": "Document Understanding, VLMs & SLMs",
+      "description": "Pesquisa e experimentação com modelos multimodais (VLMs) e Small Language Models (SLMs) aplicados à compreensão de documentos complexos, OCR neural e extração estruturada."
     },
     {
-      "area": "Robustez Forense & Detecção de Deepfakes",
-      "description": "Investigação da generalização de extratores espaciais, espectrais (FFT) e modelos fundacionais (DINOv3) contra perturbações e compressões adversas."
+      "area": "Visão Computacional, 3D & Segmentação Robusta",
+      "description": "Investigação de arquiteturas para segmentação semântica e por instância, visão 3D, representações espaço-espectrais (FFT) e modelos fundacionais (DINOv3)."
     },
     {
-      "area": "Aprendizado Auto-Supervisionado & Restrição de Dados",
-      "description": "Exploração de arquiteturas de autoencoders, Self-Taught Learning e Few-Shot Learning para treinamento de modelos eficientes em cenários com escassez de anotações."
+      "area": "High Performance Computing (HPC) & Slurm",
+      "description": "Orquestração de pipelines de treinamento e fine-tuning distribuído em clusters multi-GPU via Slurm e SSH, focando em escalabilidade e reprodutibilidade."
     },
     {
-      "area": "Adaptação de Domínio & Aprendizado Federado",
-      "description": "Métodos para transferência de conhecimento, mitigação de domain shift e fusão de representações em cenários distribuídos."
+      "area": "Modelos Leves, Adaptação de Domínio & Edge AI",
+      "description": "Otimização de modelos para inferência eficiente (quantização, autoencoders, Few-Shot Learning) e mitigação de domain shift em dados restritos."
     }
   ],
   "projects": [
@@ -108,15 +108,16 @@
     {
       "id": "res-mestrado",
       "type": "Mestrado",
-      "title": "Vision-Language Models para Document Understanding",
+      "title": "Vision-Language Models e SLMs para Document Understanding",
       "lab": "PPGIA — PUCPR (aluno especial)",
       "period": "2026 — Atual",
-      "description": "Disciplinas e investigação no Programa de Pós-Graduação em Informática com foco em Vision-Language Models (VLMs), OCR e compreensão de documentos, avaliando modelos multimodais em tarefas de extração estruturada e raciocínio visual.",
+      "description": "Disciplinas e investigação no Programa de Pós-Graduação em Informática (PPGIA/PUCPR) com foco em Vision-Language Models (VLMs), Small Language Models (SLMs) e compreensão profunda de documentos. Treinamento e avaliação de modelos multimodais em clusters de High Performance Computing (HPC) orquestrados via Slurm e operados via SSH, explorando extração estruturada de informações, OCR neural e raciocínio visual sob restrições computacionais.",
       "areas": [
-        "VLMs",
+        "VLMs & SLMs",
         "Document Understanding",
-        "OCR",
-        "Multimodalidade"
+        "HPC & Slurm",
+        "SSH Headless",
+        "OCR Neural"
       ]
     }
   ],
@@ -145,10 +146,11 @@
     }
   ],
   "futureInterests": [
-    "Multimodal Document Understanding",
-    "Cross-Attention Espaço-Espectral",
-    "Foundation Models (DINOv3 / ViT)",
+    "Modelos Multimodais Eficientes (VLMs & SLMs)",
+    "Visão Computacional 3D & Segmentação com SAM",
+    "Orquestração em Supercomputadores (HPC & Slurm)",
+    "Modelos Leves e Otimização para Borda (Edge AI)",
     "Adaptação de Domínio em Tempo de Teste (TTA)",
-    "LLMs e VLMs para Dados Não-Estruturados"
+    "Foundation Models e Análise Espaço-Espectral"
   ]
 }

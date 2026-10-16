@@ -1,20 +1,21 @@
 {
-  "summary": "Researcher and Machine Learning Engineer with solid experience in applied Artificial Intelligence, Computer Vision, LLMs, and intelligent agents. Currently working as a Machine Learning Engineer at Datakie, leading technical and architectural decisions for machine learning pipelines, alongside conducting scientific research in R&I projects and master's academic research on computer vision, multimodal models, and document understanding.",
+  "summary": "Researcher and Machine Learning Engineer with solid experience in applied Artificial Intelligence, Computer Vision, Multimodal Models, and High Performance Computing (HPC). Currently working as a Machine Learning Engineer at Datakie, leading technical and architectural decisions for machine learning and generative AI pipelines, alongside conducting scientific research in R&I projects and master's research (PPGIA/PUCPR). Specialized in Computer Vision (semantic and instance segmentation, 3D vision, OpenCV, and lightweight edge models), Multimodal Vision-Language Models (VLMs), Small Language Models (SLMs), and scientific experimentation on supercomputing (HPC) clusters orchestrated with Slurm and remote SSH environments.",
   "highlights": [
-    { "label": "Specialty", "value": "Computer Vision", "icon": "eye" },
-    { "label": "Focus", "value": "Machine Learning Engineer & LLMs", "icon": "brain-circuit" },
-    { "label": "Research", "value": "Domain Adaptation & Autoencoders", "icon": "flask-conical" },
+    { "label": "Specialty", "value": "Computer Vision & 3D", "icon": "eye" },
+    { "label": "Models", "value": "VLMs, SLMs & LLMs", "icon": "brain" },
+    { "label": "Research & HPC", "value": "Slurm, SSH & Multi-GPU", "icon": "server" },
     { "label": "Education", "value": "Computer Science & PPGIA", "icon": "graduation-cap" }
   ],
   "interests": [
-    "Computer Vision",
-    "Domain Adaptation",
-    "Autoencoders (VAE, Denoising)",
-    "Large Language Models (LLMs)",
-    "Intelligent Agents & Chatbots",
-    "Few-Shot Learning",
-    "Document Understanding & OCR",
+    "Computer Vision & Segmentation (SAM, YOLOv8-seg)",
+    "3D Vision & Point Clouds (Open3D, Depth Estimation)",
+    "OpenCV & Lightweight Edge Models (Edge AI)",
+    "Small Language Models (SLMs) & Multimodal VLMs",
+    "Document Understanding & Neural OCR",
+    "High Performance Computing (HPC) & Slurm",
+    "Multi-GPU Distributed Training & Headless SSH",
+    "Domain Adaptation & Autoencoders",
     "LLMOps & MLOps"
   ],
-  "goals": "To research and build state-of-the-art solutions in Computer Vision and Artificial Intelligence, uniting rigorous scientific experimentation with scalable, high-impact production pipelines."
+  "goals": "To conceive and engineer frontier AI solutions, uniting rigorous scientific experimentation on HPC clusters (Slurm/SSH) with lightweight Computer Vision, VLMs, and efficient models designed for high-impact practical applications."
 }

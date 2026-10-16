@@ -1,7 +1,83 @@
 [
-  { "name": "Visão Computacional (Especialidade)", "icon": "eye", "skills": ["PyTorch", "YOLO", "Autoencoders (VAE / Denoising)", "CNNs", "DINOv3 / ViT", "OpenCV", "Albumentations", "Metric Learning", "Análise Espectral (FFT)"] },
-  { "name": "LLMs, Agentes & IA Generativa", "icon": "brain", "skills": ["LLMs", "Embeddings", "Prompting Avançado", "Chatbots", "Databricks (Genie API)", "LLaMA", "Fine-Tuning", "LangChain", "Transformers"] },
-  { "name": "Linguagens & Bibliotecas Científicas", "icon": "code", "skills": ["Python", "SQL", "TensorFlow", "Keras", "Scikit-Learn", "NumPy", "Pandas", "Matplotlib", "TypeScript"] },
-  { "name": "MLOps, Cloud & Infraestrutura", "icon": "cloud", "skills": ["Databricks", "Azure", "Docker", "Podman", "LLMOps", "MLOps", "Git / GitHub", "Linux", "Bash"] },
-  { "name": "Pesquisa & Métodos Avançados", "icon": "flask-conical", "skills": ["Adaptação de Domínio", "Fusão de Representações", "Few-Shot Learning", "Self-Taught Learning", "Modelos Federados", "Data Augmentation", "LaTeX"] }
+  {
+    "name": "Visão Computacional & 3D (Especialidade)",
+    "icon": "eye",
+    "skills": [
+      "Segmentação Semântica & Instância",
+      "SAM (Segment Anything)",
+      "YOLOv8-seg",
+      "Visão 3D & Nuvens de Pontos",
+      "OpenCV (Tempo Real)",
+      "Modelos Leves (Edge AI)",
+      "DINOv3 / ViT",
+      "Autoencoders (VAE / Denoising)",
+      "Estimação de Profundidade",
+      "Análise Espectral (2D-FFT)",
+      "Albumentations",
+      "Metric Learning"
+    ]
+  },
+  {
+    "name": "LLMs, SLMs & Modelos Multimodais",
+    "icon": "brain",
+    "skills": [
+      "Small Language Models (SLMs)",
+      "Modelos Multimodais (VLMs)",
+      "Document Understanding",
+      "OCR Neural (Donut / LayoutLM)",
+      "Fine-Tuning (LoRA / QLoRA)",
+      "Florence-2 / CLIP / PaliGemma",
+      "Quantização (AWQ / GGUF)",
+      "vLLM & Ollama",
+      "RAG & Embeddings Densos",
+      "Agentes Autônomos",
+      "Transformers"
+    ]
+  },
+  {
+    "name": "Pesquisa, HPC & Cluster Computing",
+    "icon": "server",
+    "skills": [
+      "High Performance Computing (HPC)",
+      "Orquestração com Slurm (sbatch)",
+      "Operação Remota via SSH Headless",
+      "Treinamento Distribuído Multi-GPU",
+      "PyTorch DDP / Accelerate",
+      "Adaptação de Domínio",
+      "Fusão de Representações",
+      "Few-Shot Learning",
+      "Self-Taught Learning",
+      "LaTeX / Overleaf"
+    ]
+  },
+  {
+    "name": "MLOps, Cloud & Otimização",
+    "icon": "cloud",
+    "skills": [
+      "Databricks (Workflows / Genie)",
+      "Azure Cloud",
+      "Docker & Podman",
+      "ONNX Runtime & TensorRT",
+      "Quantização para Borda",
+      "LLMOps & MLOps",
+      "Git / GitHub Actions",
+      "Linux & Bash Scripting",
+      "WandB / MLflow"
+    ]
+  },
+  {
+    "name": "Linguagens & Ecossistema Científico",
+    "icon": "code",
+    "skills": [
+      "Python (Científico & OOP)",
+      "PyTorch",
+      "OpenCV",
+      "SQL",
+      "TensorFlow / Keras",
+      "Scikit-Learn",
+      "NumPy & Pandas",
+      "Matplotlib / Seaborn",
+      "TypeScript"
+    ]
+  }
 ]

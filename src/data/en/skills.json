@@ -1,7 +1,83 @@
 [
-  { "name": "Computer Vision (Specialty)", "icon": "eye", "skills": ["PyTorch", "YOLO", "Autoencoders (VAE / Denoising)", "CNNs", "DINOv3 / ViT", "OpenCV", "Albumentations", "Metric Learning", "Spectral Analysis (FFT)"] },
-  { "name": "LLMs, Agents & Generative AI", "icon": "brain", "skills": ["LLMs", "Embeddings", "Advanced Prompting", "Chatbots", "Databricks (Genie API)", "LLaMA", "Fine-Tuning", "LangChain", "Transformers"] },
-  { "name": "Languages & Scientific Libraries", "icon": "code", "skills": ["Python", "SQL", "TensorFlow", "Keras", "Scikit-Learn", "NumPy", "Pandas", "Matplotlib", "TypeScript"] },
-  { "name": "MLOps, Cloud & Infrastructure", "icon": "cloud", "skills": ["Databricks", "Azure", "Docker", "Podman", "LLMOps", "MLOps", "Git / GitHub", "Linux", "Bash"] },
-  { "name": "Research & Advanced Methods", "icon": "flask-conical", "skills": ["Domain Adaptation", "Representation Fusion", "Few-Shot Learning", "Self-Taught Learning", "Federated Models", "Data Augmentation", "LaTeX"] }
+  {
+    "name": "Computer Vision & 3D (Specialty)",
+    "icon": "eye",
+    "skills": [
+      "Semantic & Instance Segmentation",
+      "SAM (Segment Anything)",
+      "YOLOv8-seg",
+      "3D Vision & Point Clouds",
+      "OpenCV (Real-Time)",
+      "Lightweight Models (Edge AI)",
+      "DINOv3 / ViT",
+      "Autoencoders (VAE / Denoising)",
+      "Monocular Depth Estimation",
+      "Spectral Analysis (2D-FFT)",
+      "Albumentations",
+      "Metric Learning"
+    ]
+  },
+  {
+    "name": "LLMs, SLMs & Multimodal Models",
+    "icon": "brain",
+    "skills": [
+      "Small Language Models (SLMs)",
+      "Multimodal Models (VLMs)",
+      "Document Understanding",
+      "Neural OCR (Donut / LayoutLM)",
+      "Efficient Fine-Tuning (LoRA / QLoRA)",
+      "Florence-2 / CLIP / PaliGemma",
+      "Quantization (AWQ / GGUF)",
+      "vLLM & Ollama",
+      "RAG & Dense Embeddings",
+      "Autonomous Agents",
+      "Transformers"
+    ]
+  },
+  {
+    "name": "Research, HPC & Cluster Computing",
+    "icon": "server",
+    "skills": [
+      "High Performance Computing (HPC)",
+      "Slurm Workload Manager (sbatch)",
+      "Remote SSH & Headless Linux",
+      "Multi-GPU Distributed Training",
+      "PyTorch DDP / Accelerate",
+      "Domain Adaptation",
+      "Representation Fusion",
+      "Few-Shot Learning",
+      "Self-Taught Learning",
+      "LaTeX / Overleaf"
+    ]
+  },
+  {
+    "name": "MLOps, Cloud & Optimization",
+    "icon": "cloud",
+    "skills": [
+      "Databricks (Workflows / Genie)",
+      "Azure Cloud",
+      "Docker & Podman",
+      "ONNX Runtime & TensorRT",
+      "Edge Quantization",
+      "LLMOps & MLOps",
+      "Git / GitHub Actions",
+      "Linux & Bash Scripting",
+      "WandB / MLflow"
+    ]
+  },
+  {
+    "name": "Languages & Scientific Ecosystem",
+    "icon": "code",
+    "skills": [
+      "Python (Scientific & Advanced OOP)",
+      "PyTorch",
+      "OpenCV",
+      "SQL",
+      "TensorFlow / Keras",
+      "Scikit-Learn",
+      "NumPy & Pandas",
+      "Matplotlib / Seaborn",
+      "TypeScript"
+    ]
+  }
 ]

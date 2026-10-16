@@ -1,5 +1,5 @@
 import { useRef } from 'react';
-import { GraduationCap, FlaskConical, BrainCircuit, Briefcase, Target, Lightbulb, Eye } from 'lucide-react';
+import { GraduationCap, FlaskConical, BrainCircuit, Briefcase, Target, Lightbulb, Eye, Server, Brain, Cpu } from 'lucide-react';
 import gsap from 'gsap';
 import Section from './Section';
 import Reveal from './Reveal';
@@ -12,6 +12,9 @@ const ICON_MAP: Record<string, typeof GraduationCap> = {
   'brain-circuit': BrainCircuit,
   'briefcase': Briefcase,
   'eye': Eye,
+  'server': Server,
+  'brain': Brain,
+  'cpu': Cpu,
 };
 
 interface HighlightCardProps {

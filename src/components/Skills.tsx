@@ -1,4 +1,4 @@
-import { Code, Brain, Eye, Cloud, FlaskConical, type LucideIcon } from 'lucide-react';
+import { Code, Brain, Eye, Cloud, FlaskConical, Server, Cpu, type LucideIcon } from 'lucide-react';
 import Section from './Section';
 import Reveal from './Reveal';
 import { useLanguage } from '@/i18n/LanguageContext';
@@ -10,6 +10,8 @@ const ICON_MAP: Record<string, LucideIcon> = {
   eye: Eye,
   cloud: Cloud,
   'flask-conical': FlaskConical,
+  server: Server,
+  cpu: Cpu,
 };
 
 export default function Skills() {

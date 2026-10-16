@@ -1,20 +1,20 @@
 {
   "lines": [
     {
-      "area": "Document Understanding & Multimodality",
-      "description": "Research and engineering of vision-language architectures (VLMs/LLMs) applied to structured information extraction, complex layout reasoning, and neural OCR."
+      "area": "Document Understanding, VLMs & SLMs",
+      "description": "Research and development of multimodal models (VLMs) and Small Language Models (SLMs) applied to structured document parsing, complex layout reasoning, and neural OCR."
     },
     {
-      "area": "Forensic Robustness & Deepfake Detection",
-      "description": "Investigation into the generalization capacity of spatial features, frequency-domain spectral cues (FFT), and self-supervised foundation backbones (DINOv3) under real-world corruptions."
+      "area": "Computer Vision, 3D & Robust Segmentation",
+      "description": "Investigation into semantic and instance segmentation, 3D vision, spatial-spectral representations (FFT), and foundational backbones (DINOv3)."
     },
     {
-      "area": "Self-Supervised & Data-Constrained Learning",
-      "description": "Exploration of deep autoencoder ensembles, Self-Taught Learning, and Few-Shot Learning frameworks to train high-performing models in low-annotation regimes."
+      "area": "High Performance Computing (HPC) & Slurm",
+      "description": "Orchestration of distributed training and fine-tuning pipelines on multi-GPU clusters using Slurm and remote SSH, emphasizing scalability and reproducibility."
     },
     {
-      "area": "Domain Adaptation & Representation Fusion",
-      "description": "Techniques for cross-domain transfer learning, domain shift mitigation, and multimodal feature fusion across distributed environments."
+      "area": "Lightweight Models, Domain Adaptation & Edge AI",
+      "description": "Optimization for edge inference (quantization, autoencoders, Few-Shot Learning) and domain shift mitigation under data constraints."
     }
   ],
   "projects": [
@@ -108,15 +108,16 @@
     {
       "id": "res-mestrado",
       "type": "M.Sc.",
-      "title": "Vision-Language Models for Document Understanding",
+      "title": "Vision-Language Models & SLMs for Document Understanding",
       "lab": "PPGIA — PUCPR (special student)",
       "period": "2026 — Present",
-      "description": "Graduate courses and research at the Graduate Program in Informatics focused on Vision-Language Models (VLMs), OCR and document understanding, evaluating multimodal models on structured extraction and visual reasoning tasks.",
+      "description": "Graduate courses and research at the Graduate Program in Computer Science (PPGIA/PUCPR) focusing on Vision-Language Models (VLMs), Small Language Models (SLMs), and comprehensive document understanding. Training and benchmarking multimodal models on High Performance Computing (HPC) clusters orchestrated via Slurm and operated over headless SSH, exploring structured extraction, neural OCR, and visual reasoning under computational constraints.",
       "areas": [
-        "VLMs",
+        "VLMs & SLMs",
         "Document Understanding",
-        "OCR",
-        "Multimodality"
+        "HPC & Slurm",
+        "Headless SSH",
+        "Neural OCR"
       ]
     }
   ],
@@ -145,10 +146,11 @@
     }
   ],
   "futureInterests": [
-    "Multimodal Document Understanding",
-    "Spatial-Spectral Cross-Attention",
-    "Foundation Vision Models (DINOv3 / ViT)",
+    "Efficient Multimodal Models (VLMs & SLMs)",
+    "3D Computer Vision & SAM-based Segmentation",
+    "Supercomputing Orchestration (HPC & Slurm)",
+    "Lightweight Models & Edge AI Optimization",
     "Test-Time Domain Adaptation (TTA)",
-    "LLMs and VLMs for Unstructured Enterprise Data"
+    "Foundation Vision Backbones & Spatial-Spectral Analysis"
   ]
 }

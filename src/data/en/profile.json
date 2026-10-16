@@ -1,8 +1,8 @@
 {
   "name": "Lucas Cunha",
   "headline": "Machine Learning Engineer & Computer Vision Researcher",
-  "tagline": "Computer Vision · Deep Learning · LLMs & Intelligent Agents",
-  "description": "I work as a Machine Learning Engineer at Datakie, leading technical and architectural decisions for machine learning pipelines, alongside conducting scientific research in R&I projects and master's academic research on computer vision, multimodal models, and document understanding.",
+  "tagline": "Computer Vision & 3D · Multimodal Models & SLMs · HPC & Slurm",
+  "description": "I work as a Machine Learning Engineer at Datakie, leading technical and architectural decisions for machine learning and generative AI pipelines, alongside conducting scientific research in R&I projects and master's academic research (PPGIA/PUCPR), focused on Computer Vision (segmentation, 3D, lightweight edge models), Multimodal Models (VLMs), Small Language Models (SLMs), and HPC cluster experimentation using Slurm and remote SSH.",
   "location": "Curitiba, PR — Brazil",
   "email": "lucas.ocunha@hotmail.com",
   "cvUrl": "/cv/resume.pdf",

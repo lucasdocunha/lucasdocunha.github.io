@@ -1,8 +1,8 @@
 {
   "name": "Lucas Cunha",
   "headline": "Machine Learning Engineer & Pesquisador em Visão Computacional",
-  "tagline": "Visão Computacional · Deep Learning · LLMs & Agentes Inteligentes",
-  "description": "Atuo como Machine Learning Engineer na Datakie, liderando as decisões técnicas e arquiteturais dos pipelines de machine learning, além de desenvolver pesquisas científicas em Projetos de P&I e pesquisas acadêmicas do mestrado, sobre os temas de visão computacional, modelos multimodais e document understanding.",
+  "tagline": "Visão Computacional & 3D · Modelos Multimodais & SLMs · HPC & Slurm",
+  "description": "Atuo como Machine Learning Engineer na Datakie, liderando as decisões técnicas e arquiteturais dos pipelines de machine learning e IA generativa, além de desenvolver pesquisas científicas em Projetos de P&I e no mestrado acadêmico (PPGIA/PUCPR), com foco em Visão Computacional (segmentação, 3D, modelos leves), Modelos Multimodais (VLMs), Small Language Models (SLMs) e experimentação em clusters de HPC com Slurm e SSH.",
   "location": "Curitiba, PR — Brasil",
   "email": "lucas.ocunha@hotmail.com",
   "cvUrl": "/cv/resume.pdf",
