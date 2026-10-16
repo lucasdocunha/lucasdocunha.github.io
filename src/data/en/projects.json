@@ -4,6 +4,10 @@
     "title": "Visual SKU Recognition & Segmentation System",
     "description": "Computer Vision platform for automated product (SKU) detection, bounding-box segmentation, and fine-grained classification from mobile camera captures in retail environments. Leveraged Metric Learning and state-of-the-art YOLO backbones to streamline auditing and pricing workflows, boosting operational efficiency by 40%.",
     "category": "Computer Vision",
+    "tags": [
+      "Computer Vision",
+      "Machine Learning"
+    ],
     "technologies": [
       "Python",
       "PyTorch",
@@ -20,6 +24,10 @@
     "title": "Enterprise Teams Chatbot with Databricks Genie",
     "description": "Intelligent enterprise assistant integrated into Microsoft Teams, interpreting complex natural language queries and fetching analytical data directly from databases via Python, SQL, and the Databricks Genie API, reducing manual data lookup time by ~80%.",
     "category": "Machine Learning",
+    "tags": [
+      "Machine Learning",
+      "LLMs & Agents"
+    ],
     "technologies": [
       "Python",
       "SQL",
@@ -36,6 +44,10 @@
     "title": "Automated HR Resume Screening with LLMOps",
     "description": "Automated resume evaluation and summarization system for recruitment teams. Leveraged dense embeddings, advanced prompting, and structured LLMOps workflows to enhance triage accuracy and eliminate candidate evaluation bottlenecks.",
     "category": "Machine Learning",
+    "tags": [
+      "Machine Learning",
+      "LLMOps"
+    ],
     "technologies": [
       "Python",
       "LLMs",
@@ -52,6 +64,10 @@
     "title": "Intelligent Tax Document Processing",
     "description": "Machine Learning pipeline for extraction and semantic analysis of tax documents. Integrates OCR modules, NLP classification, fine-tuned open-source LLMs (LLaMA family), and secure local edge inference. Partnered with FINEP and SUFRAMA.",
     "category": "Machine Learning",
+    "tags": [
+      "Machine Learning",
+      "OCR & NLP"
+    ],
     "technologies": [
       "Python",
       "PyTorch",
@@ -66,9 +82,13 @@
   },
   {
     "id": "proj-5",
-    "title": "Forensic Robustness in Deepfake Detection (Thesis · SIBGRAPI 2026)",
+    "title": "Benchmarking Spatial, Spectral, and Self-Supervised Cues for Face Forgery Detection under Realistic Degradation (SIBGRAPI 2026)",
     "description": "In-depth empirical investigation benchmarking spatial convolutional networks, frequency-domain spectral analysis (FFT), and self-supervised Vision Transformers (DINOv3) under real-world image degradation, compression artifacts, and cross-dataset distribution shifts.",
     "category": "Research",
+    "tags": [
+      "Research",
+      "Computer Vision"
+    ],
     "technologies": [
       "Python",
       "PyTorch",
@@ -86,6 +106,10 @@
     "title": "Self-Taught Ensemble for Smart Parking (IEEE SMC 2026)",
     "description": "Unsupervised Self-Taught Learning framework leveraging multi-layer autoencoder ensembles for parking space occupancy classification in low-label data regimes, reaching state-of-the-art performance on the PKLot and CNR-EXT benchmarks.",
     "category": "Research",
+    "tags": [
+      "Research",
+      "Computer Vision"
+    ],
     "technologies": [
       "Python",
       "TensorFlow",
@@ -103,6 +127,10 @@
     "title": "Document Understanding — Sci-Image Markdown (ICDAR 2026)",
     "description": "Research and engineering framework for numerical data table extraction from scientific figures into structured Markdown, developed for the ICDAR 2026 challenges (Task 2: Scientific Figure to Data Table Extraction) at the AI League. Fine-tuning using QLoRA with Qwen2.5-VL.",
     "category": "Research",
+    "tags": [
+      "Research",
+      "Computer Vision"
+    ],
     "technologies": [
       "Python",
       "PyTorch",

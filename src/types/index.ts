@@ -111,6 +111,7 @@ export interface ProjectItem {
   title: string;
   description: string;
   category: string;
+  tags?: string[];
   technologies: string[];
   image?: string;
   github?: string;

@@ -4,6 +4,10 @@
     "title": "Reconhecimento e Segmentação Visual de SKUs",
     "description": "Solução de Visão Computacional para detecção, recorte e classificação instantânea de produtos (SKUs) a partir de imagens capturadas por celulares no varejo. Incorporação de técnicas de Metric Learning e arquiteturas YOLO, automatizando a auditoria e aumentando em cerca de 40% a eficiência operacional.",
     "category": "Visão Computacional",
+    "tags": [
+      "Visão Computacional",
+      "Machine Learning"
+    ],
     "technologies": [
       "Python",
       "PyTorch",
@@ -20,6 +24,10 @@
     "title": "Chatbot Corporativo com Databricks Genie",
     "description": "Assistente inteligente corporativo integrado ao Microsoft Teams, capaz de interpretar consultas textuais complexas em linguagem natural e recuperar dados analíticos diretamente via Python, SQL e API do Genie no Databricks, reduzindo em cerca de 80% o tempo gasto na busca manual de dados.",
     "category": "Machine Learning",
+    "tags": [
+      "Machine Learning",
+      "LLMs & Agentes"
+    ],
     "technologies": [
       "Python",
       "SQL",
@@ -36,6 +44,10 @@
     "title": "Triagem e Avaliação de CVs com LLMOps",
     "description": "Sistema automatizado de análise, pontuação e resumo de currículos para o RH. Utiliza modelos de embeddings, prompting avançado e fluxos estruturados de LLMOps para elevar a assertividade da triagem e mitigar gargalos em processos seletivos de grande volume.",
     "category": "Machine Learning",
+    "tags": [
+      "Machine Learning",
+      "LLMOps"
+    ],
     "technologies": [
       "Python",
       "LLMs",
@@ -52,6 +64,10 @@
     "title": "Processamento Inteligente de Documentos Fiscais",
     "description": "Pipeline de Machine Learning para processamento e interpretação semântica de documentos fiscais. Integração de módulos de OCR, classificação com NLP, fine-tuning de modelos abertos (família LLaMA) e inferência local. Projeto em parceria com FINEP e SUFRAMA.",
     "category": "Machine Learning",
+    "tags": [
+      "Machine Learning",
+      "OCR & NLP"
+    ],
     "technologies": [
       "Python",
       "PyTorch",
@@ -66,9 +82,13 @@
   },
   {
     "id": "proj-5",
-    "title": "Robustez Forense em Detecção de Deepfakes (TCC · SIBGRAPI 2026)",
+    "title": "Benchmarking Spatial, Spectral, and Self-Supervised Cues for Face Forgery Detection under Realistic Degradation (SIBGRAPI 2026)",
     "description": "Pesquisa e benchmark avaliando a robustez de extratores espaciais convolucionais, mapas espectrais no domínio da frequência (FFT) e modelos auto-supervisionados (DINOv3) na detecção de manipulações faciais sob degradações do mundo real.",
     "category": "Pesquisa",
+    "tags": [
+      "Pesquisa",
+      "Visão Computacional"
+    ],
     "technologies": [
       "Python",
       "PyTorch",
@@ -85,6 +105,10 @@
     "title": "Ensemble Self-Taught para Estacionamentos (IEEE SMC 2026)",
     "description": "Framework baseado em Self-Taught Learning com comitês de autoencoders não-supervisionados para classificação de ocupação de vagas em cenários de alta restrição de dados rotulados, com validação nos benchmarks PKLot e CNR-EXT.",
     "category": "Pesquisa",
+    "tags": [
+      "Pesquisa",
+      "Visão Computacional"
+    ],
     "technologies": [
       "Python",
       "TensorFlow",
@@ -102,6 +126,10 @@
     "title": "Document Understanding — Sci-Image Markdown (ICDAR 2026)",
     "description": "Framework de pesquisa e engenharia para extração de tabelas numéricas a partir de figuras científicas em Markdown estruturado, desenvolvido no âmbito dos desafios do ICDAR 2026 (Task 2: Scientific Figure to Data Table Extraction) na Liga de IA. Fine-tuning com QLoRA sobre Qwen2.5-VL.",
     "category": "Pesquisa",
+    "tags": [
+      "Pesquisa",
+      "Visão Computacional"
+    ],
     "technologies": [
       "Python",
       "PyTorch",

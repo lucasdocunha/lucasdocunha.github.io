@@ -10,32 +10,56 @@ export default function Projects() {
   const { t, lang } = useLanguage();
   const { projects } = getData(lang);
 
-  const categories = useMemo(() => {
-    const cats = Array.from(new Set(projects.map((p) => p.category)));
-    return [t.projects.all, ...cats];
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [lang]);
+  const categoryFilters = useMemo(() => [
+    { key: 'all', label: t.projects.all },
+    { key: 'cv', label: lang === 'pt' ? 'Visão Computacional' : 'Computer Vision' },
+    { key: 'ml', label: 'Machine Learning' },
+    { key: 'research', label: lang === 'pt' ? 'Pesquisa' : 'Research' },
+  ], [lang, t.projects.all]);
 
-  const [filter, setFilter] = useState(t.projects.all);
+  const [activeCategory, setActiveCategory] = useState<string>('all');
 
-  const filtered = filter === t.projects.all
-    ? projects
-    : projects.filter((p) => p.category === filter);
+  const filtered = useMemo(() => {
+    if (activeCategory === 'all') return projects;
+
+    const targetTag =
+      activeCategory === 'cv'
+        ? (lang === 'pt' ? 'Visão Computacional' : 'Computer Vision')
+        : activeCategory === 'ml'
+        ? 'Machine Learning'
+        : (lang === 'pt' ? 'Pesquisa' : 'Research');
+
+    return projects.filter((p) => {
+      const matchCategory = p.category === targetTag;
+      const matchTag = p.tags && p.tags.includes(targetTag);
+      return matchCategory || matchTag;
+    });
+  }, [projects, activeCategory, lang]);
+
+  const handleTagClick = (tag: string) => {
+    if (tag === 'Visão Computacional' || tag === 'Computer Vision') {
+      setActiveCategory('cv');
+    } else if (tag === 'Pesquisa' || tag === 'Research') {
+      setActiveCategory('research');
+    } else if (tag === 'Machine Learning') {
+      setActiveCategory('ml');
+    }
+  };
 
   return (
     <Section id="projects" title={t.projects.title} heading={t.projects.heading}>
       <div className="flex flex-wrap gap-2 mb-8">
-        {categories.map((cat) => (
+        {categoryFilters.map((cat) => (
           <button
-            key={cat}
-            onClick={() => setFilter(cat)}
+            key={cat.key}
+            onClick={() => setActiveCategory(cat.key)}
             className={`px-3.5 py-1.5 rounded-lg text-xs transition-all duration-200 ${
-              filter === cat
-                ? 'bg-accent-500 text-base-950 font-medium'
+              activeCategory === cat.key
+                ? 'bg-accent-500 text-base-950 font-medium shadow-md shadow-accent-500/20'
                 : 'bg-base-800/60 text-gray-400 border border-base-700 hover:border-accent-500/40 hover:text-white'
             }`}
           >
-            {cat}
+            {cat.label}
           </button>
         ))}
       </div>
@@ -90,7 +114,42 @@ export default function Projects() {
                 </div>
               </div>
 
-              <span className="badge-accent mb-2 w-fit">{project.category}</span>
+              <div className="flex flex-wrap gap-1.5 mb-2.5">
+                {(project.tags || [project.category]).map((tag) => {
+                  const isFilterable =
+                    tag === 'Visão Computacional' ||
+                    tag === 'Computer Vision' ||
+                    tag === 'Pesquisa' ||
+                    tag === 'Research' ||
+                    tag === 'Machine Learning';
+
+                  const isActive =
+                    (activeCategory === 'cv' && (tag === 'Visão Computacional' || tag === 'Computer Vision')) ||
+                    (activeCategory === 'research' && (tag === 'Pesquisa' || tag === 'Research')) ||
+                    (activeCategory === 'ml' && tag === 'Machine Learning');
+
+                  return (
+                    <button
+                      key={tag}
+                      type="button"
+                      disabled={!isFilterable}
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        if (isFilterable) handleTagClick(tag);
+                      }}
+                      className={`inline-flex items-center px-2.5 py-0.5 rounded-md text-xs font-medium border transition-all ${
+                        isActive
+                          ? 'bg-accent-500/25 border-accent-400 text-accent-300 shadow-sm shadow-accent-500/10'
+                          : isFilterable
+                          ? 'bg-accent-500/10 border-accent-500/20 text-accent-400 hover:border-accent-500/40 hover:bg-accent-500/15 cursor-pointer'
+                          : 'bg-base-800/80 border-base-700 text-gray-300 cursor-default'
+                      }`}
+                    >
+                      {tag}
+                    </button>
+                  );
+                })}
+              </div>
 
               <h3 className="text-white font-semibold text-base mb-2 group-hover:text-accent-400 transition-colors">
                 {project.title}
