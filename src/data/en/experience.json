@@ -1,26 +1,76 @@
 [
   {
-    "id": "exp-1",
+    "id": "exp-datakie",
+    "track": "corporate",
     "role": "Machine Learning Engineer",
     "company": "Datakie",
     "period": "06/2026 — Present",
+    "isCurrent": true,
     "location": "Curitiba, PR — Brazil",
-    "description": "Developing ML solutions and driving technical and architectural decisions for intelligent tax document processing (FINEP / SUFRAMA partnership).",
+    "badge": "Strategic Partnership: FINEP / SUFRAMA",
+    "description": "Technical leadership and architectural decisions for Machine Learning and generative AI pipelines focused on intelligent processing, semantic interpretation, and automated auditing of tax documents.",
+    "metrics": [
+      { "value": "100%", "label": "Local Inference", "detail": "Data privacy and on-premise tax compliance" },
+      { "value": "LLaMA", "label": "Open-Source Models", "detail": "Domain fine-tuning and quantization" },
+      { "value": "MLOps", "label": "End-to-End Architecture", "detail": "Versioning, reproducible pipelines, and robustness" }
+    ],
+    "pillars": [
+      {
+        "title": "AI Pipeline Engineering",
+        "description": "Full end-to-end development: intelligent neural OCR, NLP classification, and efficient local inference with LLaMA family models.",
+        "icon": "brain"
+      },
+      {
+        "title": "Technical Leadership & Architecture",
+        "description": "Designing model architectures, establishing MLOps/LLMOps governance, and guaranteeing high reliability in enterprise environments.",
+        "icon": "layers"
+      },
+      {
+        "title": "Hands-on Experimentation & Robustness",
+        "description": "Thorough stress testing under noisy documents, cross-template generalization, and hallucination mitigation on complex invoices.",
+        "icon": "cpu"
+      }
+    ],
     "responsibilities": [
       "End-to-end Machine Learning pipeline development, spanning NLP classification models, intelligent OCR, fine-tuning open-source models (LLaMA family), and local inference",
       "Making technical decisions on model architectures and establishing MLOps and LLMOps practices",
       "Conducting hands-on model experimentation, robustness evaluation, and applied research for tax document analysis"
     ],
     "technologies": ["Python", "PyTorch", "LLaMA", "Transformers", "OCR", "PyTesseract", "MLOps", "LLMOps", "SQL"],
-    "projects": ["Tax Document Intelligence (FINEP / SUFRAMA)"]
+    "projects": ["Intelligent Tax Document Processing (FINEP / SUFRAMA)"]
   },
   {
-    "id": "exp-2",
+    "id": "exp-mbrf",
+    "track": "corporate",
     "role": "Data Scientist (Intern)",
     "company": "MBRF",
     "period": "10/2025 — 06/2026",
+    "isCurrent": false,
     "location": "Curitiba, PR — Brazil",
-    "description": "Worked at the AI Center of Operational Excellence (COEIA), building LLM-based solutions, intelligent agents, Computer Vision systems, and enterprise automations to streamline internal workflows and increase operational efficiency.",
+    "badge": "COEIA — AI Center of Operational Excellence",
+    "description": "Built production AI systems at the AI Center of Operational Excellence, developing solutions based on LLMs, intelligent agents, Computer Vision, and enterprise automations delivering direct business impact.",
+    "metrics": [
+      { "value": "-80%", "label": "Lookup Time", "detail": "Analytical queries via Databricks Genie + Teams" },
+      { "value": "+40%", "label": "Retail Efficiency", "detail": "Instant SKU segmentation & classification" },
+      { "value": "LLMOps", "label": "HR Resume Triage", "detail": "Embeddings & automated candidate summarization" }
+    ],
+    "pillars": [
+      {
+        "title": "Enterprise Agents & Databricks",
+        "description": "Corporate chatbot integrated with Microsoft Teams querying analytical lakehouses via Databricks Genie API in natural language.",
+        "icon": "bot"
+      },
+      {
+        "title": "Applied Retail Computer Vision",
+        "description": "Computer Vision pipeline for SKU detection, cropping, and classification from mobile captures, automating retail store audits.",
+        "icon": "eye"
+      },
+      {
+        "title": "Automated HR Screening via LLMOps",
+        "description": "Resume evaluation and structured summarization engine using embeddings and LLMOps workflows to eliminate recruiting bottlenecks.",
+        "icon": "sparkles"
+      }
+    ],
     "responsibilities": [
       "Engineered an enterprise chatbot integrated with Microsoft Teams, capable of interpreting complex textual queries and retrieving data directly from databases via Python, SQL, and the Databricks Genie API, reducing manual lookup time by ~80%",
       "Developed an automated resume screening and summarization system for HR using embeddings, advanced prompting, and LLMOps workflows to enhance triage accuracy and eliminate recruitment bottlenecks",
@@ -28,5 +78,191 @@
     ],
     "technologies": ["Python", "SQL", "Docker", "Databricks", "Azure", "Git", "LLMs", "Embeddings", "Chatbots", "LLMOps", "PyTorch", "YOLO"],
     "projects": ["Enterprise Teams Chatbot with Genie API", "Automated HR Resume Screening with LLMOps", "Visual SKU Segmentation & Classification"]
+  },
+  {
+    "id": "exp-mestrado",
+    "track": "research",
+    "role": "Researcher & Special Student",
+    "company": "PPGIA — PUCPR",
+    "period": "2026 — Present",
+    "isCurrent": true,
+    "location": "Curitiba, PR — Brazil",
+    "badge": "Graduate Program in Informatics (PPGIA)",
+    "description": "Advanced research into Vision-Language Models (VLMs), Small Language Models (SLMs), and comprehensive Document Understanding, exploring structured extraction and visual reasoning.",
+    "metrics": [
+      { "value": "VLMs", "label": "Multimodal Models", "detail": "Deep understanding of complex document layouts" },
+      { "value": "SLMs", "label": "Efficient Models", "detail": "Fast visual reasoning under computational constraints" },
+      { "value": "PPGIA", "label": "Academic Excellence", "detail": "Top-tier Graduate Computer Science department" }
+    ],
+    "pillars": [
+      {
+        "title": "Multimodal Document Understanding",
+        "description": "Investigating VLMs and SLMs for parsing tables, scientific figures, and complex forms without requiring massive manual labels.",
+        "icon": "brain"
+      },
+      {
+        "title": "Efficiency & Neural OCR",
+        "description": "Studying lightweight inference, spatial layout tokens, and end-to-end transcription architectures.",
+        "icon": "zap"
+      }
+    ],
+    "responsibilities": [
+      "Graduate-level courses and research in Computer Science (PPGIA/PUCPR) focused on Multimodal Models (VLMs) and Lightweight Models (SLMs)",
+      "Applied investigation in structured document parsing and spatial-spectral analysis",
+      "Benchmarking accuracy and latency tradeoffs for real-world document understanding"
+    ],
+    "technologies": ["Python", "PyTorch", "VLMs", "SLMs", "Transformers", "OCR", "Document Understanding"],
+    "projects": ["Vision-Language Models for Document Understanding"]
+  },
+  {
+    "id": "exp-tcc",
+    "track": "research",
+    "role": "Researcher (Thesis & SIBGRAPI 2026 Paper)",
+    "company": "PUCPR",
+    "period": "2025 — Present",
+    "isCurrent": true,
+    "location": "Curitiba, PR — Brazil",
+    "badge": "Paper Presented at SIBGRAPI 2026",
+    "description": "Unified benchmark and framework evaluating robustness, cross-dataset generalization, and explainability of facial deepfake detectors under realistic real-world corruptions.",
+    "metrics": [
+      { "value": "SIBGRAPI", "label": "2026 Conference", "detail": "Premier Latin American Computer Vision and Graphics venue" },
+      { "value": "DINOv3", "label": "Foundation Model", "detail": "Spatial and spectral 2D-FFT hybrid representations" },
+      { "value": "Benchmark", "label": "Open Source", "detail": "Public and reproducible framework on GitHub" }
+    ],
+    "pillars": [
+      {
+        "title": "Spatial-Spectral Analysis (2D-FFT)",
+        "description": "Combining spatial cues and frequency-domain artifacts (FFT) to spot subtle manipulation traces and social media compression.",
+        "icon": "cpu"
+      },
+      {
+        "title": "Realistic Robustness Benchmark",
+        "description": "Comprehensive evaluation of CNNs, Vision Transformers, and DINOv3 under severe degradations and optical noise.",
+        "icon": "layers"
+      }
+    ],
+    "responsibilities": [
+      "Built a unified benchmark comparing CNNs, ViTs, and DINOv3 on facial manipulation detection",
+      "Designed hybrid spatial-spectral representations (2D-FFT) to enhance model robustness and explainability",
+      "Authored and presented scientific paper at SIBGRAPI 2026, releasing public code and weights on GitHub"
+    ],
+    "technologies": ["Python", "PyTorch", "DINOv3", "Vision Transformers", "2D-FFT", "Albumentations", "Deepfake Detection"],
+    "projects": ["FaceForgery-Benchmark", "SIBGRAPI 2026 Conference Paper"],
+    "links": [
+      { "label": "Paper (arXiv)", "url": "https://arxiv.org/abs/2609.01511" },
+      { "label": "Code (GitHub)", "url": "https://github.com/lucasdocunha/FaceForgery-Benchmark" }
+    ]
+  },
+  {
+    "id": "exp-liga",
+    "track": "research",
+    "role": "Active Member & Researcher",
+    "company": "PUCPR AI League",
+    "period": "2025 — Present",
+    "isCurrent": true,
+    "location": "Curitiba, PR — Brazil",
+    "badge": "International Challenges: ICDAR & ICPR",
+    "description": "Collaborative research and engineering focused on international competitive AI benchmarks: Document Understanding at ICDAR 2026 and low-resolution license plate recognition at ICPR 2026.",
+    "metrics": [
+      { "value": "ICDAR", "label": "2026 Challenge", "detail": "Frontier international competition in document comprehension" },
+      { "value": "Sci-Image", "label": "Open-Source Tool", "detail": "Scientific figure extraction and Markdown generation" },
+      { "value": "ICPR", "label": "2026 Challenge", "detail": "Low-resolution vehicle plate recognition" }
+    ],
+    "pillars": [
+      {
+        "title": "Semantic Layout Comprehension",
+        "description": "Deep learning models for structured extraction of tables and scientific text in academic and technical PDFs.",
+        "icon": "bot"
+      },
+      {
+        "title": "Open Scientific Tooling",
+        "description": "Developed the Sci-Image package to assist the scientific community in structured paper reading.",
+        "icon": "sparkles"
+      }
+    ],
+    "responsibilities": [
+      "Developed competitive solutions for ICDAR 2026 and ICPR 2026 challenge tracks",
+      "Built and maintained open-source repositories for the PUCPR Academic AI League",
+      "Fostered knowledge sharing in advanced Computer Vision and multimodal architectures"
+    ],
+    "technologies": ["Python", "PyTorch", "VLMs", "LayoutLM", "Neural OCR", "Streamlit", "OpenCV"],
+    "projects": ["Sci-Image Markdown", "ICDAR & ICPR 2026 Competitions"],
+    "links": [
+      { "label": "Sci-Image (GitHub)", "url": "https://github.com/lucasdocunha/sci-image-markdown" },
+      { "label": "AI League (GitHub)", "url": "https://github.com/Liga-de-IA-PUCPR" }
+    ]
+  },
+  {
+    "id": "exp-pibic-2",
+    "track": "research",
+    "role": "Undergraduate Researcher (PIBIC)",
+    "company": "PUCPR — Lasin",
+    "period": "07/2025 — 2026",
+    "isCurrent": false,
+    "location": "Curitiba, PR — Brazil",
+    "badge": "Second Scientific Initiation (PIBIC)",
+    "description": "Applied research into feature representation fusion and domain adaptation for intelligent parking monitoring using deep Autoencoders and federated learning paradigms.",
+    "metrics": [
+      { "value": "VAE", "label": "Autoencoders", "detail": "Latent fusion and denoising reconstruction" },
+      { "value": "Federated", "label": "Learning", "detail": "Privacy-preserving distributed training across nodes" },
+      { "value": "Podman", "label": "Containerization", "detail": "Isolated, reproducible experiment environments" }
+    ],
+    "pillars": [
+      {
+        "title": "Latent Representation Fusion",
+        "description": "Aligning feature space distributions between disparate camera domains to mitigate performance degradation.",
+        "icon": "layers"
+      },
+      {
+        "title": "Containers & Reproducibility",
+        "description": "Building portable, production-grade pipelines with Podman for reproducible distributed training.",
+        "icon": "cpu"
+      }
+    ],
+    "responsibilities": [
+      "Implemented and evaluated deep Autoencoders (VAE, Denoising, and deep variants) and CNNs",
+      "Engineered robust data augmentation pipelines to mitigate domain shifts across camera angles",
+      "Containerized experimental environments with Podman for complete reproducibility"
+    ],
+    "technologies": ["Python", "PyTorch", "Autoencoders", "VAE", "Denoising", "CNNs", "Podman", "Git"],
+    "projects": ["Representation Fusion for Parking Monitoring"]
+  },
+  {
+    "id": "exp-pibic-1",
+    "track": "research",
+    "role": "CNPq Research Scholar (PIBIC)",
+    "company": "CNPq / PUCPR — Lasin",
+    "period": "03/2024 — 07/2025",
+    "isCurrent": false,
+    "location": "Curitiba, PR — Brazil",
+    "badge": "Published at IEEE SMC 2026",
+    "description": "First scientific initiation with a CNPq federal grant. Developed domain adaptation and few-shot learning methods in computer vision, culminating in a peer-reviewed paper at IEEE SMC 2026.",
+    "metrics": [
+      { "value": "IEEE SMC", "label": "2026 Paper", "detail": "Publication at prestigious international IEEE conference" },
+      { "value": "93%–96%", "label": "Cross-Dataset Accuracy", "detail": "Robust few-shot classification under scarce labels" },
+      { "value": "CNPq", "label": "Merit Fellowship", "detail": "Competitively funded research grant by CNPq" }
+    ],
+    "pillars": [
+      {
+        "title": "Self-Taught Learning & Autoencoders",
+        "description": "Autoencoder ensemble extracting invariant features from unlabelled real-world video frames.",
+        "icon": "sparkles"
+      },
+      {
+        "title": "Vision Domain Adaptation",
+        "description": "Compensating for severe lighting, weather, and camera angle discrepancies across different parking lots.",
+        "icon": "eye"
+      }
+    ],
+    "responsibilities": [
+      "Developed domain adaptation and few-shot learning techniques for vision systems",
+      "Modeled and benchmarked CNNs, autoencoders, and traditional classifiers",
+      "Authored research paper published at IEEE SMC 2026 with rigorous cross-dataset benchmarking"
+    ],
+    "technologies": ["Python", "PyTorch", "Autoencoders", "Few-Shot Learning", "CNNs", "Scikit-Learn"],
+    "projects": ["Self-Taught Learning with Autoencoders (IEEE SMC 2026)"],
+    "links": [
+      { "label": "SMC Paper (arXiv)", "url": "https://arxiv.org/abs/2609.03258" }
+    ]
   }
 ]

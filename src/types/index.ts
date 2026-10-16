@@ -35,16 +35,34 @@ export interface About {
   goals: string;
 }
 
+export interface ExperienceMetric {
+  value: string;
+  label: string;
+  detail?: string;
+}
+
+export interface ExperiencePillar {
+  title: string;
+  description: string;
+  icon?: string;
+}
+
 export interface ExperienceItem {
   id: string;
   role: string;
   company: string;
   period: string;
+  isCurrent?: boolean;
   location?: string;
+  badge?: string;
+  track?: 'corporate' | 'research';
   description: string;
+  metrics?: ExperienceMetric[];
+  pillars?: ExperiencePillar[];
   responsibilities: string[];
   technologies: string[];
   projects?: string[];
+  links?: LinkItem[];
 }
 
 export interface LinkItem {

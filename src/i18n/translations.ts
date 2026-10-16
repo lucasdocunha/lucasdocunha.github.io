@@ -34,6 +34,12 @@ export interface TranslationStrings {
     researchDetail: string;
     workYears: string;
     workDetail: string;
+    tabCorporate: string;
+    tabResearch: string;
+    tabAll: string;
+    currentBadge: string;
+    pillarsTitle: string;
+    metricsTitle: string;
   };
   research: {
     title: string;
@@ -141,6 +147,12 @@ export const translations: Record<Language, TranslationStrings> = {
       researchDetail: 'Lasin · 2× PIBIC · TCC · Liga de IA · PPGIA',
       workYears: 'anos de experiência profissional',
       workDetail: 'DATAKIE · MBRF (COEIA)',
+      tabCorporate: 'Atuação Corporativa',
+      tabResearch: 'Pesquisa Científica & P&D',
+      tabAll: 'Linha do Tempo Completa',
+      currentBadge: 'Atualmente',
+      pillarsTitle: 'Pilares Arquiteturais & Entregas',
+      metricsTitle: 'Resultados & Impacto',
     },
     research: {
       title: 'Pesquisa',
@@ -246,6 +258,12 @@ export const translations: Record<Language, TranslationStrings> = {
       researchDetail: 'Lasin · 2× PIBIC · Thesis · AI League · PPGIA',
       workYears: 'years of professional experience',
       workDetail: 'DATAKIE · MBRF (COEIA)',
+      tabCorporate: 'Corporate & Industry',
+      tabResearch: 'Scientific Research & R&D',
+      tabAll: 'Unified Timeline',
+      currentBadge: 'Present',
+      pillarsTitle: 'Architectural Pillars & Deliverables',
+      metricsTitle: 'Impact & Results',
     },
     research: {
       title: 'Research',
