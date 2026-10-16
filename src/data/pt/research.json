@@ -15,23 +15,24 @@
   ],
   "projects": [
     {
-      "id": "res-tcc",
-      "type": "TCC",
+      "id": "res-mestrado",
+      "type": "Pesquisador - Mestrado",
       "status": "Em andamento",
-      "title": "Detecção de Manipulação Facial sob Degradações Realistas",
-      "lab": "Ciência da Computação — PUCPR",
+      "title": "Vision-Language Models (VLMs) & Detecção de Deepfakes Faciais",
+      "lab": "PPGIA / PUCPR",
       "period": "2025 — Atual",
-      "description": "Trabalho de Conclusão de Curso que deu origem ao artigo apresentado no SIBGRAPI 2026. Framework unificado para avaliar robustez, generalização cross-dataset e explicabilidade de detectores de deepfakes, comparando CNNs, Vision Transformers e o modelo auto-supervisionado DINOv3 com representações espaciais e espectrais (2D-FFT). Continuamos a pesquisa para publicar uma versão mais robusta do trabalho.",
+      "description": "Investigação avançada em Visão Computacional e IA Generativa no PPGIA/PUCPR: modelos multimodais (VLMs/SLMs) para compreensão de documentos e o framework unificado de robustez em detecção de deepfakes faciais com DINOv3 e análise espectral 2D-FFT, apresentado no SIBGRAPI 2026.",
       "areas": [
+        "VLMs & SLMs",
+        "Document Understanding",
         "Deepfake Detection",
         "DINOv3",
-        "FFT",
-        "Robustez",
-        "Explicabilidade"
+        "2D-FFT",
+        "SIBGRAPI 2026"
       ],
       "links": [
         {
-          "label": "Artigo (arXiv)",
+          "label": "Artigo SIBGRAPI (arXiv)",
           "url": "https://arxiv.org/abs/2609.01511"
         },
         {
@@ -106,21 +107,6 @@
           "label": "Artigo SMC (arXiv)",
           "url": "https://arxiv.org/abs/2609.03258"
         }
-      ]
-    },
-    {
-      "id": "res-mestrado",
-      "type": "Mestrado",
-      "title": "Vision-Language Models e SLMs para Document Understanding",
-      "lab": "PPGIA — PUCPR (aluno especial)",
-      "period": "2026 — Atual",
-      "description": "Disciplinas e investigação no Programa de Pós-Graduação em Informática (PPGIA/PUCPR) com foco em Vision-Language Models (VLMs), Small Language Models (SLMs) e compreensão profunda de documentos. Treinamento e avaliação de modelos multimodais em clusters de High Performance Computing (HPC) orquestrados via Slurm e operados via SSH, explorando extração estruturada de informações, OCR neural e raciocínio visual sob restrições computacionais.",
-      "areas": [
-        "VLMs & SLMs",
-        "Document Understanding",
-        "HPC & Slurm",
-        "SSH Headless",
-        "OCR Neural"
       ]
     }
   ],

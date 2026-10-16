@@ -38,12 +38,11 @@
     "period": "2024 — Presente",
     "isCurrent": true,
     "location": "Curitiba, PR",
-    "badge": "Mestrado · Liga de IA · PIBIC · Artigo SIBGRAPI 2026",
-    "description": "Trajetória contínua em pesquisa científica aplicada, combinando Iniciação Científica (CNPq e Lasin), projetos competitivos na Liga Acadêmica de IA e avanço para o Mestrado em Informática (PPGIA).",
+    "badge": "Pesquisador - Mestrado · Liga de IA · PIBIC · SIBGRAPI 2026",
+    "description": "Trajetória contínua em pesquisa científica aplicada, combinando Iniciação Científica (CNPq e Lasin), projetos competitivos na Liga Acadêmica de IA e avanço para a Pós-Graduação no Mestrado em Informática (PPGIA).",
     "responsibilities": [
-      "Mestrado (PPGIA / PUCPR — 2026): Investigação em Vision-Language Models (VLMs) e Small Language Models (SLMs) para Document Understanding e raciocínio multimodal",
+      "Pesquisador - Mestrado (PPGIA / PUCPR — 2025 — Presente): Investigação em Vision-Language Models (VLMs/SLMs) para Document Understanding, além de framework unificado de detecção de deepfakes faciais com DINOv3 e representações espaço-espectrais 2D-FFT (artigo apresentado no SIBGRAPI 2026)",
       "Liga Acadêmica de IA (2025 — Presente): Desafios internacionais do ICDAR 2026 (compreensão de documentos) e ICPR 2026; autor da ferramenta Sci-Image (conversão de figuras científicas para Markdown)",
-      "TCC & Artigo SIBGRAPI 2026 (2025 — Atual): Framework unificado de detecção de deepfakes faciais comparando CNNs, ViTs e DINOv3 com representações espaço-espectrais (2D-FFT)",
       "Iniciações Científicas PIBIC (2024 — 2026): Duas pesquisas consecutivas (bolsa CNPq e Lasin/PUCPR) sobre adaptação de domínio, comitê de autoencoders e fusão de representações que, juntas, deram origem ao artigo publicado no IEEE SMC 2026"
     ],
     "technologies": ["PyTorch", "VLMs", "SLMs", "DINOv3", "Vision Transformers", "2D-FFT", "Autoencoders", "Few-Shot Learning", "OpenCV"],
