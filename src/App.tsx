@@ -1,6 +1,7 @@
 import { motion, MotionConfig } from 'framer-motion';
 import { LanguageProvider, useLanguage, LANG_FADE_MS } from '@/i18n/LanguageContext';
 import Navbar from '@/components/Navbar';
+import SectionScroller from '@/components/SectionScroller';
 import Hero from '@/components/Hero';
 import About from '@/components/About';
 import Experience from '@/components/Experience';
@@ -22,6 +23,7 @@ function Page() {
   return (
     <div className="min-h-screen bg-base-950 text-gray-300">
       <Navbar />
+      <SectionScroller />
       <motion.main initial={false} {...fade}>
         <Hero />
         <About />

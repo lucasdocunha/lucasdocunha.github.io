@@ -82,10 +82,16 @@ export default function Hero() {
         </div>
       </div>
 
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 hidden md:block">
-        <div className="w-6 h-10 rounded-full border-2 border-base-600 flex justify-center pt-2">
-          <div className="w-1 h-2 rounded-full bg-accent-400 animate-bounce" />
-        </div>
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 hidden md:block z-20">
+        <a
+          href="#about"
+          aria-label={lang === 'pt' ? 'Rolar para Sobre Mim' : 'Scroll to About'}
+          className="group flex flex-col items-center gap-1.5 text-gray-500 hover:text-accent-400 transition-colors"
+        >
+          <div className="w-6 h-10 rounded-full border-2 border-base-600 group-hover:border-accent-500/60 transition-colors flex justify-center pt-2">
+            <div className="w-1 h-2 rounded-full bg-accent-400 animate-bounce" />
+          </div>
+        </a>
       </div>
     </section>
   );
