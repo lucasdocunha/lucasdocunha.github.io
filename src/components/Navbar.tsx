@@ -1,164 +1,60 @@
 import { useEffect, useState } from 'react';
-import { AnimatePresence, motion } from 'framer-motion';
-import { Menu, X, FileDown, Languages } from 'lucide-react';
-import { useLanguage } from '@/i18n/LanguageContext';
-import { getData } from '@/data';
+import { motion, useScroll, useSpring } from 'framer-motion';
+import { Download } from 'lucide-react';
+import { useLang } from '@/lib/lang';
+import { links } from '@/content';
+
+const IDS = ['focus', 'claude', 'research', 'path', 'contact'] as const;
 
 export default function Navbar() {
-  const { t, lang, toggleLang, isSwitching } = useLanguage();
-  const { profile } = getData(lang);
+  const { c, lang, toggle } = useLang();
+  const [active, setActive] = useState<string>('');
   const [scrolled, setScrolled] = useState(false);
-  const [open, setOpen] = useState(false);
-  const [active, setActive] = useState('#home');
-
-  const NAV_ITEMS = [
-    { label: t.nav.home, href: '#home' },
-    { label: t.nav.about, href: '#about' },
-    { label: t.nav.experience, href: '#experience' },
-    { label: t.nav.research, href: '#research' },
-    { label: t.nav.projects, href: '#projects' },
-    { label: t.nav.publications, href: '#publications' },
-    { label: t.nav.skills, href: '#skills' },
-    { label: t.nav.contact, href: '#contact' },
-  ];
+  const { scrollYProgress } = useScroll();
+  const progress = useSpring(scrollYProgress, { stiffness: 120, damping: 25 });
 
   useEffect(() => {
-    const onScroll = () => {
-      setScrolled(window.scrollY > 24);
-      const sections = NAV_ITEMS.map((n) => n.href.slice(1));
-      const current = sections.find((id) => {
-        const el = document.getElementById(id);
-        if (!el) return false;
-        const rect = el.getBoundingClientRect();
-        return rect.top <= 120 && rect.bottom >= 120;
-      });
-      if (current) setActive(`#${current}`);
-    };
-    window.addEventListener('scroll', onScroll, { passive: true });
+    const onScroll = () => setScrolled(window.scrollY > 24);
     onScroll();
-    return () => window.removeEventListener('scroll', onScroll);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [lang]);
-
-  useEffect(() => {
-    document.body.style.overflow = open ? 'hidden' : '';
-    return () => { document.body.style.overflow = ''; };
-  }, [open]);
+    window.addEventListener('scroll', onScroll, { passive: true });
+    const io = new IntersectionObserver(
+      (entries) => entries.forEach((e) => e.isIntersecting && setActive(e.target.id)),
+      { rootMargin: '-45% 0px -50% 0px' },
+    );
+    IDS.forEach((id) => { const el = document.getElementById(id); if (el) io.observe(el); });
+    return () => { window.removeEventListener('scroll', onScroll); io.disconnect(); };
+  }, []);
 
   return (
-    <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled
-          ? 'bg-base-950/85 backdrop-blur-md border-b border-base-700/50'
-          : 'bg-transparent'
-      }`}
-    >
-      <nav className="max-w-6xl mx-auto px-6 md:px-10 h-16 flex items-center justify-between">
-        {/* Logo — simple initials, no code brackets */}
-        <a href="#home" className="font-serif font-semibold text-white text-lg tracking-tight">
-          {profile.name.replace(/\[.*?\]/g, '').trim() || 'Portfolio'}
+    <header className={`fixed inset-x-0 top-0 z-50 transition-colors duration-500 ${scrolled ? 'bg-ink-950/70 backdrop-blur-xl border-b border-ink-800/80' : ''}`}>
+      <motion.div className="absolute left-0 top-0 h-[2px] w-full origin-left bg-gradient-to-r from-ember-500 via-amber-400 to-lilac-400" style={{ scaleX: progress }} />
+      <nav className="wrap flex h-16 items-center justify-between">
+        <a href="#top" className="font-display text-lg font-semibold text-ink-100 tracking-tight">
+          lucas<span className="text-ember-500">.</span>cunha
         </a>
-
-        {/* Desktop nav */}
-        <div className="hidden lg:flex items-center gap-7">
-          {NAV_ITEMS.map((item) => (
-            <a
-              key={item.href}
-              href={item.href}
-              className={`nav-link ${active === item.href ? 'text-accent-400' : ''}`}
-            >
-              <motion.span animate={{ opacity: isSwitching ? 0 : 1 }} transition={{ duration: 0.2 }}>
-                {item.label}
-              </motion.span>
-            </a>
+        <ul className="hidden md:flex items-center gap-1 rounded-full border border-ink-800 bg-ink-900/60 p-1">
+          {IDS.map((id) => (
+            <li key={id} className="relative">
+              {active === id && (
+                <motion.span layoutId="nav-pill" className="absolute inset-0 rounded-full bg-ink-700" transition={{ type: 'spring', stiffness: 380, damping: 32 }} />
+              )}
+              <a href={`#${id}`} className={`relative z-10 block px-4 py-1.5 text-sm transition-colors ${active === id ? 'text-ink-100' : 'text-ink-400 hover:text-ink-100'}`}>
+                {c.nav[id]}
+              </a>
+            </li>
           ))}
-          <button
-            onClick={toggleLang}
-            className="flex items-center gap-1.5 text-sm text-gray-400 hover:text-accent-400 transition-colors px-2 py-1"
-            aria-label="Toggle language"
-          >
-            <motion.span animate={{ rotate: isSwitching ? 180 : 0 }} transition={{ duration: 0.3 }} className="inline-flex">
-              <Languages size={15} />
-            </motion.span>
-            <LangLabel label={t.langToggle.label} />
+        </ul>
+        <div className="flex items-center gap-2">
+          <button onClick={toggle} className="rounded-full border border-ink-700 px-3 py-1.5 font-mono text-xs text-ink-300 hover:border-ember-400/60 hover:text-white transition-colors" aria-label="Trocar idioma / switch language">
+            <span className={lang === 'pt' ? 'text-ember-400' : ''}>PT</span>
+            <span className="mx-1 text-ink-600">/</span>
+            <span className={lang === 'en' ? 'text-ember-400' : ''}>EN</span>
           </button>
-          <a href={profile.cvUrl} download className="btn-primary text-xs ml-2">
-            <FileDown size={14} />
-            {t.nav.downloadCV}
+          <a href={links.cv} target="_blank" rel="noreferrer" className="hidden sm:inline-flex items-center gap-1.5 rounded-full bg-ink-100 px-3.5 py-1.5 text-xs font-medium text-ink-950 hover:bg-white transition-colors">
+            <Download size={13} /> {c.nav.cv}
           </a>
-        </div>
-
-        {/* Mobile toggle */}
-        <div className="lg:hidden flex items-center gap-3">
-          <button
-            onClick={toggleLang}
-            className="flex items-center gap-1.5 text-sm text-gray-400 hover:text-accent-400 transition-colors"
-            aria-label="Toggle language"
-          >
-            <motion.span animate={{ rotate: isSwitching ? 180 : 0 }} transition={{ duration: 0.3 }} className="inline-flex">
-              <Languages size={15} />
-            </motion.span>
-            <LangLabel label={t.langToggle.label} />
-          </button>
-          <button
-            onClick={() => setOpen(!open)}
-            className="text-gray-300 hover:text-white p-2"
-            aria-label="Toggle menu"
-          >
-            {open ? <X size={22} /> : <Menu size={22} />}
-          </button>
         </div>
       </nav>
-
-      {/* Mobile menu */}
-      <div
-        className={`lg:hidden overflow-hidden transition-all duration-300 ${
-          open ? 'max-h-[600px] opacity-100' : 'max-h-0 opacity-0'
-        } bg-base-900/95 backdrop-blur-md border-b border-base-700/50`}
-      >
-        <div className="px-6 py-6 flex flex-col gap-4">
-          {NAV_ITEMS.map((item) => (
-            <a
-              key={item.href}
-              href={item.href}
-              onClick={() => setOpen(false)}
-              className={`text-sm font-medium transition-colors ${
-                active === item.href ? 'text-accent-400' : 'text-gray-400 hover:text-white'
-              }`}
-            >
-              {item.label}
-            </a>
-          ))}
-          <a
-            href={profile.cvUrl}
-            download
-            onClick={() => setOpen(false)}
-            className="btn-primary mt-2 w-fit"
-          >
-            <FileDown size={14} />
-            {t.nav.downloadCV}
-          </a>
-        </div>
-      </div>
     </header>
-  );
-}
-
-/** Language code that slides in/out when it changes. */
-function LangLabel({ label }: { label: string }) {
-  return (
-    <span className="relative inline-flex overflow-hidden w-5 h-5 items-center">
-      <AnimatePresence mode="popLayout" initial={false}>
-        <motion.span
-          key={label}
-          initial={{ y: 14, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          exit={{ y: -14, opacity: 0 }}
-          transition={{ duration: 0.25, ease: 'easeOut' }}
-        >
-          {label}
-        </motion.span>
-      </AnimatePresence>
-    </span>
   );
 }

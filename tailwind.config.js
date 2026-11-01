@@ -4,66 +4,49 @@ export default {
   theme: {
     extend: {
       colors: {
-        // Warm dark base with olive undertone
-        base: {
-          950: '#0a0b09',
-          900: '#0e100d',
-          850: '#121410',
-          800: '#161914',
-          700: '#1f241e',
-          600: '#2a3026',
+        // Tinta: fundo quase preto com leve tom azul-violeta
+        ink: {
+          950: '#08080c',
+          900: '#0d0d13',
+          850: '#12121a',
+          800: '#181822',
+          700: '#23232f',
+          600: '#30303f',
+          400: '#8b8b9e',
+          300: '#b4b4c4',
+          100: '#ececf3',
         },
-        // Accent — moss / sage green
-        accent: {
-          50: '#f2f7ef',
-          100: '#e0ebd8',
-          200: '#c5d9b8',
-          300: '#a3c191',
-          400: '#84a86e',
-          500: '#6d9058',
-          600: '#5a7848',
-          700: '#4a6239',
-          800: '#3d5130',
-          900: '#334429',
+        // Brasa: acento principal (coral → âmbar)
+        ember: {
+          200: '#ffd2bf',
+          300: '#ffad8a',
+          400: '#ff8a5c',
+          500: '#ff6b3d',
+          600: '#e5522a',
         },
-        // Secondary — warm amber for subtle contrast
-        secondary: {
-          400: '#d4a960',
-          500: '#c4984a',
-          600: '#a87f3a',
+        amber: { 400: '#ffc15e' },
+        // Lilás: acento secundário (agentes / pesquisa)
+        lilac: {
+          300: '#cbbcff',
+          400: '#a995ff',
+          500: '#8b72ff',
         },
-        success: { 400: '#84a86e', 500: '#6d9058', 600: '#5a7848' },
-        warning: { 400: '#d4a960', 500: '#c4984a' },
-        error: { 400: '#c97a6e', 500: '#b85a4a', 600: '#a04838' },
       },
       fontFamily: {
+        display: ['"Space Grotesk"', 'system-ui', 'sans-serif'],
         sans: ['Inter', 'system-ui', 'sans-serif'],
-        serif: ['"Lora"', 'Georgia', 'serif'],
         mono: ['"JetBrains Mono"', 'ui-monospace', 'monospace'],
       },
-      animation: {
-        'fade-in': 'fadeIn 0.6s ease-out forwards',
-        'fade-in-up': 'fadeInUp 0.7s ease-out forwards',
-        'fade-in-down': 'fadeInDown 0.7s ease-out forwards',
-        'slide-in-left': 'slideInLeft 0.6s ease-out forwards',
-        'slide-in-right': 'slideInRight 0.6s ease-out forwards',
-        'scale-in': 'scaleIn 0.5s ease-out forwards',
-        'pulse-soft': 'pulseSoft 3s ease-in-out infinite',
-        'float': 'float 6s ease-in-out infinite',
-        'gradient': 'gradient 8s ease infinite',
-        'blink': 'blink 1s step-end infinite',
-      },
       keyframes: {
-        fadeIn: { '0%': { opacity: '0' }, '100%': { opacity: '1' } },
-        fadeInUp: { '0%': { opacity: '0', transform: 'translateY(30px)' }, '100%': { opacity: '1', transform: 'translateY(0)' } },
-        fadeInDown: { '0%': { opacity: '0', transform: 'translateY(-30px)' }, '100%': { opacity: '1', transform: 'translateY(0)' } },
-        slideInLeft: { '0%': { opacity: '0', transform: 'translateX(-30px)' }, '100%': { opacity: '1', transform: 'translateX(0)' } },
-        slideInRight: { '0%': { opacity: '0', transform: 'translateX(30px)' }, '100%': { opacity: '1', transform: 'translateX(0)' } },
-        scaleIn: { '0%': { opacity: '0', transform: 'scale(0.95)' }, '100%': { opacity: '1', transform: 'scale(1)' } },
-        pulseSoft: { '0%, 100%': { opacity: '1' }, '50%': { opacity: '0.6' } },
-        float: { '0%, 100%': { transform: 'translateY(0)' }, '50%': { transform: 'translateY(-12px)' } },
-        gradient: { '0%, 100%': { 'background-position': '0% 50%' }, '50%': { 'background-position': '100% 50%' } },
-        blink: { '0%, 100%': { opacity: '1' }, '50%': { opacity: '0' } },
+        marquee: { from: { transform: 'translateX(0)' }, to: { transform: 'translateX(-50%)' } },
+        blink: { '0%,100%': { opacity: '1' }, '50%': { opacity: '0' } },
+        spinSlow: { to: { transform: 'rotate(360deg)' } },
+      },
+      animation: {
+        marquee: 'marquee 40s linear infinite',
+        'marquee-rev': 'marquee 46s linear infinite reverse',
+        blink: 'blink 1s step-end infinite',
+        'spin-slow': 'spinSlow 14s linear infinite',
       },
     },
   },

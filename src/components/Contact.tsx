@@ -1,181 +1,73 @@
-import { useState, type FormEvent } from 'react';
-import { Mail, Linkedin, Github, GraduationCap, Send, CheckCircle2, AlertCircle, Loader2 } from 'lucide-react';
-import Section from './Section';
-import Reveal from './Reveal';
-import AnimatedContactHeading from './AnimatedContactHeading';
-import { useLanguage } from '@/i18n/LanguageContext';
-import { getData } from '@/data';
-
-const ICON_MAP: Record<string, typeof Mail> = {
-  linkedin: Linkedin,
-  github: Github,
-  scholar: GraduationCap,
-  mail: Mail,
-};
-
-type Status = 'idle' | 'loading' | 'success' | 'error';
+import { useState } from 'react';
+import { motion } from 'framer-motion';
+import { Mail, Linkedin, Github, Copy, Check, Download } from 'lucide-react';
+import { Reveal, Magnetic } from '@/lib/motion';
+import { useLang } from '@/lib/lang';
+import { links } from '@/content';
 
 export default function Contact() {
-  const { t, lang } = useLanguage();
-  const { contact } = getData(lang);
-  const [form, setForm] = useState({ name: '', email: '', message: '' });
-  const [errors, setErrors] = useState<{ name?: string; email?: string; message?: string }>({});
-  const [status, setStatus] = useState<Status>('idle');
+  const { c } = useLang();
+  const k = c.contact;
+  const [copied, setCopied] = useState(false);
 
-  const validate = () => {
-    const e: typeof errors = {};
-    if (!form.name.trim()) e.name = t.contact.errorName;
-    if (!form.email.trim()) {
-      e.email = t.contact.errorEmail;
-    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email)) {
-      e.email = t.contact.errorEmailInvalid;
-    }
-    if (!form.message.trim()) e.message = t.contact.errorMessage;
-    setErrors(e);
-    return Object.keys(e).length === 0;
-  };
-
-  const handleSubmit = async (e: FormEvent) => {
-    e.preventDefault();
-    if (!validate()) return;
-
-    setStatus('loading');
+  const copy = async () => {
     try {
-      await new Promise((resolve) => setTimeout(resolve, 1200));
-      setStatus('success');
-      setForm({ name: '', email: '', message: '' });
-      setTimeout(() => setStatus('idle'), 4000);
-    } catch {
-      setStatus('error');
-      setTimeout(() => setStatus('idle'), 4000);
-    }
+      await navigator.clipboard.writeText(links.email);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 1800);
+    } catch { window.location.href = `mailto:${links.email}`; }
   };
 
-  const inputClass = (field: keyof typeof errors) =>
-    `w-full bg-base-800/60 border rounded-lg px-4 py-2.5 text-sm text-white placeholder-gray-600
-     transition-all duration-200 outline-none
-     ${errors[field] ? 'border-error-500' : 'border-base-600 focus:border-accent-500/50 focus:ring-1 focus:ring-accent-500/30'}`;
+  const socials = [
+    { href: links.linkedin, label: 'LinkedIn', Icon: Linkedin },
+    { href: links.github, label: 'GitHub', Icon: Github },
+    { href: links.cv, label: 'CV', Icon: Download },
+  ];
 
   return (
-    <Section
-      id="contact"
-      title={t.contact.title}
-      heading={<AnimatedContactHeading text={t.contact.heading} />}
-    >
-      <div className="grid lg:grid-cols-2 gap-8">
+    <section id="contact" className="relative overflow-hidden py-32 md:py-44">
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-[420px] bg-[radial-gradient(ellipse_at_bottom,rgba(255,107,61,0.16),transparent_65%)]" />
+      <div className="wrap relative text-center">
         <Reveal>
-          <div className="space-y-6">
-            <p className="text-gray-400 leading-relaxed">
-              {t.contact.intro}
-            </p>
+          <p className="eyebrow">{k.eyebrow}</p>
+          <h2 className="mt-5 font-display text-5xl md:text-7xl lg:text-8xl font-semibold tracking-tight text-ink-100">
+            {k.title.split(' ').map((w, i) => (
+              <motion.span
+                key={w + i}
+                className={`inline-block mr-[0.25em] ${i === k.title.split(' ').length - 1 ? 'text-gradient' : ''}`}
+                initial={{ opacity: 0, y: 40, rotate: 4 }}
+                whileInView={{ opacity: 1, y: 0, rotate: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.9, delay: i * 0.08, ease: [0.16, 1, 0.3, 1] }}
+              >
+                {w}
+              </motion.span>
+            ))}
+          </h2>
+          <p className="mx-auto mt-6 max-w-md text-ink-400">{k.text}</p>
+        </Reveal>
 
-            <div className="space-y-3">
-              {contact.socials.map((social) => {
-                const Icon = ICON_MAP[social.icon] ?? Mail;
-                return (
-                  <a
-                    key={social.label}
-                    href={social.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-3 card card-hover p-4 group"
-                  >
-                    <div className="w-10 h-10 rounded-lg bg-accent-500/10 border border-accent-500/20 flex items-center justify-center shrink-0">
-                      <Icon size={18} className="text-accent-400" />
-                    </div>
-                    <div>
-                      <p className="text-sm text-white font-medium group-hover:text-accent-400 transition-colors">
-                        {social.label}
-                      </p>
-                      <p className="text-xs text-gray-500 truncate">{social.url.replace(/^mailto:/, '')}</p>
-                    </div>
-                  </a>
-                );
-              })}
-            </div>
+        <Reveal delay={0.15} className="mt-10 flex flex-col items-center gap-6">
+          <div className="flex flex-wrap items-center justify-center gap-3">
+            <Magnetic strength={0.25}>
+              <a href={`mailto:${links.email}`} className="btn-primary text-base px-6 py-3"><Mail size={17} /> {links.email}</a>
+            </Magnetic>
+            <button onClick={copy} className="btn-ghost" aria-live="polite">
+              {copied ? <Check size={15} className="text-amber-400" /> : <Copy size={15} />} {copied ? k.copied : k.copy}
+            </button>
+          </div>
+          <div className="flex gap-3">
+            {socials.map(({ href, label, Icon }) => (
+              <Magnetic key={label} strength={0.5}>
+                <a href={href} target="_blank" rel="noreferrer" aria-label={label}
+                  className="grid h-12 w-12 place-items-center rounded-full border border-ink-700 text-ink-300 transition-colors hover:border-ember-400/60 hover:text-ember-300">
+                  <Icon size={18} />
+                </a>
+              </Magnetic>
+            ))}
           </div>
         </Reveal>
-
-        <Reveal delay={150}>
-          <form onSubmit={handleSubmit} className="card p-6 space-y-4" noValidate>
-            <div>
-              <label htmlFor="name" className="block text-xs text-gray-400 mb-1.5 uppercase tracking-wider">
-                {t.contact.name}
-              </label>
-              <input
-                id="name"
-                type="text"
-                value={form.name}
-                onChange={(e) => setForm({ ...form, name: e.target.value })}
-                placeholder={t.contact.namePlaceholder}
-                className={inputClass('name')}
-              />
-              {errors.name && <p className="text-error-400 text-xs mt-1.5">{errors.name}</p>}
-            </div>
-
-            <div>
-              <label htmlFor="email" className="block text-xs text-gray-400 mb-1.5 uppercase tracking-wider">
-                {t.contact.email}
-              </label>
-              <input
-                id="email"
-                type="email"
-                value={form.email}
-                onChange={(e) => setForm({ ...form, email: e.target.value })}
-                placeholder={t.contact.emailPlaceholder}
-                className={inputClass('email')}
-              />
-              {errors.email && <p className="text-error-400 text-xs mt-1.5">{errors.email}</p>}
-            </div>
-
-            <div>
-              <label htmlFor="message" className="block text-xs text-gray-400 mb-1.5 uppercase tracking-wider">
-                {t.contact.message}
-              </label>
-              <textarea
-                id="message"
-                rows={4}
-                value={form.message}
-                onChange={(e) => setForm({ ...form, message: e.target.value })}
-                placeholder={t.contact.messagePlaceholder}
-                className={`${inputClass('message')} resize-none`}
-              />
-              {errors.message && <p className="text-error-400 text-xs mt-1.5">{errors.message}</p>}
-            </div>
-
-            <button
-              type="submit"
-              disabled={status === 'loading'}
-              className="btn-primary w-full justify-center disabled:opacity-60 disabled:cursor-not-allowed"
-            >
-              {status === 'loading' ? (
-                <>
-                  <Loader2 size={16} className="animate-spin" />
-                  {t.contact.sending}
-                </>
-              ) : (
-                <>
-                  <Send size={16} />
-                  {t.contact.send}
-                </>
-              )}
-            </button>
-
-            {status === 'success' && (
-              <div className="flex items-center gap-2 text-success-400 text-sm animate-fade-in">
-                <CheckCircle2 size={16} />
-                {t.contact.success}
-              </div>
-            )}
-            {status === 'error' && (
-              <div className="flex items-center gap-2 text-error-400 text-sm animate-fade-in">
-                <AlertCircle size={16} />
-                {t.contact.error}
-              </div>
-            )}
-          </form>
-        </Reveal>
       </div>
-    </Section>
+    </section>
   );
 }

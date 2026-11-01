@@ -1,143 +1,64 @@
-import { FlaskConical, BookOpen, ArrowUpRight, Sparkles, GraduationCap } from 'lucide-react';
 import { motion } from 'framer-motion';
-import Section from './Section';
-import Reveal from './Reveal';
-import { useLanguage } from '@/i18n/LanguageContext';
-import { getData } from '@/data';
-
-const hover = { whileHover: { y: -4 }, transition: { type: 'spring' as const, stiffness: 300, damping: 20 } };
+import { ArrowUpRight, Github } from 'lucide-react';
+import { Reveal, spotlightMove } from '@/lib/motion';
+import { useLang } from '@/lib/lang';
 
 export default function Research() {
-  const { t, lang } = useLanguage();
-  const { research } = getData(lang);
-
+  const { c } = useLang();
+  const r = c.research;
   return (
-    <Section id="research" title={t.research.title} heading={t.research.heading}>
-      {/* Academic trajectory: TCC, AI League, PIBICs, Master's */}
-      <div className="flex items-center gap-2 mb-5">
-        <GraduationCap size={18} className="text-accent-400" />
-        <h3 className="text-sm text-accent-500 uppercase tracking-wider font-medium">{t.research.projects}</h3>
-      </div>
-      <div className="grid md:grid-cols-2 gap-4 mb-14">
-        {research.projects.map((proj, i) => (
-          <Reveal key={proj.id} delay={(i % 2) * 100} className={i === 0 ? 'md:col-span-2' : ''}>
-            <motion.div {...hover} className="card card-hover p-5 h-full flex flex-col">
-              <div className="flex flex-wrap items-center gap-2 mb-3">
-                {proj.type && (
-                  <span className="inline-flex items-center px-2.5 py-1 rounded-md bg-secondary-500/10 border border-secondary-500/30 text-xs font-semibold text-secondary-400">
-                    {proj.type}
-                  </span>
-                )}
-                {proj.status && (
-                  <span className={`gap-1.5 ${proj.status === 'Finalizado' || proj.status === 'Completed' ? 'badge text-gray-300 border-base-600' : 'badge-accent'}`}>
-                    <span className={`w-1.5 h-1.5 rounded-full ${proj.status === 'Finalizado' || proj.status === 'Completed' ? 'bg-secondary-400' : 'bg-accent-400 animate-pulse-soft'}`} />
-                    {proj.status}
-                  </span>
-                )}
-                <span className="text-gray-500 text-xs ml-auto">{proj.period}</span>
-              </div>
-              <p className="text-white font-semibold text-base mb-1">{proj.title}</p>
-              <p className="text-accent-400 text-xs mb-3">{proj.lab}</p>
-              <p className="text-gray-400 text-sm leading-relaxed mb-4 flex-1">{proj.description}</p>
-              <div className="flex flex-wrap items-end justify-between gap-3">
-                <div className="flex flex-wrap gap-1.5">
-                  {proj.areas.map((area, j) => (
-                    <span key={j} className="badge">{area}</span>
-                  ))}
-                </div>
-                {proj.links && proj.links.length > 0 && (
-                  <div className="flex flex-wrap gap-2">
-                    {proj.links.map((link) => (
-                      <a
-                        key={link.url}
-                        href={link.url}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="btn-secondary text-xs px-3 py-1.5"
-                      >
-                        {link.label}
-                        <ArrowUpRight size={13} />
-                      </a>
-                    ))}
-                  </div>
-                )}
-              </div>
-            </motion.div>
-          </Reveal>
-        ))}
-      </div>
-
-      <div className="grid lg:grid-cols-2 gap-8">
+    <section id="research" className="relative py-28 md:py-36">
+      <div className="wrap">
         <Reveal>
-          <div className="flex items-center gap-2 mb-5">
-            <FlaskConical size={18} className="text-accent-400" />
-            <h3 className="text-sm text-accent-500 uppercase tracking-wider font-medium">{t.research.lines}</h3>
-          </div>
-          <div className="space-y-3">
-            {research.lines.map((line, i) => (
-              <Reveal key={i} delay={i * 80}>
-                <motion.div {...hover} className="card card-hover p-4">
-                  <p className="text-white font-medium text-sm mb-1">{line.area}</p>
-                  <p className="text-gray-400 text-sm leading-relaxed">{line.description}</p>
-                </motion.div>
-              </Reveal>
-            ))}
-          </div>
+          <p className="eyebrow">{r.eyebrow}</p>
+          <h2 className="h2 mt-4 max-w-2xl">{r.title}</h2>
+          <p className="mt-5 max-w-xl text-ink-400 leading-relaxed">{r.intro}</p>
         </Reveal>
 
-        <Reveal delay={150}>
-          <div className="flex items-center gap-2 mb-5">
-            <BookOpen size={18} className="text-accent-400" />
-            <h3 className="text-sm text-accent-500 uppercase tracking-wider font-medium">{t.research.publications}</h3>
-          </div>
-          <div className="space-y-3">
-            {research.publications.map((pub, i) => (
-              <Reveal key={i} delay={i * 80}>
-                <motion.div {...hover} className="card card-hover p-5">
-                  <div className="flex items-center gap-2 mb-2">
-                    <span className="badge-accent">{pub.venue}</span>
-                    {pub.status && (
-                      <span className="inline-flex items-center px-2.5 py-1 rounded-md bg-secondary-500/10 border border-secondary-500/30 text-xs font-semibold text-secondary-400">
-                        {pub.status}
-                      </span>
-                    )}
-                  </div>
-                  <p className="text-white font-medium text-sm mb-1">{pub.title}</p>
-                  <p className="text-gray-500 text-xs mb-2">{pub.authors.join(', ')} · {pub.year}</p>
-                  {pub.abstract && (
-                    <p className="text-gray-400 text-sm leading-relaxed mb-3">{pub.abstract}</p>
+        <div className="mt-14 divide-y divide-ink-800 border-y border-ink-800">
+          {r.papers.map((p, i) => (
+            <motion.article
+              key={p.title}
+              onMouseMove={spotlightMove}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: '-60px' }}
+              transition={{ duration: 0.8, delay: i * 0.08, ease: [0.16, 1, 0.3, 1] }}
+              className="spotlight group grid gap-4 rounded-none px-2 py-8 md:grid-cols-12 md:gap-8 md:px-4"
+            >
+              <div className="md:col-span-3">
+                <div className="font-display text-3xl md:text-4xl font-semibold tracking-tight text-ink-100 transition-colors duration-500 group-hover:text-ember-400">
+                  {p.venue}
+                </div>
+                <div className="mt-1 flex items-center gap-2 font-mono text-xs text-ink-400">
+                  {p.year}
+                  {p.status && (
+                    <span className="inline-flex items-center gap-1.5 rounded-full border border-lilac-400/30 bg-lilac-500/10 px-2 py-0.5 text-lilac-300">
+                      <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-lilac-400" />{p.status}
+                    </span>
                   )}
-                  {pub.link && (
-                    <a
-                      href={pub.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="btn-secondary text-xs px-3 py-1.5"
-                    >
-                      {t.research.readPaper}
-                      <ArrowUpRight size={13} />
-                    </a>
-                  )}
-                </motion.div>
-              </Reveal>
-            ))}
-          </div>
-        </Reveal>
-      </div>
-
-      <Reveal delay={300}>
-        <div className="mt-8 card p-5 border-accent-500/20">
-          <div className="flex items-center gap-2 mb-3">
-            <Sparkles size={16} className="text-accent-400" />
-            <p className="text-xs text-accent-500 uppercase tracking-wider font-medium">{t.research.futureInterests}</p>
-          </div>
-          <div className="flex flex-wrap gap-2">
-            {research.futureInterests.map((interest, i) => (
-              <span key={i} className="badge-accent">{interest}</span>
-            ))}
-          </div>
+                </div>
+              </div>
+              <div className="md:col-span-7">
+                <h3 className="font-display text-lg md:text-xl font-medium leading-snug text-ink-100">{p.title}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-ink-400">{p.summary}</p>
+              </div>
+              <div className="flex items-start gap-2 md:col-span-2 md:justify-end">
+                {p.link && (
+                  <a href={p.link} target="_blank" rel="noreferrer" className="inline-flex items-center gap-1 rounded-full border border-ink-700 px-3 py-1.5 text-xs text-ink-300 transition-colors hover:border-ember-400/60 hover:text-white">
+                    {r.paper} <ArrowUpRight size={13} className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                  </a>
+                )}
+                {p.code && (
+                  <a href={p.code} target="_blank" rel="noreferrer" className="inline-flex items-center gap-1 rounded-full border border-ink-700 px-3 py-1.5 text-xs text-ink-300 transition-colors hover:border-ember-400/60 hover:text-white">
+                    <Github size={13} /> {r.code}
+                  </a>
+                )}
+              </div>
+            </motion.article>
+          ))}
         </div>
-      </Reveal>
-    </Section>
+      </div>
+    </section>
   );
 }
