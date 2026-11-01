@@ -11,10 +11,11 @@ export const links = {
 
 export interface FocusArea {
   id: string;
-  icon: 'eye' | 'scan' | 'brain' | 'network' | 'layers' | 'cpu';
+  icon: 'eye' | 'scan' | 'brain' | 'network' | 'layers' | 'cpu' | 'workflow';
   title: string;
   blurb: string;
   topics: string[];
+  wide?: boolean;
 }
 
 export interface TermLine {
@@ -42,7 +43,7 @@ export interface Role {
 }
 
 const pt = {
-  nav: { focus: 'Estudos', claude: 'Claude Code', research: 'Pesquisa', path: 'Trajetória', contact: 'Contato', cv: 'CV' },
+  nav: { focus: 'Estudos', claude: 'Harness', research: 'Pesquisa', path: 'Trajetória', contact: 'Contato', cv: 'CV' },
   hero: {
     kicker: 'Machine Learning Engineer · Pesquisador em IA',
     name: 'Lucas Cunha',
@@ -60,7 +61,7 @@ const pt = {
   focus: {
     eyebrow: '01 · Temas de estudo',
     title: 'O que eu estudo a fundo',
-    intro: 'Seis frentes de machine learning que conecto entre si — da representação visual ao deploy de agentes.',
+    intro: 'Sete frentes de machine learning que conecto entre si — da representação visual ao deploy de agentes.',
     areas: [
       {
         id: 'cv', icon: 'eye', title: 'Visão Computacional',
@@ -90,19 +91,24 @@ const pt = {
       {
         id: 'scale', icon: 'cpu', title: 'Treino & Inferência em Escala',
         blurb: 'Do cluster ao edge: treinar rápido e servir leve.',
-        topics: ['HPC · Slurm', 'Multi-GPU (DDP · Accelerate)', 'ONNX · TensorRT', 'MLflow · W&B', 'Docker · Podman'],
+        topics: ['HPC · Slurm', 'Multi-GPU (DDP · Accelerate)', 'ONNX · TensorRT', 'W&B', 'Docker · Podman'],
+      },
+      {
+        id: 'mlops', icon: 'workflow', title: 'MLOps', wide: true,
+        blurb: 'O que faço no dia a dia: levar modelos do experimento à produção e mantê-los saudáveis.',
+        topics: ['Pipelines treino → deploy', 'MLflow · Model Registry', 'Versionamento de dados & modelos', 'CI/CD para ML', 'Monitoramento & drift', 'Databricks', 'Docker · Podman'],
       },
     ] as FocusArea[],
     marquee: [
       'Transformers', 'Atenção', 'Contrastive learning', 'Self-supervised', 'Transfer learning', 'PEFT', 'Quantização',
       'Segmentação', 'Detecção', 'OCR', 'VLMs', 'RAG', 'Embeddings', 'Agentes', 'Domain shift', 'Robustez', 'Few-shot',
-      'Autoencoders', 'Metric learning', 'Distributed training', 'Edge AI', 'Avaliação',
+      'Autoencoders', 'Metric learning', 'Distributed training', 'Edge AI', 'MLOps', 'Avaliação',
     ],
   },
   claude: {
-    eyebrow: '02 · Claude Code',
-    title: 'Da ideia à POC em horas, não semanas.',
-    intro: 'Claude Code é meu ambiente principal de engenharia. Eu defino o problema, a arquitetura e os critérios de aceite; agentes em paralelo exploram, implementam, testam e revisam.',
+    eyebrow: '02 · Harness em uso',
+    title: 'Um harness que amplifica o que eu consigo construir.',
+    intro: 'Uso o Claude Code como harness de engenharia: ele amplia minhas capacidades e me deixa focado na pergunta de pesquisa e em bolar ideias, enquanto construo sistemas com mais rapidez e solidez. Eu defino o problema, a arquitetura e os critérios de aceite; agentes em paralelo exploram, implementam, testam e revisam.',
     points: [
       { title: 'POCs relâmpago', text: 'De uma ideia para um protótipo funcional — modelo, API e interface — no mesmo dia, pronto para validar com o time.' },
       { title: 'Orquestração de agentes', text: 'Subagentes com contexto isolado trabalhando em paralelo: pesquisa, backend, frontend, avaliação e code review.' },
@@ -142,7 +148,12 @@ const pt = {
         venue: 'IEEE SMC', year: '2026',
         title: 'An Ensemble-Based Self-Taught Learning Approach for Parking Space Classification Under Limited Data',
         summary: 'Comitê de autoencoders como extratores não supervisionados: 93–96% de acurácia cross-dataset com poucos rótulos.',
-        link: 'https://arxiv.org/abs/2609.03258',
+        link: 'https://arxiv.org/abs/2609.03258', code: 'https://github.com/lucasdocunha/PKLot-Ensemble-STL',
+      },
+      {
+        venue: 'CEAP', year: '2026', status: 'Em andamento',
+        title: 'Pesquisa de mestrado: VLLMs para documentos fiscais brasileiros',
+        summary: 'Vision LLMs para entender e extrair informações estruturadas de documentos fiscais brasileiros.',
       },
       {
         venue: 'ICDAR', year: '2026', status: 'Em andamento',
@@ -161,7 +172,7 @@ const pt = {
       { period: '2025 — 2026', role: 'Cientista de Dados', org: 'MBRF · COEIA', line: 'Agente LLM no Teams sobre Databricks Genie (−80% no tempo de busca) e visão computacional para SKUs (+40% na auditoria).' },
       { period: '2024 —', role: 'Pesquisador em IA', org: 'PUCPR · PPGIA · Lasin', line: 'Mestrado, Liga de IA e duas iniciações científicas em adaptação de domínio.', current: true },
     ] as Role[],
-    education: 'Ciência da Computação (PUCPR, 2023 —) · Mestrado em Informática (PPGIA/PUCPR, 2026 —)',
+    education: 'Ciência da Computação (PUCPR, 2023 — dez/2026) · Mestrado em Informática (PPGIA/PUCPR, 2026 —)',
   },
   contact: {
     eyebrow: '05 · Contato',
@@ -175,7 +186,7 @@ const pt = {
 type Content = typeof pt;
 
 const en: Content = {
-  nav: { focus: 'Focus', claude: 'Claude Code', research: 'Research', path: 'Path', contact: 'Contact', cv: 'CV' },
+  nav: { focus: 'Focus', claude: 'Harness', research: 'Research', path: 'Path', contact: 'Contact', cv: 'CV' },
   hero: {
     kicker: 'Machine Learning Engineer · AI Researcher',
     name: 'Lucas Cunha',
@@ -193,7 +204,7 @@ const en: Content = {
   focus: {
     eyebrow: '01 · Study focus',
     title: 'What I study in depth',
-    intro: 'Six machine learning fronts that I connect — from visual representations to deployed agents.',
+    intro: 'Seven machine learning fronts that I connect — from visual representations to deployed agents.',
     areas: [
       { id: 'cv', icon: 'eye', title: 'Computer Vision', blurb: 'Detection, segmentation and representations robust to real-world degradation.',
         topics: ['Detection & segmentation', 'YOLO · SAM', 'ViT · DINOv3', 'Metric learning', 'Spectral analysis (FFT)', 'Deepfake forensics'] },
@@ -206,18 +217,20 @@ const en: Content = {
       { id: 'repr', icon: 'layers', title: 'Representation Learning', blurb: 'Learning well from few labels and generalizing across domains.',
         topics: ['Self-supervised', 'Autoencoders', 'Self-taught learning', 'Domain adaptation', 'Few-shot', 'Ensembles'] },
       { id: 'scale', icon: 'cpu', title: 'Training & Inference at Scale', blurb: 'From cluster to edge: train fast, serve light.',
-        topics: ['HPC · Slurm', 'Multi-GPU (DDP · Accelerate)', 'ONNX · TensorRT', 'MLflow · W&B', 'Docker · Podman'] },
+        topics: ['HPC · Slurm', 'Multi-GPU (DDP · Accelerate)', 'ONNX · TensorRT', 'W&B', 'Docker · Podman'] },
+      { id: 'mlops', icon: 'workflow', title: 'MLOps', wide: true, blurb: 'My day-to-day: taking models from experiment to production and keeping them healthy.',
+        topics: ['Training → deploy pipelines', 'MLflow · Model Registry', 'Data & model versioning', 'CI/CD for ML', 'Monitoring & drift', 'Databricks', 'Docker · Podman'] },
     ],
     marquee: [
       'Transformers', 'Attention', 'Contrastive learning', 'Self-supervised', 'Transfer learning', 'PEFT', 'Quantization',
       'Segmentation', 'Detection', 'OCR', 'VLMs', 'RAG', 'Embeddings', 'Agents', 'Domain shift', 'Robustness', 'Few-shot',
-      'Autoencoders', 'Metric learning', 'Distributed training', 'Edge AI', 'Evaluation',
+      'Autoencoders', 'Metric learning', 'Distributed training', 'Edge AI', 'MLOps', 'Evaluation',
     ],
   },
   claude: {
-    eyebrow: '02 · Claude Code',
-    title: 'From idea to POC in hours, not weeks.',
-    intro: 'Claude Code is my main engineering environment. I set the problem, the architecture and the acceptance criteria; parallel agents explore, implement, test and review.',
+    eyebrow: '02 · Harness in use',
+    title: 'A harness that amplifies what I can build.',
+    intro: 'I use Claude Code as my engineering harness: it amplifies my capabilities and keeps me focused on the research question and on coming up with ideas, while I build systems faster and more solidly. I set the problem, the architecture and the acceptance criteria; parallel agents explore, implement, test and review.',
     points: [
       { title: 'Rapid POCs', text: 'From an idea to a working prototype — model, API and UI — the same day, ready to validate with the team.' },
       { title: 'Agent orchestration', text: 'Subagents with isolated context working in parallel: research, backend, frontend, evaluation and code review.' },
@@ -254,7 +267,10 @@ const en: Content = {
       { venue: 'IEEE SMC', year: '2026',
         title: 'An Ensemble-Based Self-Taught Learning Approach for Parking Space Classification Under Limited Data',
         summary: 'An ensemble of autoencoders as unsupervised feature extractors: 93–96% cross-dataset accuracy with few labels.',
-        link: 'https://arxiv.org/abs/2609.03258' },
+        link: 'https://arxiv.org/abs/2609.03258', code: 'https://github.com/lucasdocunha/PKLot-Ensemble-STL' },
+      { venue: 'CEAP', year: '2026', status: 'Ongoing',
+        title: 'Master research: VLLMs for Brazilian tax documents',
+        summary: 'Vision LLMs to understand and extract structured information from Brazilian tax documents.' },
       { venue: 'ICDAR', year: '2026', status: 'Ongoing',
         title: 'Sci-Image: scientific figures → Markdown tables',
         summary: 'QLoRA fine-tuning of Qwen2.5-VL to extract data from charts and figures, at the PUCPR AI League.',
@@ -270,7 +286,7 @@ const en: Content = {
       { period: '2025 — 2026', role: 'Data Scientist', org: 'MBRF · COEIA', line: 'LLM agent in Teams over Databricks Genie (−80% search time) and computer vision for SKUs (+40% audit efficiency).' },
       { period: '2024 —', role: 'AI Researcher', org: 'PUCPR · PPGIA · Lasin', line: 'MSc, AI League and two research grants on domain adaptation.', current: true },
     ],
-    education: 'BSc Computer Science (PUCPR, 2023 —) · MSc Informatics (PPGIA/PUCPR, 2026 —)',
+    education: 'BSc Computer Science (PUCPR, 2023 — Dec 2026) · MSc Informatics (PPGIA/PUCPR, 2026 —)',
   },
   contact: {
     eyebrow: '05 · Contact',

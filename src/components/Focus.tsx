@@ -1,12 +1,12 @@
 import { motion } from 'framer-motion';
-import { Eye, ScanText, Brain, Network, Layers, Cpu, type LucideIcon } from 'lucide-react';
+import { Eye, ScanText, Brain, Network, Layers, Cpu, Workflow, type LucideIcon } from 'lucide-react';
 import { Reveal, spotlightMove } from '@/lib/motion';
 import { useLang } from '@/lib/lang';
 import type { FocusArea } from '@/content';
 
-const ICONS: Record<FocusArea['icon'], LucideIcon> = { eye: Eye, scan: ScanText, brain: Brain, network: Network, layers: Layers, cpu: Cpu };
+const ICONS: Record<FocusArea['icon'], LucideIcon> = { eye: Eye, scan: ScanText, brain: Brain, network: Network, layers: Layers, cpu: Cpu, workflow: Workflow };
 
-function Card({ area, i }: { area: FocusArea; i: number }) {
+function Card({ area, i, lang }: { area: FocusArea; i: number; lang: string }) {
   const Icon = ICONS[area.icon];
   return (
     <motion.article
@@ -15,7 +15,7 @@ function Card({ area, i }: { area: FocusArea; i: number }) {
       whileInView={{ opacity: 1, y: 0, rotateX: 0 }}
       viewport={{ once: true, margin: '-60px' }}
       transition={{ duration: 0.9, delay: (i % 3) * 0.1, ease: [0.16, 1, 0.3, 1] }}
-      className="spotlight group rounded-2xl border border-ink-800 bg-ink-900/60 p-6 md:p-7 [transform-style:preserve-3d]"
+      className={`spotlight group rounded-2xl ${area.wide ? 'sm:col-span-2 lg:col-span-3' : ''} border border-ink-800 bg-ink-900/60 p-6 md:p-7 [transform-style:preserve-3d]`}
     >
       <div className="flex items-start justify-between">
         <span className="grid h-11 w-11 place-items-center rounded-xl border border-ink-700 bg-ink-850 text-ember-400 transition-all duration-500 group-hover:border-ember-500/50 group-hover:bg-ember-500/10 group-hover:rotate-[-6deg] group-hover:scale-110">
@@ -26,6 +26,7 @@ function Card({ area, i }: { area: FocusArea; i: number }) {
       <h3 className="mt-6 font-display text-xl font-semibold text-ink-100">{area.title}</h3>
       <p className="mt-2 text-sm leading-relaxed text-ink-400">{area.blurb}</p>
       <motion.ul
+        key={lang} // remonta ao trocar idioma; senão os chips novos ficam presos em 'hidden'
         className="mt-5 flex flex-wrap gap-1.5"
         initial="hidden" whileInView="show" viewport={{ once: true }}
         variants={{ show: { transition: { staggerChildren: 0.05, delayChildren: 0.3 + (i % 3) * 0.1 } } }}
@@ -56,7 +57,7 @@ function Marquee({ items, reverse = false }: { items: string[]; reverse?: boolea
 }
 
 export default function Focus() {
-  const { c } = useLang();
+  const { c, lang } = useLang();
   const f = c.focus;
   const half = Math.ceil(f.marquee.length / 2);
   return (
@@ -68,7 +69,7 @@ export default function Focus() {
           <p className="mt-5 max-w-xl text-ink-400 leading-relaxed">{f.intro}</p>
         </Reveal>
         <div className="mt-14 grid gap-4 sm:grid-cols-2 lg:grid-cols-3 [perspective:1200px]">
-          {f.areas.map((a, i) => <Card key={a.id} area={a} i={i} />)}
+          {f.areas.map((a, i) => <Card key={a.id} area={a} i={i} lang={lang} />)}
         </div>
       </div>
       <div className="mt-16 space-y-3">
