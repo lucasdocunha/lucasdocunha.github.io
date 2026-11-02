@@ -45,13 +45,13 @@ export interface Role {
 }
 
 const pt = {
-  nav: { focus: 'Estudos', claude: 'Harness', research: 'Pesquisa', path: 'Trajetória', contact: 'Contato', cv: 'CV' },
+  nav: { focus: 'Áreas', claude: 'Harness', research: 'Pesquisa', path: 'Trajetória', contact: 'Contato', cv: 'CV' },
   hero: {
     kicker: 'Machine Learning Engineer · Pesquisador em IA',
     name: 'Lucas Cunha',
     headline: ['Pesquiso e construo', 'sistemas de IA', 'do modelo ao produto.'],
     sub: 'ML Engineer na Datakie e mestrando no PPGIA/PUCPR. Visão computacional, modelos multimodais e agentes — com Claude Code para transformar ideias em POCs em horas.',
-    ctaPrimary: 'Ver o que eu estudo',
+    ctaPrimary: 'Ver minhas áreas',
     ctaSecondary: 'Baixar CV',
     stats: [
       { value: '2', label: 'artigos em 2026' },
@@ -61,8 +61,8 @@ const pt = {
     location: 'Curitiba, BR',
   },
   focus: {
-    eyebrow: '01 · Temas de estudo',
-    title: 'O que eu estudo a fundo',
+    eyebrow: '01 · Áreas de atuação',
+    title: 'Temas com que já trabalhei',
     intro: 'Oito frentes de machine learning que conecto entre si — da representação visual ao deploy de agentes.',
     areas: [
       {
@@ -163,7 +163,7 @@ const pt = {
         summary: 'Vision LLMs para entender e extrair informações estruturadas de documentos fiscais brasileiros.',
       },
       {
-        venue: 'Kaggle', year: '2026', status: 'Em andamento',
+        venue: 'Kaggle Challenge', year: '2026', status: 'Em andamento',
         title: 'Name That LLM',
         summary: 'Competição no Kaggle com a equipe da Liga de IA da PUCPR: identificar qual LLM está por trás de cada texto.',
         link: 'https://www.kaggle.com/competitions/name-that-llm', linkLabel: 'Kaggle', code: 'https://github.com/Liga-de-IA-PUCPR/Name-That-LLM',
@@ -199,13 +199,13 @@ const pt = {
 type Content = typeof pt;
 
 const en: Content = {
-  nav: { focus: 'Focus', claude: 'Harness', research: 'Research', path: 'Path', contact: 'Contact', cv: 'CV' },
+  nav: { focus: 'Areas', claude: 'Harness', research: 'Research', path: 'Path', contact: 'Contact', cv: 'CV' },
   hero: {
     kicker: 'Machine Learning Engineer · AI Researcher',
     name: 'Lucas Cunha',
     headline: ['I research and build', 'AI systems', 'from model to product.'],
     sub: 'ML Engineer at Datakie and MSc student at PPGIA/PUCPR. Computer vision, multimodal models and agents — using Claude Code to turn ideas into POCs in hours.',
-    ctaPrimary: 'See what I study',
+    ctaPrimary: 'See my areas',
     ctaSecondary: 'Download CV',
     stats: [
       { value: '2', label: 'papers in 2026' },
@@ -215,8 +215,8 @@ const en: Content = {
     location: 'Curitiba, BR',
   },
   focus: {
-    eyebrow: '01 · Study focus',
-    title: 'What I study in depth',
+    eyebrow: '01 · Areas of work',
+    title: "Topics I've worked with",
     intro: 'Eight machine learning fronts that I connect — from visual representations to deployed agents.',
     areas: [
       { id: 'cv', icon: 'eye', title: 'Computer Vision', blurb: 'Robust detection, segmentation and classification — from server to edge.',
@@ -286,7 +286,7 @@ const en: Content = {
       { venue: 'CEAP', year: '2026', status: 'Ongoing',
         title: 'Master research: VLLMs for Brazilian tax documents',
         summary: 'Vision LLMs to understand and extract structured information from Brazilian tax documents.' },
-      { venue: 'Kaggle', year: '2026', status: 'Ongoing',
+      { venue: 'Kaggle Challenge', year: '2026', status: 'Ongoing',
         title: 'Name That LLM',
         summary: 'Kaggle competition with the PUCPR AI League team: identifying which LLM is behind each text.',
         link: 'https://www.kaggle.com/competitions/name-that-llm', linkLabel: 'Kaggle', code: 'https://github.com/Liga-de-IA-PUCPR/Name-That-LLM' },
