@@ -6,12 +6,13 @@ export const links = {
   email: 'lucas.ocunha@hotmail.com',
   linkedin: 'https://www.linkedin.com/in/lucasdoc/',
   github: 'https://github.com/lucasdocunha',
+  lattes: 'http://lattes.cnpq.br/8290492930803559',
   cv: `${import.meta.env.BASE_URL}cv/resume.pdf`,
 };
 
 export interface FocusArea {
   id: string;
-  icon: 'eye' | 'scan' | 'brain' | 'network' | 'layers' | 'cpu' | 'workflow';
+  icon: 'eye' | 'scan' | 'brain' | 'network' | 'layers' | 'cpu' | 'workflow' | 'text';
   title: string;
   blurb: string;
   topics: string[];
@@ -30,6 +31,7 @@ export interface Paper {
   title: string;
   summary: string;
   link?: string;
+  linkLabel?: string;
   code?: string;
   status?: string;
 }
@@ -61,22 +63,27 @@ const pt = {
   focus: {
     eyebrow: '01 · Temas de estudo',
     title: 'O que eu estudo a fundo',
-    intro: 'Sete frentes de machine learning que conecto entre si — da representação visual ao deploy de agentes.',
+    intro: 'Oito frentes de machine learning que conecto entre si — da representação visual ao deploy de agentes.',
     areas: [
       {
         id: 'cv', icon: 'eye', title: 'Visão Computacional',
-        blurb: 'Detecção, segmentação e representações robustas a degradação real.',
-        topics: ['Detecção & segmentação', 'YOLO · SAM', 'ViT · DINOv3', 'Metric learning', 'Análise espectral (FFT)', 'Deepfake forensics'],
+        blurb: 'Detectar, segmentar e classificar com robustez — do servidor ao edge.',
+        topics: ['Detecção', 'Segmentação', 'Classificação', 'Metric learning', 'Edge models', 'Análise espectral'],
       },
       {
         id: 'vlm', icon: 'scan', title: 'Multimodal & Document Understanding',
         blurb: 'VLMs que leem documentos, figuras e tabelas e devolvem dados estruturados.',
-        topics: ['Qwen2.5-VL · Florence-2', 'OCR neural', 'Análise de layout', 'Figura → tabela', 'Extração estruturada'],
+        topics: ['VLMs', 'ColPali', 'OCR', 'Análise de layout', 'Extração estruturada'],
+      },
+      {
+        id: 'nlp', icon: 'text', title: 'NLP',
+        blurb: 'Do baseline leve ao transformer: entender, identificar e classificar texto.',
+        topics: ['TF-IDF', 'N-gramas · bigramas', 'BERT & variantes', 'Classificação de texto', 'Identificação'],
       },
       {
         id: 'llm', icon: 'brain', title: 'LLMs & SLMs',
         blurb: 'Adaptar, comprimir e servir modelos de linguagem com custo baixo.',
-        topics: ['LoRA · QLoRA', 'Quantização (AWQ · GGUF)', 'vLLM · Ollama', 'RAG & embeddings', 'Avaliação de LLMs'],
+        topics: ['LoRA · QLoRA', 'Quantização', 'VLMs', 'RAG & embeddings', 'LLMOps'],
       },
       {
         id: 'agents', icon: 'network', title: 'Agentes & Orquestração',
@@ -86,12 +93,12 @@ const pt = {
       {
         id: 'repr', icon: 'layers', title: 'Aprendizado de Representação',
         blurb: 'Aprender bem com poucos rótulos e generalizar entre domínios.',
-        topics: ['Self-supervised', 'Autoencoders', 'Self-taught learning', 'Adaptação de domínio', 'Few-shot', 'Ensembles'],
+        topics: ['Self-supervised', 'Autoencoders', 'Self-taught learning', 'Adaptação de domínio', 'Few-shot', 'Ensembles', 'Clusterização'],
       },
       {
         id: 'scale', icon: 'cpu', title: 'Treino & Inferência em Escala',
         blurb: 'Do cluster ao edge: treinar rápido e servir leve.',
-        topics: ['HPC · Slurm', 'Multi-GPU (DDP · Accelerate)', 'ONNX · TensorRT', 'W&B', 'Docker · Podman'],
+        topics: ['HPC · Slurm', 'Multi-GPU (DDP · Accelerate)', 'Federated learning', 'ONNX · TensorRT', 'FastAPI', 'W&B', 'Docker · Podman'],
       },
       {
         id: 'mlops', icon: 'workflow', title: 'MLOps', wide: true,
@@ -156,6 +163,12 @@ const pt = {
         summary: 'Vision LLMs para entender e extrair informações estruturadas de documentos fiscais brasileiros.',
       },
       {
+        venue: 'Kaggle', year: '2026', status: 'Em andamento',
+        title: 'Name That LLM',
+        summary: 'Competição no Kaggle com a equipe da Liga de IA da PUCPR: identificar qual LLM está por trás de cada texto.',
+        link: 'https://www.kaggle.com/competitions/name-that-llm', linkLabel: 'Kaggle', code: 'https://github.com/Liga-de-IA-PUCPR/Name-That-LLM',
+      },
+      {
         venue: 'ICDAR', year: '2026', status: 'Em andamento',
         title: 'Sci-Image: figuras científicas → tabelas em Markdown',
         summary: 'Fine-tuning de Qwen2.5-VL com QLoRA para extrair dados de gráficos e figuras, na Liga de IA da PUCPR.',
@@ -204,20 +217,22 @@ const en: Content = {
   focus: {
     eyebrow: '01 · Study focus',
     title: 'What I study in depth',
-    intro: 'Seven machine learning fronts that I connect — from visual representations to deployed agents.',
+    intro: 'Eight machine learning fronts that I connect — from visual representations to deployed agents.',
     areas: [
-      { id: 'cv', icon: 'eye', title: 'Computer Vision', blurb: 'Detection, segmentation and representations robust to real-world degradation.',
-        topics: ['Detection & segmentation', 'YOLO · SAM', 'ViT · DINOv3', 'Metric learning', 'Spectral analysis (FFT)', 'Deepfake forensics'] },
+      { id: 'cv', icon: 'eye', title: 'Computer Vision', blurb: 'Robust detection, segmentation and classification — from server to edge.',
+        topics: ['Detection', 'Segmentation', 'Classification', 'Metric learning', 'Edge models', 'Spectral analysis'] },
       { id: 'vlm', icon: 'scan', title: 'Multimodal & Document Understanding', blurb: 'VLMs that read documents, figures and tables and return structured data.',
-        topics: ['Qwen2.5-VL · Florence-2', 'Neural OCR', 'Layout analysis', 'Figure → table', 'Structured extraction'] },
+        topics: ['VLMs', 'ColPali', 'OCR', 'Layout analysis', 'Structured extraction'] },
+      { id: 'nlp', icon: 'text', title: 'NLP', blurb: 'From lightweight baselines to transformers: understanding, identifying and classifying text.',
+        topics: ['TF-IDF', 'N-grams · bigrams', 'BERT & variants', 'Text classification', 'Identification'] },
       { id: 'llm', icon: 'brain', title: 'LLMs & SLMs', blurb: 'Adapting, compressing and serving language models cheaply.',
-        topics: ['LoRA · QLoRA', 'Quantization (AWQ · GGUF)', 'vLLM · Ollama', 'RAG & embeddings', 'LLM evaluation'] },
+        topics: ['LoRA · QLoRA', 'Quantization', 'VLMs', 'RAG & embeddings', 'LLMOps'] },
       { id: 'agents', icon: 'network', title: 'Agents & Orchestration', blurb: 'Multi-agent systems with tools, memory and well-scoped context.',
         topics: ['Tool use', 'MCP', 'Multi-agent', 'Prompt & context engineering', 'LLMOps'] },
       { id: 'repr', icon: 'layers', title: 'Representation Learning', blurb: 'Learning well from few labels and generalizing across domains.',
-        topics: ['Self-supervised', 'Autoencoders', 'Self-taught learning', 'Domain adaptation', 'Few-shot', 'Ensembles'] },
+        topics: ['Self-supervised', 'Autoencoders', 'Self-taught learning', 'Domain adaptation', 'Few-shot', 'Ensembles', 'Clustering'] },
       { id: 'scale', icon: 'cpu', title: 'Training & Inference at Scale', blurb: 'From cluster to edge: train fast, serve light.',
-        topics: ['HPC · Slurm', 'Multi-GPU (DDP · Accelerate)', 'ONNX · TensorRT', 'W&B', 'Docker · Podman'] },
+        topics: ['HPC · Slurm', 'Multi-GPU (DDP · Accelerate)', 'Federated learning', 'ONNX · TensorRT', 'FastAPI', 'W&B', 'Docker · Podman'] },
       { id: 'mlops', icon: 'workflow', title: 'MLOps', wide: true, blurb: 'My day-to-day: taking models from experiment to production and keeping them healthy.',
         topics: ['Training → deploy pipelines', 'MLflow · Model Registry', 'Data & model versioning', 'CI/CD for ML', 'Monitoring & drift', 'Databricks', 'Docker · Podman'] },
     ],
@@ -271,6 +286,10 @@ const en: Content = {
       { venue: 'CEAP', year: '2026', status: 'Ongoing',
         title: 'Master research: VLLMs for Brazilian tax documents',
         summary: 'Vision LLMs to understand and extract structured information from Brazilian tax documents.' },
+      { venue: 'Kaggle', year: '2026', status: 'Ongoing',
+        title: 'Name That LLM',
+        summary: 'Kaggle competition with the PUCPR AI League team: identifying which LLM is behind each text.',
+        link: 'https://www.kaggle.com/competitions/name-that-llm', linkLabel: 'Kaggle', code: 'https://github.com/Liga-de-IA-PUCPR/Name-That-LLM' },
       { venue: 'ICDAR', year: '2026', status: 'Ongoing',
         title: 'Sci-Image: scientific figures → Markdown tables',
         summary: 'QLoRA fine-tuning of Qwen2.5-VL to extract data from charts and figures, at the PUCPR AI League.',

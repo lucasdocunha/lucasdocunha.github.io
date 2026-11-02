@@ -46,7 +46,7 @@ export default function Research() {
               <div className="flex items-start gap-2 md:col-span-2 md:justify-end">
                 {p.link && (
                   <a href={p.link} target="_blank" rel="noreferrer" className="inline-flex items-center gap-1 rounded-full border border-ink-700 px-3 py-1.5 text-xs text-ink-300 transition-colors hover:border-ember-400/60 hover:text-white">
-                    {r.paper} <ArrowUpRight size={13} className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                    {p.linkLabel ?? r.paper} <ArrowUpRight size={13} className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                   </a>
                 )}
                 {p.code && (

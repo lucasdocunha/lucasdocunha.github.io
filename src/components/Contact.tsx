@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Mail, Linkedin, Github, Copy, Check, Download } from 'lucide-react';
+import { Mail, Linkedin, Github, Copy, Check, Download, GraduationCap } from 'lucide-react';
 import { Reveal, Magnetic } from '@/lib/motion';
 import { useLang } from '@/lib/lang';
 import { links } from '@/content';
@@ -21,6 +21,7 @@ export default function Contact() {
   const socials = [
     { href: links.linkedin, label: 'LinkedIn', Icon: Linkedin },
     { href: links.github, label: 'GitHub', Icon: Github },
+    { href: links.lattes, label: 'Lattes', Icon: GraduationCap },
     { href: links.cv, label: 'CV', Icon: Download },
   ];
 

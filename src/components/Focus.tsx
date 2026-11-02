@@ -1,10 +1,10 @@
 import { motion } from 'framer-motion';
-import { Eye, ScanText, Brain, Network, Layers, Cpu, Workflow, type LucideIcon } from 'lucide-react';
+import { Eye, ScanText, Brain, Network, Layers, Cpu, Workflow, Languages, type LucideIcon } from 'lucide-react';
 import { Reveal, spotlightMove } from '@/lib/motion';
 import { useLang } from '@/lib/lang';
 import type { FocusArea } from '@/content';
 
-const ICONS: Record<FocusArea['icon'], LucideIcon> = { eye: Eye, scan: ScanText, brain: Brain, network: Network, layers: Layers, cpu: Cpu, workflow: Workflow };
+const ICONS: Record<FocusArea['icon'], LucideIcon> = { eye: Eye, scan: ScanText, brain: Brain, network: Network, layers: Layers, cpu: Cpu, workflow: Workflow, text: Languages };
 
 function Card({ area, i, lang }: { area: FocusArea; i: number; lang: string }) {
   const Icon = ICONS[area.icon];
@@ -15,7 +15,7 @@ function Card({ area, i, lang }: { area: FocusArea; i: number; lang: string }) {
       whileInView={{ opacity: 1, y: 0, rotateX: 0 }}
       viewport={{ once: true, margin: '-60px' }}
       transition={{ duration: 0.9, delay: (i % 3) * 0.1, ease: [0.16, 1, 0.3, 1] }}
-      className={`spotlight group rounded-2xl ${area.wide ? 'sm:col-span-2 lg:col-span-3' : ''} border border-ink-800 bg-ink-900/60 p-6 md:p-7 [transform-style:preserve-3d]`}
+      className={`spotlight group rounded-2xl ${area.wide ? 'lg:col-span-2' : ''} border border-ink-800 bg-ink-900/60 p-6 md:p-7 [transform-style:preserve-3d]`}
     >
       <div className="flex items-start justify-between">
         <span className="grid h-11 w-11 place-items-center rounded-xl border border-ink-700 bg-ink-850 text-ember-400 transition-all duration-500 group-hover:border-ember-500/50 group-hover:bg-ember-500/10 group-hover:rotate-[-6deg] group-hover:scale-110">
