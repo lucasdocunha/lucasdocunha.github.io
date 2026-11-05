@@ -1,6 +1,7 @@
+import { useEffect, useState } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { ArrowDown, Download, MapPin } from 'lucide-react';
-import NeuralCanvas from './NeuralCanvas';
+import ConvCanvas from './ConvCanvas';
 import { Scramble, Magnetic } from '@/lib/motion';
 import { useLang } from '@/lib/lang';
 import { links } from '@/content';
@@ -13,6 +14,15 @@ export default function Hero() {
   const { scrollY } = useScroll();
   const y = useTransform(scrollY, [0, 600], [0, 120]);
   const fade = useTransform(scrollY, [0, 500], [1, 0]);
+  // modo desenho: a grade sobe acima dos textos e recebe o mouse
+  const [drawing, setDrawing] = useState(false);
+
+  useEffect(() => {
+    if (!drawing) return;
+    const onKey = (e: KeyboardEvent) => { if (e.key === 'Escape') setDrawing(false); };
+    window.addEventListener('keydown', onKey);
+    return () => window.removeEventListener('keydown', onKey);
+  }, [drawing]);
 
   return (
     <section id="top" className="relative flex min-h-[100svh] items-center overflow-hidden">
@@ -20,8 +30,15 @@ export default function Hero() {
       <div className="pointer-events-none absolute -top-40 right-[-10%] h-[620px] w-[620px] rounded-full bg-ember-500/10 blur-[120px]" />
       <div className="pointer-events-none absolute bottom-[-20%] left-[-10%] h-[520px] w-[520px] rounded-full bg-lilac-500/10 blur-[120px]" />
 
-      <motion.div style={{ opacity: fade }} className="absolute inset-0">
-        <NeuralCanvas className="h-full w-full opacity-40 md:opacity-100" />
+      <motion.div
+        style={{ opacity: drawing ? 1 : fade }}
+        className={`absolute inset-0 ${drawing ? 'z-20 pointer-events-auto' : ''}`}
+      >
+        <ConvCanvas
+          interactive={drawing}
+          onClose={() => setDrawing(false)}
+          className={`h-full w-full ${drawing ? 'cursor-crosshair' : 'opacity-40 md:opacity-100'}`}
+        />
       </motion.div>
       <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-ink-950 via-ink-950/70 to-transparent md:via-ink-950/40" />
       <div className="pointer-events-none absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-ink-950 to-transparent" />
@@ -70,6 +87,7 @@ export default function Hero() {
         >
           <Magnetic><a href="#focus" className="btn-primary">{h.ctaPrimary} <ArrowDown size={15} /></a></Magnetic>
           <Magnetic><a href={links.cv} target="_blank" rel="noreferrer" className="btn-ghost"><Download size={15} /> {h.ctaSecondary}</a></Magnetic>
+          <Magnetic><button type="button" onClick={() => setDrawing(true)} className="btn-ghost">{lang === 'pt' ? 'Desenhar' : 'Draw'}</button></Magnetic>
           <span className="ml-1 inline-flex items-center gap-1.5 text-sm text-ink-400"><MapPin size={14} /> {h.location}</span>
         </motion.div>
 
