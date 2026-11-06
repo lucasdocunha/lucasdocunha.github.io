@@ -161,6 +161,7 @@ const pt = {
         venue: 'CEAP', year: '2026', status: 'Em andamento',
         title: 'Pesquisa de mestrado: VLLMs para documentos fiscais brasileiros',
         summary: 'Vision LLMs para entender e extrair informações estruturadas de documentos fiscais brasileiros.',
+        link: 'https://ceap-latent-space-3d.vercel.app/#/latente', linkLabel: 'Espaço latente',
       },
       {
         venue: 'Kaggle Challenge', year: '2026', status: 'Em andamento',
@@ -285,7 +286,8 @@ const en: Content = {
         link: 'https://arxiv.org/abs/2609.03258', code: 'https://github.com/lucasdocunha/PKLot-Ensemble-STL' },
       { venue: 'CEAP', year: '2026', status: 'Ongoing',
         title: 'Master research: VLLMs for Brazilian tax documents',
-        summary: 'Vision LLMs to understand and extract structured information from Brazilian tax documents.' },
+        summary: 'Vision LLMs to understand and extract structured information from Brazilian tax documents.',
+        link: 'https://ceap-latent-space-3d.vercel.app/#/latente', linkLabel: 'Latent space' },
       { venue: 'Kaggle Challenge', year: '2026', status: 'Ongoing',
         title: 'Name That LLM',
         summary: 'Kaggle competition with the PUCPR AI League team: identifying which LLM is behind each text.',
